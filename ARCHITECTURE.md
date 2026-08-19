@@ -12,28 +12,40 @@ One tenant (meinphysio+), two locations, seven practitioners, master data seeded
 
 ### Components
 
-```
-                         ┌──────────────────────────────────────────────────────────┐
- data/*.json ──seed────▶ │ PostgreSQL  (every table has tenant_id, ADR-0003)        │
- Termino export ─ingest─▶│ locations · practitioners · patients · prescriptions     │
-   (every 5 min)         │ termino_exports · appointments · absences                │
-                         │ reschedule_tasks · affected_appointments · outbox        │
-                         │ data_issues                                              │
-                         └───────────────▲──────────────────────────────────────────┘
-                                         │ packages/db  (Drizzle schema, migrations, repositories, ingest)
-                                         │
- ┌───────────────────────────────────────┴──────────────────────────────────────────┐
- │ apps/api  — Hono, zod contracts (packages/contracts), OpenAPI at /docs (ADR-0002) │
- │   services/absence-service: create absence → engine → tasks → outbox → deliver    │
- │   services/reconcile: confirm Termino writes against later exports (ADR-0001)     │
- │   adapters: TerminoClient (fake) · Notifier (fake) — both behind the outbox        │
- │   uses packages/domain (pure engine, zero I/O, tests): affected → decide → rank    │
- └───────────────────────────────────────▲──────────────────────────────────────────┘
-                                         │ typed HTTP client
- ┌───────────────────────────────────────┴──────────────────────────────────────────┐
- │ apps/web — TanStack Start, shadcn/ui, react-i18next (de default, en stub)         │
- │   Offene Fälle (one queue across absences) · + Neuer Ausfall (dialog) · Ausfälle  │
- └──────────────────────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+  subgraph sources [Sources]
+    seed["data/*.json (master data)"]
+    export["Termino export (every 5 min)"]
+  end
+
+  subgraph db [PostgreSQL - tenant_id on every table, ADR-0003]
+    tables["locations · practitioners · patients · prescriptions<br/>termino_exports · appointments · absences<br/>reschedule_tasks · affected_appointments · outbox · data_issues"]
+  end
+
+  subgraph api [apps/api - Hono, zod contracts, OpenAPI, ADR-0002]
+    svc["absence-service<br/>create absence → engine → tasks → outbox → deliver"]
+    rec["reconcile<br/>confirm Termino writes against later exports, ADR-0001"]
+    adapters["adapters: TerminoClient (fake) · Notifier (fake)<br/>both behind the outbox"]
+  end
+
+  domain["packages/domain - pure engine, zero I/O, tests<br/>affected → decide → rank, policy as data (ADR-0004)"]
+  dbpkg["packages/db - Drizzle schema, migrations, repositories, ingest"]
+
+  subgraph web [apps/web - TanStack Start, shadcn/ui, i18n de/en]
+    queue["Offene Fälle (one queue across absences)"]
+    dialog["+ Neuer Ausfall (dialog)"]
+    list["Ausfälle (progress per absence)"]
+  end
+
+  seed -- seed --> dbpkg
+  export -- ingest --> dbpkg
+  dbpkg --> tables
+  svc --> dbpkg
+  rec --> dbpkg
+  svc --> domain
+  svc --> adapters
+  web -- typed HTTP client --> api
 ```
 
 Processes: `db`, `api`, `web` (docker compose). `packages/domain` and `packages/db` are libraries; `domain` imports nothing, `db` imports only domain types.
@@ -45,6 +57,37 @@ Processes: `db`, `api`, `web` (docker compose). `packages/domain` and `packages/
 3. Decisions become reschedule tasks (one per patient per absence). Auto-rebookings become Termino writes + notifications in the outbox; the fake adapters deliver them.
 4. The front desk works the queue: quick actions (accept proposal, cancel and notify, log contact attempt, kept) call the API, which writes through the outbox.
 5. Each new Termino export is ingested idempotently. Reconciliation protects locally written appointments from stale exports, confirms writes per type (cancel, swap, rebook; a confirmed rebook retires the local row), flags writes unconfirmed after two exports, closes tasks resolved externally, and adds tasks for new bookings inside an absence.
+
+```mermaid
+sequenceDiagram
+  actor FD as Front desk
+  participant Web as apps/web
+  participant API as apps/api
+  participant Eng as packages/domain
+  participant DB as PostgreSQL
+  participant OB as Outbox
+  participant T as Termino (fake)
+  participant N as Notifier (fake)
+
+  FD->>Web: record absence (practitioner, category, from–to)
+  Web->>API: POST /absences
+  API->>DB: insert absence
+  API->>OB: enqueue block_practitioner
+  API->>Eng: decide(engine input)
+  Eng-->>API: decisions per affected appointment
+  API->>DB: reschedule tasks + affected appointments
+  API->>OB: enqueue rebook writes + notifications
+  OB->>T: deliver writes (apply to local appointments)
+  OB->>N: deliver messages (after the write)
+  API-->>Web: id + counts
+  Web-->>FD: result: auto-resolved / need front desk / urgent
+  FD->>Web: work the queue (quick actions)
+  Web->>API: accept-proposal / cancel / contact-attempts / kept
+  API->>OB: enqueue + deliver
+  Note over API,DB: next export
+  API->>DB: ingest export (protected rows untouched)
+  API->>OB: confirm / flag stale writes, close tasks resolved externally
+```
 
 ### Data issues
 

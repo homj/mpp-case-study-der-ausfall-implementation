@@ -16,6 +16,8 @@ Single-context: `CONTEXT.md` + `docs/adr/` at the repo root. See `docs/agents/do
 
 ## Writing style
 
+Diagrams in Markdown files use Mermaid code blocks, never ASCII art.
+
 Write all prose (docs, comments, commit messages, issues, chat replies) in ASD-STE100 (Simplified Technical English): short sentences, one idea per sentence, active voice, approved simple words, present tense, no noun clusters or ambiguous pronouns.
 
 Also follow Zinsser's four principles of quality writing:
