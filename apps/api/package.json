@@ -1,0 +1,29 @@
+{
+  "name": "@ausfall/api",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/start.ts",
+    "dev": "tsx watch src/start.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@ausfall/contracts": "workspace:*",
+    "@ausfall/db": "workspace:*",
+    "@ausfall/domain": "workspace:*",
+    "@hono/node-server": "^2.1.1",
+    "@hono/zod-openapi": "^1.6.0",
+    "@scalar/hono-api-reference": "^0.11.14",
+    "hono": "^4.13.3",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsx": "^4.23.12",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
