@@ -11,6 +11,11 @@ COPY pnpm-lock.yaml* ./
 COPY packages ./packages
 COPY apps/web ./apps/web
 RUN pnpm install --no-frozen-lockfile --filter "@ausfall/web..."
+# Vite inlines these at build time; they cannot be set at run time.
+ARG VITE_API_URL=http://localhost:4000
+ARG VITE_APP_NOW=2026-09-07T07:40:00+02:00
+ENV VITE_API_URL=$VITE_API_URL
+ENV VITE_APP_NOW=$VITE_APP_NOW
 RUN pnpm --filter "@ausfall/web" build
 
 FROM node:24-alpine AS runtime

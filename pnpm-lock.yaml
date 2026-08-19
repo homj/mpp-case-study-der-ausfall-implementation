@@ -50,9 +50,15 @@ importers:
 
   apps/web:
     dependencies:
+      '@ausfall/contracts':
+        specifier: workspace:*
+        version: link:../../packages/contracts
       '@fontsource-variable/inter':
         specifier: ^5.3.0
         version: 5.3.0
+      '@tanstack/react-query':
+        specifier: ^5.101.4
+        version: 5.101.4(react@19.2.8)
       '@tanstack/react-router':
         specifier: ^1.170.30
         version: 1.170.30(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -71,6 +77,9 @@ importers:
       lucide-react:
         specifier: ^0.552.0
         version: 0.552.0(react@19.2.8)
+      next-themes:
+        specifier: ^0.4.6
+        version: 0.4.6(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       radix-ui:
         specifier: ^1.6.7
         version: 1.6.7(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -86,6 +95,9 @@ importers:
       shadcn:
         specifier: ^4.18.0
         version: 4.18.0(typescript@5.9.3)
+      sonner:
+        specifier: ^2.0.8
+        version: 2.0.8(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.6.0
@@ -1958,6 +1970,14 @@ packages:
     peerDependencies:
       vite: '>=7.0.0'
 
+  '@tanstack/query-core@5.101.4':
+    resolution: {integrity: sha512-gNwcvOJcRbLWPOLG/2OBm+zM+Yv+MKsXKEOWC57USuZDEsI71hEErQsiEGx5wX9rzWWkfwM0fVSPoiIFSsxfiw==}
+
+  '@tanstack/react-query@5.101.4':
+    resolution: {integrity: sha512-yRg2pfOCxIs4ZJW3XYYHU/WgtD04FHSnfHlpRT7h7pR77hwkdRG4wxbKe4aq6P0RvXUTBSQpQeadS1SUYUe+KA==}
+    peerDependencies:
+      react: ^18 || ^19
+
   '@tanstack/react-router@1.170.30':
     resolution: {integrity: sha512-FB3FD6cPPKQFMyYaEsm3Isb8TkIvNAuSeADCS25OzMgKyFXZK/B/Y3m9fpBoKS55pjbvtRPpW87NMY8GVwNPlg==}
     engines: {node: '>=20.19'}
@@ -3643,6 +3663,12 @@ packages:
     resolution: {integrity: sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==}
     engines: {node: '>= 0.6'}
 
+  next-themes@0.4.6:
+    resolution: {integrity: sha512-pZvgD5L0IEvX5/9GWyHMf3m8BKiVQwsCMHfoFosXtXBMnaS0ZnIJ9ST4b4NqLVKDEm8QBxoNNGNaBv2JNF6XNA==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+
   nitropack@2.13.4:
     resolution: {integrity: sha512-tX7bT6zxNeMwkc6hxHiZeUoTOjVrcjoh1Z3cmxOlodIqjl4HISgqfGOmkWSayky3Nv9Z5+KQH52F8nmXJY5AAA==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -4179,6 +4205,16 @@ packages:
   socks@2.8.9:
     resolution: {integrity: sha512-LJhUYUvItdQ0LkJTmPeaEObWXAqFyfmP85x0tch/ez9cahmhlBBLbIqDFnvBnUJGagb0JbIQrkBs1wJ+yRYpEw==}
     engines: {node: '>= 10.0.0', npm: '>= 3.0.0'}
+
+  sonner@2.0.8:
+    resolution: {integrity: sha512-UM/ByIoFra8yzV75n1o0Puu0bw5U/9UNnDacrJNspekBewIfsQ3D6ez1nvlWpt7aTsO6rujQtifBpycwIivqlg==}
+    peerDependencies:
+      '@types/react': ^18.0.0 || ^19.0.0
+      react: ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+      react-dom: ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -6453,6 +6489,13 @@ snapshots:
       - webpack
       - xml2js
 
+  '@tanstack/query-core@5.101.4': {}
+
+  '@tanstack/react-query@5.101.4(react@19.2.8)':
+    dependencies:
+      '@tanstack/query-core': 5.101.4
+      react: 19.2.8
+
   '@tanstack/react-router@1.170.30(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
       '@tanstack/history': 1.162.1
@@ -8065,6 +8108,11 @@ snapshots:
 
   negotiator@1.0.0: {}
 
+  next-themes@0.4.6(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
+    dependencies:
+      react: 19.2.8
+      react-dom: 19.2.8(react@19.2.8)
+
   nitropack@2.13.4(drizzle-orm@0.45.2(postgres@3.4.9))(srvx@0.11.22)(vite@7.3.6(@types/node@24.13.3)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.0)):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.2
@@ -8785,6 +8833,13 @@ snapshots:
     dependencies:
       ip-address: 10.5.0
       smart-buffer: 4.2.0
+
+  sonner@2.0.8(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
+    dependencies:
+      react: 19.2.8
+      react-dom: 19.2.8(react@19.2.8)
+    optionalDependencies:
+      '@types/react': 19.2.18
 
   source-map-js@1.2.1: {}
 

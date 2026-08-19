@@ -1,116 +1,85 @@
 /**
- * Typed API client.
- *
- * `VITE_API_URL` unset -> the built-in mock. Set it to wire the real API:
- * `HttpApiClient` implements the same `ApiClient` interface.
+ * Typed HTTP client for the API. Request and response shapes come from
+ * `@ausfall/contracts`, so the boundary is typed end to end and nothing is
+ * hand-typed twice. There is no mock any more: the API is the source of truth.
  */
-import { MOCK_ABSENCE, MOCK_PRACTITIONERS } from './mock'
 import type {
+  AbsenceListResponse,
   AbsenceView,
-  ApiClient,
-  CreateAbsenceInput,
-  CreateAbsenceResult,
-  PractitionerOption,
-  QuickActionInput,
-  ResolveDataIssueInput,
-  UndoAutomatedActionInput,
-} from './types'
+  CreateAbsenceRequest,
+  CreateAbsenceResponse,
+  DataIssueView,
+  IngestResponse,
+  PractitionerListResponse,
+  QuickActionResponse,
+  RescheduleTaskState,
+  TaskQueueResponse,
+} from '@ausfall/contracts'
 
-const apiUrl = import.meta.env.VITE_API_URL
+export const API_URL: string = import.meta.env.VITE_API_URL ?? 'http://localhost:4000'
 
-export const USE_MOCK = apiUrl === undefined || apiUrl === ''
-
-function delay(ms = 120): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms))
-}
-
-class MockApiClient implements ApiClient {
-  async listPractitioners(): Promise<PractitionerOption[]> {
-    await delay(0)
-    return MOCK_PRACTITIONERS
-  }
-
-  async createAbsence(input: CreateAbsenceInput): Promise<CreateAbsenceResult> {
-    await delay()
-    const suffix = Math.random().toString(36).slice(2, 8)
-    return { id: `abs_${input.terminoPractitionerId}_${suffix}` }
-  }
-
-  async getAbsenceView(id: string): Promise<AbsenceView> {
-    await delay()
-    return { ...MOCK_ABSENCE, id }
-  }
-
-  async runQuickAction(input: QuickActionInput): Promise<void> {
-    await delay()
-    // The mock only acknowledges. The real client will POST and the caller refetches.
-    void input
-  }
-
-  async undoAutomatedAction(input: UndoAutomatedActionInput): Promise<void> {
-    await delay()
-    void input
-  }
-
-  async resolveDataIssue(input: ResolveDataIssueInput): Promise<void> {
-    await delay()
-    void input
+export class ApiError extends Error {
+  constructor(
+    readonly status: number,
+    message: string,
+  ) {
+    super(message)
+    this.name = 'ApiError'
   }
 }
 
-class HttpApiClient implements ApiClient {
-  constructor(private readonly baseUrl: string) {}
-
-  private async request<T>(path: string, init?: RequestInit): Promise<T> {
-    const response = await fetch(`${this.baseUrl}${path}`, {
-      headers: { 'content-type': 'application/json' },
-      ...init,
-    })
-    if (!response.ok) {
-      throw new Error(`API request failed: ${response.status} ${path}`)
-    }
-    return (await response.json()) as T
+async function request<T>(path: string, init?: RequestInit): Promise<T> {
+  const response = await fetch(`${API_URL}${path}`, {
+    headers: { 'content-type': 'application/json' },
+    ...init,
+  })
+  if (!response.ok) {
+    const body = (await response.json().catch(() => null)) as { error?: string } | null
+    throw new ApiError(response.status, body?.error ?? `${response.status} ${path}`)
   }
-
-  private post<T>(path: string, body: unknown): Promise<T> {
-    return this.request<T>(path, { method: 'POST', body: JSON.stringify(body) })
-  }
-
-  listPractitioners(): Promise<PractitionerOption[]> {
-    return this.request<PractitionerOption[]>('/practitioners')
-  }
-
-  createAbsence(input: CreateAbsenceInput): Promise<CreateAbsenceResult> {
-    return this.post<CreateAbsenceResult>('/absences', input)
-  }
-
-  getAbsenceView(id: string): Promise<AbsenceView> {
-    return this.request<AbsenceView>(`/absences/${encodeURIComponent(id)}/view`)
-  }
-
-  async runQuickAction(input: QuickActionInput): Promise<void> {
-    await this.post(`/absences/${encodeURIComponent(input.absenceId)}/quick-actions`, input)
-  }
-
-  async undoAutomatedAction(input: UndoAutomatedActionInput): Promise<void> {
-    await this.post(`/absences/${encodeURIComponent(input.absenceId)}/automated-actions/undo`, input)
-  }
-
-  async resolveDataIssue(input: ResolveDataIssueInput): Promise<void> {
-    await this.post(`/absences/${encodeURIComponent(input.absenceId)}/data-issues/resolve`, input)
-  }
+  return (await response.json()) as T
 }
 
-export const apiClient: ApiClient =
-  apiUrl === undefined || apiUrl === '' ? new MockApiClient() : new HttpApiClient(apiUrl)
+function post<T>(path: string, body: unknown = {}): Promise<T> {
+  return request<T>(path, { method: 'POST', body: JSON.stringify(body) })
+}
 
-export const listPractitioners = (): Promise<PractitionerOption[]> => apiClient.listPractitioners()
-export const createAbsence = (input: CreateAbsenceInput): Promise<CreateAbsenceResult> =>
-  apiClient.createAbsence(input)
-export const getAbsenceView = (id: string): Promise<AbsenceView> => apiClient.getAbsenceView(id)
-export const runQuickAction = (input: QuickActionInput): Promise<void> =>
-  apiClient.runQuickAction(input)
-export const undoAutomatedAction = (input: UndoAutomatedActionInput): Promise<void> =>
-  apiClient.undoAutomatedAction(input)
-export const resolveDataIssue = (input: ResolveDataIssueInput): Promise<void> =>
-  apiClient.resolveDataIssue(input)
+export const api = {
+  listPractitioners: () =>
+    request<PractitionerListResponse>('/practitioners').then((r) => r.practitioners),
+
+  listAbsences: () => request<AbsenceListResponse>('/absences').then((r) => r.absences),
+
+  getAbsence: (id: string) => request<AbsenceView>(`/absences/${encodeURIComponent(id)}`),
+
+  listTasks: (status: 'open' | 'all') =>
+    request<TaskQueueResponse>(`/tasks?status=${status}`).then((r) => r.tasks),
+
+  listDataIssues: () =>
+    request<{ dataIssues: DataIssueView[] }>('/data-issues').then((r) => r.dataIssues),
+
+  createAbsence: (body: CreateAbsenceRequest) =>
+    post<CreateAbsenceResponse>('/absences', body),
+
+  logContactAttempt: (absenceId: string, taskId: string, reached: boolean) =>
+    post<RescheduleTaskState>(
+      `/absences/${encodeURIComponent(absenceId)}/tasks/${encodeURIComponent(taskId)}/contact-attempts`,
+      { reached },
+    ),
+
+  markKept: (absenceId: string, taskId: string) =>
+    post<{ taskId: string; keptAppointments: number }>(
+      `/absences/${encodeURIComponent(absenceId)}/tasks/${encodeURIComponent(taskId)}/kept`,
+    ),
+
+  acceptProposal: (affectedId: string, slotIndex: number) =>
+    post<QuickActionResponse>(
+      `/affected-appointments/${encodeURIComponent(affectedId)}/accept-proposal`,
+      { slotIndex },
+    ),
+
+  cancelAppointment: (affectedId: string) =>
+    post<QuickActionResponse>(`/affected-appointments/${encodeURIComponent(affectedId)}/cancel`),
+
+  ingestExport: (path: string) => post<IngestResponse>('/exports/ingest', { path }),
+}

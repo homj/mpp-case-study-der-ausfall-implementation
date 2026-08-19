@@ -7,11 +7,13 @@ import tailwindcss from '@tailwindcss/vite'
 
 const src = fileURLToPath(new URL('./src', import.meta.url))
 const domain = fileURLToPath(new URL('../../packages/domain/src/index.ts', import.meta.url))
+const contracts = fileURLToPath(new URL('../../packages/contracts/src/index.ts', import.meta.url))
 
 export default defineConfig({
   resolve: {
     alias: [
       { find: '@ausfall/domain', replacement: domain },
+      { find: '@ausfall/contracts', replacement: contracts },
       { find: /^@\//, replacement: `${src}/` },
     ],
   },

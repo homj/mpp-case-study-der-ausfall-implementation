@@ -10,53 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as AbsencesIdRouteImport } from './routes/absences.$id'
-import { Route as AbsencesNewRouteImport } from './routes/absences.new'
+import { Route as AbsencesRouteImport } from './routes/absences'
+import { Route as QueueRouteImport } from './routes/queue'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AbsencesIdRoute = AbsencesIdRouteImport.update({
-  id: '/absences/$id',
-  path: '/absences/$id',
+const AbsencesRoute = AbsencesRouteImport.update({
+  id: '/absences',
+  path: '/absences',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AbsencesNewRoute = AbsencesNewRouteImport.update({
-  id: '/absences/new',
-  path: '/absences/new',
+const QueueRoute = QueueRouteImport.update({
+  id: '/queue',
+  path: '/queue',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/absences/$id': typeof AbsencesIdRoute
-  '/absences/new': typeof AbsencesNewRoute
+  '/absences': typeof AbsencesRoute
+  '/queue': typeof QueueRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/absences/$id': typeof AbsencesIdRoute
-  '/absences/new': typeof AbsencesNewRoute
+  '/absences': typeof AbsencesRoute
+  '/queue': typeof QueueRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/absences/$id': typeof AbsencesIdRoute
-  '/absences/new': typeof AbsencesNewRoute
+  '/absences': typeof AbsencesRoute
+  '/queue': typeof QueueRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/absences/$id' | '/absences/new'
+  fullPaths: '/' | '/absences' | '/queue'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/absences/$id' | '/absences/new'
-  id: '__root__' | '/' | '/absences/$id' | '/absences/new'
+  to: '/' | '/absences' | '/queue'
+  id: '__root__' | '/' | '/absences' | '/queue'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AbsencesIdRoute: typeof AbsencesIdRoute
-  AbsencesNewRoute: typeof AbsencesNewRoute
+  AbsencesRoute: typeof AbsencesRoute
+  QueueRoute: typeof QueueRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -68,18 +68,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/absences/$id': {
-      id: '/absences/$id'
-      path: '/absences/$id'
-      fullPath: '/absences/$id'
-      preLoaderRoute: typeof AbsencesIdRouteImport
+    '/absences': {
+      id: '/absences'
+      path: '/absences'
+      fullPath: '/absences'
+      preLoaderRoute: typeof AbsencesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/absences/new': {
-      id: '/absences/new'
-      path: '/absences/new'
-      fullPath: '/absences/new'
-      preLoaderRoute: typeof AbsencesNewRouteImport
+    '/queue': {
+      id: '/queue'
+      path: '/queue'
+      fullPath: '/queue'
+      preLoaderRoute: typeof QueueRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -87,8 +87,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AbsencesIdRoute: AbsencesIdRoute,
-  AbsencesNewRoute: AbsencesNewRoute,
+  AbsencesRoute: AbsencesRoute,
+  QueueRoute: QueueRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

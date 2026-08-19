@@ -1,6 +1,9 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { HeadContent, Outlet, Scripts, createRootRoute } from '@tanstack/react-router'
+import { useState } from 'react'
 import type { ReactNode } from 'react'
 import { AppHeader } from '@/components/app-header'
+import { Toaster } from '@/components/ui/sonner'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import appCss from '@/styles.css?url'
 
@@ -23,7 +26,7 @@ function RootDocument({ children }: { children: ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className="min-h-screen bg-background text-foreground antialiased">
+      <body className="bg-background text-foreground min-h-screen antialiased">
         {children}
         <Scripts />
       </body>
@@ -32,14 +35,21 @@ function RootDocument({ children }: { children: ReactNode }) {
 }
 
 function RootLayout() {
+  // One client per browser session; the queue is short-lived demo data.
+  const [client] = useState(
+    () => new QueryClient({ defaultOptions: { queries: { refetchOnWindowFocus: false } } }),
+  )
   return (
-    <TooltipProvider delayDuration={200}>
-      <div className="flex min-h-screen flex-col">
-        <AppHeader />
-        <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 sm:px-6 lg:px-8">
-          <Outlet />
-        </main>
-      </div>
-    </TooltipProvider>
+    <QueryClientProvider client={client}>
+      <TooltipProvider delayDuration={200}>
+        <div className="flex min-h-screen flex-col">
+          <AppHeader />
+          <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 sm:px-6 lg:px-8">
+            <Outlet />
+          </main>
+          <Toaster position="bottom-center" />
+        </div>
+      </TooltipProvider>
+    </QueryClientProvider>
   )
 }
