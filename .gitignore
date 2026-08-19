@@ -7,3 +7,6 @@ dist/
 .env
 .DS_Store
 .idea/
+
+# Playwright MCP scratch output
+.playwright-mcp/

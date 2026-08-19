@@ -76,7 +76,8 @@
       "open": "open",
       "in_progress": "in progress",
       "retry_contact": "contact again",
-      "resolved": "done"
+      "resolved": "done",
+      "resolved_by_system": "Assistant"
     }
   },
   "queue": {
@@ -84,7 +85,7 @@
     "subtitle": "{{count}} cases · sorted by urgency",
     "all_done": "All done",
     "filter_label": "Filter by absence",
-    "filter_all": "All {{count}}",
+    "filter_all": "All",
     "empty_title": "No open cases",
     "empty_body": "New absences or the next Termino reconciliation fill the list again.",
     "assistant_summary": "Rescheduling assistant: {{count}} patients rebooked and notified",
@@ -126,7 +127,7 @@
       "reached": "☎ Reached",
       "not_reached": "Not reached",
       "kept": "Comes anyway",
-      "cancel": "Cancel appointment",
+      "cancel": "Cancel & notify",
       "next": "Next"
     },
     "toast": {
@@ -135,6 +136,12 @@
       "kept": "{{name}}: comes anyway – takes place",
       "cancel": "{{name}}: cancelled and notified",
       "accept": "{{name}}: rebooked – Termino write and message in the outbox"
+    },
+    "detail_label": "Case details",
+    "detail_empty": "Choose a case on the left.",
+    "cancel_confirm": {
+      "title": "Cancel the appointment?",
+      "body": "The appointment of {{name}} on {{time}} will be cancelled. {{name}} gets a cancellation notice by SMS or email right away. Only a new appointment undoes this."
     }
   },
   "warnings": {

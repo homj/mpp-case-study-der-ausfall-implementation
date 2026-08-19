@@ -3,10 +3,10 @@ import { Link, createFileRoute } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
 import { useAbsences, useTasks } from '@/api/queries'
 import { AbsenceTag } from '@/components/absence-tag'
+import { toneFill } from '@/components/status-badge'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Progress } from '@/components/ui/progress'
 import { Skeleton } from '@/components/ui/skeleton'
 import { useLocale } from '@/i18n/use-locale'
 import { formatDateTimeLong, formatTime } from '@/lib/datetime'
@@ -71,10 +71,28 @@ function AbsencesPage() {
               </p>
             </CardHeader>
             <CardContent className="grid gap-3">
-              <Progress
-                value={percent}
+              <div
+                className="bg-muted flex h-2 w-full overflow-hidden rounded-full"
+                role="img"
                 aria-label={t('absence.list.progress_label', { percent })}
-              />
+              >
+                {(
+                  [
+                    ['assistant', bySystem],
+                    ['done', byFrontDesk],
+                    ['attention', retry],
+                    ['open', stillOpen],
+                  ] as const
+                ).map(([tone, count]) =>
+                  count === 0 || absence.taskCount === 0 ? null : (
+                    <span
+                      key={tone}
+                      className={toneFill[tone]}
+                      style={{ width: `${(count / absence.taskCount) * 100}%` }}
+                    />
+                  ),
+                )}
+              </div>
               <p className="text-muted-foreground text-sm">
                 {t('absence.list.legend_assistant', { count: bySystem })} ·{' '}
                 {t('absence.list.legend_front_desk', { count: byFrontDesk })} ·{' '}

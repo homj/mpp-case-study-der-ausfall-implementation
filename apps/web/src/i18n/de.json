@@ -76,7 +76,8 @@
       "open": "offen",
       "in_progress": "in Arbeit",
       "retry_contact": "erneut kontaktieren",
-      "resolved": "erledigt"
+      "resolved": "erledigt",
+      "resolved_by_system": "Assistent"
     }
   },
   "queue": {
@@ -84,7 +85,7 @@
     "subtitle": "{{count}} Fälle · sortiert nach Dringlichkeit",
     "all_done": "Alles erledigt",
     "filter_label": "Nach Ausfall filtern",
-    "filter_all": "Alle {{count}}",
+    "filter_all": "Alle",
     "empty_title": "Keine offenen Fälle",
     "empty_body": "Neue Ausfälle oder der nächste Termino-Abgleich füllen die Liste wieder.",
     "assistant_summary": "Umbuchungsassistent: {{count}} Patient:innen umgebucht und benachrichtigt",
@@ -126,7 +127,7 @@
       "reached": "☎ Erreicht",
       "not_reached": "Nicht erreicht",
       "kept": "Kommt trotzdem",
-      "cancel": "Absagen",
+      "cancel": "Absagen & benachrichtigen",
       "next": "Nächster"
     },
     "toast": {
@@ -135,6 +136,12 @@
       "kept": "{{name}}: kommt trotzdem – findet statt",
       "cancel": "{{name}}: abgesagt und benachrichtigt",
       "accept": "{{name}}: umgebucht – Termino und Nachricht im Postausgang"
+    },
+    "detail_label": "Fall-Details",
+    "detail_empty": "Wähle links einen Fall aus.",
+    "cancel_confirm": {
+      "title": "Termin absagen?",
+      "body": "Der Termin von {{name}} am {{time}} wird abgesagt. {{name}} bekommt sofort eine Absage per SMS oder E-Mail. Das lässt sich nur mit einem neuen Termin beheben."
     }
   },
   "warnings": {
