@@ -4,6 +4,42 @@
 
 Case study "The Outage" for meinphysio+ (physiotherapy, two Berlin locations). A practitioner calls in sick at 07:40 with 14 appointments that day. This service gives the front desk a triage tool: who is rebooked, who is cancelled, who is informed and how. Brief: `docs/case-study/brief.md`. Analysis: `docs/case-study/analysis.md`. Data: `data/`.
 
+## Start
+
+Requirements: Docker with Compose. Nothing else.
+
+```bash
+docker compose up --build
+```
+
+This starts three services:
+
+| Service | URL | What it does |
+| --- | --- | --- |
+| `db` | `localhost:5432` | PostgreSQL 17 (user / password / database: `ausfall`) |
+| `api` | <http://localhost:4000> | Runs migrations, seeds master data from `data/`, ingests the 08:00 Termino export, then serves the API. OpenAPI UI at <http://localhost:4000/docs>, health at `/healthz` |
+| `web` | <http://localhost:3000> | Front-desk app (German UI, "Demo-Zeit" badge shows the simulated clock) |
+
+The app believes it is **Monday 2026-09-07, 07:40 Europe/Berlin** (`APP_NOW`), so "imminent" and "today" mean what the case study means. Set `APP_NOW=system` on the `api` service for the real clock.
+
+Walk-through: open <http://localhost:3000> → **+ Neuer Ausfall** → Anna Weber, krank, 07:40–18:00 → the assistant runs → open the urgent cases → work the queue. Then `POST /exports/ingest` with the 08:05 file (button in the app or `curl -X POST localhost:4000/exports/ingest -H 'content-type: application/json' -d '{"path":"termino_export_2026-09-07_0805.json"}'`) to see reconciliation.
+
+If port 5432 is taken by a local PostgreSQL, stop it or change the published port of `db` in `docker-compose.yml` (the services talk to each other over the compose network, not the published port).
+
+Local development without Docker for api/web: `pnpm install`, start only the database (`docker compose up -d db`), then `pnpm --filter @ausfall/api start` and `pnpm --filter @ausfall/web dev`. Tests: `pnpm test` (domain + api), `pnpm typecheck`.
+
+## Status (end of the 3-hour time box, 2026-08-19)
+
+Done:
+
+- Domain engine with 62 tests (`packages/domain`): affected appointments, slot finder, auto-rebook policy as data, resolution engine, prescription warnings, ranking.
+- Database schema with `tenant_id` everywhere, seed, idempotent export ingest with data-issue detection (`packages/db`).
+- Explicit API with OpenAPI (`apps/api`): absences, reschedule tasks, quick actions, export ingest with reconciliation (protect local writes, confirm per write type, staleness flag), data issues. Fake Termino client and notifier behind an outbox.
+- Web app (`apps/web`) on TanStack Start + shadcn/ui, German default locale: one queue of open cases across all absences, new-absence dialog that runs the assistant, case sheet with quick actions, absences overview.
+- `docker compose up`, ADRs, glossary, analysis, prototypes (`docs/prototypes/`).
+
+Open: see **Next steps** below and `ARCHITECTURE.md` §5. The biggest gaps are a real outbox worker (retries, circuit breaker), real Termino and notification adapters, and patient confirm/decline links.
+
 ## Assumptions
 
 Things we take as true without proof. Update when an assumption is confirmed or broken.
