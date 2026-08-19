@@ -1,0 +1,212 @@
+<meta charset="utf-8">
+<title>Ausfall-Cockpit Flows</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#F3F5F7;--surface:#FFFFFF;--surface-2:#EAEEF2;--line:#D5DBE2;--text:#1B2430;--muted:#5B6878;--accent:#0F8B8D;--accent-ink:#FFFFFF;--accent-soft:#DDF1F1;--crit:#B3261E;--crit-soft:#FBE4E2;--warn:#9A6700;--warn-soft:#FBEFD0;--good:#1E7D3A;--good-soft:#DDF3E2;--auto:#2F5FD1;--auto-soft:#E0E8FB;--shadow:0 1px 2px rgba(16,24,32,.06),0 4px 14px rgba(16,24,32,.06);--radius:8px;--font:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#14181D;--surface:#1C2229;--surface-2:#232B34;--line:#303A46;--text:#E6EBF0;--muted:#9AA7B5;--accent:#3FB8BA;--accent-ink:#0B1416;--accent-soft:#163C3D;--crit:#F08A82;--crit-soft:#4A1F1B;--warn:#E2B84A;--warn-soft:#3F3212;--good:#6CC688;--good-soft:#18361F;--auto:#8EAEFF;--auto-soft:#1E2B4B;--shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{--bg:#14181D;--surface:#1C2229;--surface-2:#232B34;--line:#303A46;--text:#E6EBF0;--muted:#9AA7B5;--accent:#3FB8BA;--accent-ink:#0B1416;--accent-soft:#163C3D;--crit:#F08A82;--crit-soft:#4A1F1B;--warn:#E2B84A;--warn-soft:#3F3212;--good:#6CC688;--good-soft:#18361F;--auto:#8EAEFF;--auto-soft:#1E2B4B;--shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.35)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.45;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit} h1,h2,h3{margin:0;text-wrap:balance;font-weight:600} h2{font-size:16px} h3{font-size:14px} p{margin:0}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.top{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--line);padding:8px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{font-weight:600;font-size:15px} .brand span{color:var(--accent)}
+.demo{display:inline-flex;align-items:center;gap:8px;padding:3px 10px;border:1px dashed var(--warn);color:var(--warn);border-radius:999px;font-size:12px;font-weight:500;background:var(--warn-soft)} .demo b{font-family:var(--mono);font-weight:500}
+.nav{display:flex;gap:4px;margin-left:12px}
+.nav button{background:transparent;border:1px solid transparent;border-radius:6px;padding:6px 12px;cursor:pointer;color:var(--muted);display:inline-flex;gap:8px;align-items:center;font-weight:500}
+.nav button[aria-current="page"]{background:var(--accent-soft);color:var(--text);border-color:var(--accent)}
+.nav .cnt{font-family:var(--mono);font-size:11px;background:var(--crit);color:#fff;border-radius:999px;padding:0 6px;line-height:18px} .nav .cnt.zero{background:var(--surface-2);color:var(--muted)}
+.newbtn{margin-left:auto}
+.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:6px 10px;cursor:pointer;font-size:13px;font-weight:500;white-space:nowrap}
+.btn:hover{background:var(--surface-2)} .btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)} .btn.primary:hover{filter:brightness(.95)} .btn.danger{color:var(--crit);border-color:var(--crit)} .btn[disabled]{opacity:.5;cursor:not-allowed} .btn.sm{padding:3px 8px;font-size:12px} .btn.lg{padding:10px 16px;font-size:14px}
+.btn:focus-visible,.rowbtn:focus-visible,.slotbtn:focus-visible,.chip:focus-visible,.nav button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+main{max-width:1100px;margin:18px auto 80px;padding:0 20px}
+.page{display:none} .page.active{display:block}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)} .pad{padding:14px 16px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap} .stack{display:flex;flex-direction:column;gap:10px} .muted{color:var(--muted)} .small{font-size:12px}
+.kicker{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:500;border:1px solid transparent;white-space:nowrap}
+.b-crit{background:var(--crit-soft);color:var(--crit)} .b-warn{background:var(--warn-soft);color:var(--warn)} .b-good{background:var(--good-soft);color:var(--good)} .b-auto{background:var(--auto-soft);color:var(--auto)} .b-neutral{background:var(--surface-2);color:var(--muted)} .b-outline{border-color:var(--line);color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:currentColor;display:inline-block}
+.abs-tag{display:inline-flex;align-items:center;gap:6px;padding:1px 8px;border-radius:4px;font-size:11px;font-weight:600;letter-spacing:.02em;border:1px solid var(--line);background:var(--surface-2);color:var(--muted)} .abs-tag i{width:8px;height:8px;border-radius:2px;display:inline-block}
+.page-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:12px} .page-h h1{font-size:20px} .page-h .sub{color:var(--muted)}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:3px 10px;font-size:12px;cursor:pointer;display:inline-flex;gap:6px;align-items:center} .chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.group-h{display:flex;align-items:baseline;gap:8px;margin:16px 0 8px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600} .group-h::after{content:"";flex:1;border-top:1px solid var(--line)}
+.rowbtn{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px 12px 10px 14px;cursor:pointer;box-shadow:var(--shadow)}
+.rowbtn:hover{border-color:var(--accent)} .rowbtn.sel{border-color:var(--accent);background:var(--accent-soft)}
+.stripe{height:100%;min-height:40px;border-radius:var(--radius) 0 0 var(--radius)} .stripe.p1{background:var(--crit)} .stripe.p2{background:var(--warn)} .stripe.p3{background:var(--auto)} .stripe.done{background:var(--good)}
+.rowbtn .t{font-family:var(--mono);font-size:16px;font-weight:500} .rowbtn .t small{display:block;font-size:11px;color:var(--muted);font-weight:400;font-family:var(--font)}
+.rowbtn .who{font-weight:600;font-size:15px} .rowbtn .todo{font-size:13px;margin-top:2px} .rowbtn .meta{font-size:12px;color:var(--muted);margin-top:3px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.rowbtn .right{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.summary-line{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--auto-soft);border-radius:var(--radius);color:var(--auto);font-weight:500;margin-top:14px} .summary-line button{margin-left:auto}
+.empty{padding:40px 20px;text-align:center;color:var(--muted)} .empty b{display:block;font-size:16px;color:var(--text);margin-bottom:4px}
+/* absences list */
+.abs-card{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start}
+.abs-card .hd{display:flex;gap:10px;align-items:center;flex-wrap:wrap} .abs-card .hd b{font-size:16px}
+.bar{display:flex;height:14px;border-radius:4px;overflow:hidden;border:1px solid var(--line);margin:8px 0 4px;max-width:520px} .bar div{min-width:2px} .s-auto{background:var(--auto)} .s-fd{background:var(--good)} .s-retry{background:var(--warn)} .s-open{background:var(--crit)}
+.legend2{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted)} .legend2 i{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:-1px;margin-right:5px}
+/* drawer / focus */
+.scrim{position:fixed;inset:0;background:rgba(10,14,18,.25);z-index:25;display:none} .scrim.open{display:block}
+.drawer{position:fixed;top:0;right:0;height:100vh;width:min(520px,100vw);background:var(--surface);border-left:1px solid var(--line);box-shadow:-8px 0 30px rgba(0,0,0,.18);transform:translateX(100%);transition:transform .22s ease;z-index:30;display:flex;flex-direction:column}
+.drawer.open{transform:none} @media (prefers-reduced-motion: reduce){.drawer,.toast{transition:none}}
+.drawer .hd{display:flex;align-items:flex-start;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line)} .drawer .bd{padding:16px 18px;overflow:auto;flex:1;display:flex;flex-direction:column;gap:14px} .drawer .ft{padding:12px 18px;border-top:1px solid var(--line);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.drawer h2{font-size:20px} .close{margin-left:auto;border:0;background:transparent;font-size:22px;cursor:pointer;color:var(--muted);line-height:1}
+.phone-big{font-family:var(--mono);font-size:20px;font-weight:500}
+.what{font-size:16px;line-height:1.4} .why{font-size:13px;color:var(--muted)}
+.script{background:var(--surface-2);border-radius:6px;padding:10px 12px;font-size:13px;line-height:1.5} .script .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;display:block;margin-bottom:4px}
+.slotbtn{display:inline-flex;flex-direction:column;align-items:flex-start;gap:1px;border:1px dashed var(--accent);background:var(--accent-soft);border-radius:6px;padding:7px 11px 7px 30px;cursor:pointer;font-size:12px;line-height:1.3;text-align:left;position:relative} .slotbtn::before{content:"+";position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:18px;font-weight:600;color:var(--accent)} .slotbtn:hover{border-style:solid}
+.proposals{display:flex;flex-direction:column;gap:6px} .proposals .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600} .proposals .hint{font-size:12px;color:var(--muted)} .slotbtn b{font-family:var(--mono);font-weight:500;font-size:14px} .slotbtn.warnslot{border-color:var(--warn);background:var(--warn-soft)} .slotbtn.warnslot::before{color:var(--warn)}
+.appt-d{border:1px solid var(--line);border-radius:6px;padding:10px 12px;display:flex;flex-direction:column;gap:8px} .appt-d .hd2{display:flex;gap:8px;align-items:baseline} .appt-d .hd2 .t{font-family:var(--mono);font-size:16px;font-weight:500}
+.warnings{display:flex;gap:6px;flex-wrap:wrap} .note{font-size:12px;color:var(--muted)}
+.nextbar{margin-left:auto;display:flex;gap:6px}
+/* modal */
+dialog{border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--text);padding:0;max-width:640px;width:94vw;box-shadow:var(--shadow)} dialog::backdrop{background:rgba(10,14,18,.45)} dialog .pad{padding:20px 22px}
+label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted);font-weight:500} select,textarea,input{font:inherit;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:7px 9px;font-size:13px} textarea{min-height:110px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px} @media (max-width:700px){.two{grid-template-columns:1fr}}
+.result-big{display:grid;grid-template-columns:repeat(3,1fr);gap:10px} .result-big .cell{border:1px solid var(--line);border-radius:8px;padding:12px;text-align:center} .result-big b{display:block;font-size:26px;font-family:var(--mono);font-weight:500} .result-big span{font-size:12px;color:var(--muted)} .cell.c-auto b{color:var(--auto)} .cell.c-open b{color:var(--crit)} .cell.c-urgent{border-color:var(--crit);background:var(--crit-soft)} .cell.c-urgent b{color:var(--crit)}
+.spinner{display:inline-block;width:14px;height:14px;border:2px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:sp .8s linear infinite;vertical-align:-2px;margin-right:8px} @keyframes sp{to{transform:rotate(360deg)}} @media (prefers-reduced-motion: reduce){.spinner{animation:none}}
+.urgent-list{display:flex;flex-direction:column;gap:6px} .urgent-list .u{display:flex;gap:10px;align-items:baseline;font-size:13px;padding:6px 10px;border:1px solid var(--line);border-radius:6px} .urgent-list .u .t{font-family:var(--mono);font-weight:500}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:10px 14px;border-radius:8px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:40;max-width:90vw} .toast.show{opacity:1}
+.proto-note{background:var(--surface-2);border-left:3px solid var(--accent);padding:10px 14px;border-radius:0 6px 6px 0;margin-bottom:14px;font-size:13px} .proto-note b{display:block;margin-bottom:2px}
+.flowhint{font-size:12px;color:var(--muted);display:flex;gap:6px;align-items:center;flex-wrap:wrap} .flowhint kbd{font-family:var(--mono);font-size:11px;border:1px solid var(--line);border-radius:4px;padding:0 5px;background:var(--surface)}
+</style>
+
+<header class="top">
+  <div class="brand">meinphysio<span>+</span> · Ausfall-Cockpit</div>
+  <div class="demo"><span class="dot"></span>Demo-Zeit <b id="clock">Mo 07.09.2026 · 07:40</b></div>
+  <nav class="nav" aria-label="Hauptnavigation">
+    <button data-page="queue" aria-current="page">Offene Fälle <span class="cnt" id="q-cnt">4</span></button>
+    <button data-page="absences">Ausfälle <span class="cnt zero" id="a-cnt">1</span></button>
+  </nav>
+  <button class="btn primary newbtn" onclick="openNew()">+ Neuer Ausfall</button>
+</header>
+
+<main>
+  <div class="proto-note"><b>Prototyp · zwei Flows, ein Zustand</b>Flow 1: <b style="display:inline">+ Neuer Ausfall</b> (oben rechts, jederzeit) → Assistent läuft → Ergebnis im Dialog → entweder „Dringende jetzt bearbeiten“ oder „in die Warteschlange“. Flow 2: <b style="display:inline">Offene Fälle</b> – eine Warteschlange über alle Ausfälle und Therapeut:innen, jederzeit verlassen und wiederkommen. Probiere: lege einen zweiten Ausfall an (z. B. Tobias Falk, Notfall ab 10:00), während Annas Fälle offen sind.</div>
+
+  <section id="page-queue" class="page active" aria-label="Offene Fälle">
+    <div class="page-h"><h1>Offene Fälle</h1><span class="sub" id="q-sub"></span></div>
+    <div class="filters" id="q-filters"></div>
+    <div id="q-body"></div>
+  </section>
+
+  <section id="page-absences" class="page" aria-label="Ausfälle">
+    <div class="page-h"><h1>Ausfälle</h1><span class="sub">Heute und kommend · je Therapeut:in ein Ausfall mit Zeitraum</span></div>
+    <div class="stack" id="a-body"></div>
+  </section>
+</main>
+
+<div class="scrim" id="scrim" onclick="closeDrawer()"></div>
+<aside class="drawer" id="drawer" aria-label="Fall"><div class="hd"><div><div id="dr-tag"></div><h2 id="dr-title"></h2><div class="small muted" id="dr-sub"></div></div><button class="close" onclick="closeDrawer()" aria-label="Schließen">×</button></div><div class="bd" id="dr-body"></div><div class="ft" id="dr-foot"></div><div class="flowhint" style="padding:6px 18px 10px"><kbd>→</kbd> nächster Fall · <kbd>Esc</kbd> schließen</div></aside>
+
+<dialog id="new">
+  <div class="pad stack" id="new-body"></div>
+</dialog>
+
+<dialog id="undo">
+  <form method="dialog" class="pad stack">
+    <h2>Umbuchung zurücknehmen</h2><p class="muted small" id="undo-sub"></p>
+    <div class="two"><label>Grund<select id="undo-reason"><option value="patient_declined">Patient:in lehnt neuen Termin ab</option><option value="practitioner_available">Therapeut:in doch verfügbar</option><option value="wrong_slot">Falscher Termin / Datenfehler</option><option value="other">Sonstiges</option></select></label><label>Nächster Schritt<select id="undo-next"><option value="front_desk_will_call">Empfang ruft an</option><option value="takes_place_as_planned">Termin findet wie geplant statt</option><option value="cancel_without_replacement">Absagen ohne Ersatz</option></select></label></div>
+    <label>Nachricht an Patient:in (vorbereitet, bearbeitbar)<textarea id="undo-msg"></textarea></label>
+    <div class="row" style="justify-content:flex-end"><button class="btn" value="cancel">Abbrechen</button><button class="btn primary" value="ok">Zurücknehmen &amp; senden</button></div>
+  </form>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const LOC={loc_01:{name:"Mitte"},loc_02:{name:"Kreuzberg"}};
+const PR={prac_01:{name:"Anna Weber",q:"KG, MT, MLD45"},prac_02:{name:"Jonas Brandt",q:"KG, MT"},prac_04:{name:"Sofia Lindqvist",q:"KG, KGG"},prac_05:{name:"Meltem Aydin",q:"KG, MT, MLD45"},prac_06:{name:"David Okafor",q:"KG"},prac_07:{name:"Clara Petersen",q:"KG, MT"},prac_08:{name:"Tobias Falk",q:"KG, KGG"}};
+const CAT={sick:"krank",emergency:"Notfall",planned:"geplant",other:"Sonstiges"};
+const ABS_COLORS=["#0F8B8D","#B3261E","#7A4FD1","#9A6700"];
+let absences=[{id:"abs1",pr:"prac_01",cat:"sick",from:"07:40",to:"18:00",day:"Mo 07.09.",note:"",createdAt:"07:41",color:ABS_COLORS[0]}];
+// tasks: absId, patient, contact, status, prio, warnings, appts[{id,time,svc,loc,kind,todo,reason,candidates,to,notice,resolution}]
+let tasks=[
+ {id:"t1",abs:"abs1",patient:"Sabine Czerny",phone:"+49 151 55011020",email:"sabine.czerny@example.com",status:"open",attempts:0,prio:1,warnings:[],appts:[{id:"a1",time:"08:00",svc:"KG",loc:"loc_01",kind:"front_desk",todo:"Kommt in 20 Min. Vor Ort empfangen, Ersatz anbieten.",reason:"Keine Therapeut:in zur gleichen Zeit in Mitte frei. Patientin ist vermutlich schon unterwegs.",candidates:[],notice:false}]},
+ {id:"t2",abs:"abs1",patient:"Lena Krause",phone:"+49 151 55011131",email:"lena.krause@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:["Nicht zugeordnet – kein Stammdatensatz, Selbstzahlerin angenommen"],appts:[{id:"a2",time:"08:20",svc:"KG",loc:"loc_01",kind:"auto",to:{day:"Mo 07.09.",time:"09:20",pr:"prac_02",loc:"loc_01"}}]},
+ {id:"t3",abs:"abs1",patient:"Jan Ahrens",phone:"+49 151 55011052",email:"jan.ahrens@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:[],appts:[{id:"a3",time:"08:40",svc:"MT",loc:"loc_01",kind:"auto",to:{day:"Mo 07.09.",time:"11:40",pr:"prac_02",loc:"loc_01"}}]},
+ {id:"t4",abs:"abs1",patient:"Cem Öztürk",phone:"+49 151 55011129",email:"cem.oeztuerk@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:[],appts:[{id:"a4",time:"09:00",svc:"KG",loc:"loc_01",kind:"auto",to:{day:"Mo 07.09.",time:"10:20",pr:"prac_04",loc:"loc_01"}}]},
+ {id:"t5",abs:"abs1",patient:"Kerstin Nowak",phone:"+49 151 55011038",email:"kerstin.nowak@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:[],appts:[{id:"a5",time:"09:20",svc:"KG",loc:"loc_01",kind:"auto",to:{day:"Mo 07.09.",time:"15:00",pr:"prac_02",loc:"loc_01"}}]},
+ {id:"t6",abs:"abs1",patient:"Gisela Neumann",phone:null,email:"gisela.neumann@example.com",status:"open",attempts:0,prio:2,warnings:["Kein Telefon – nur E-Mail","Diese Woche unter Frequenz (1×/Woche)"],appts:[{id:"a6",time:"09:40",svc:"MT",loc:"loc_01",kind:"proposal",todo:"Per E-Mail Di 09:40 oder Mi 08:40 anbieten.",reason:"Heute keine MT-Lücke in Mitte mehr. Absage für heute ist per E-Mail raus.",candidates:[{day:"Di 08.09.",time:"09:40",pr:"prac_02",loc:"loc_01"},{day:"Mi 09.09.",time:"08:40",pr:"prac_02",loc:"loc_01"}],notice:true}]},
+ {id:"t7",abs:"abs1",patient:"Marek Kowalski",phone:"+49 151 55011079",email:"marek.kowalski@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:["Zwei Termine am selben Tag (Verordnung 1×/Woche)"],appts:[{id:"a7",time:"10:00",svc:"KG",loc:"loc_01",kind:"auto",to:{day:"Mo 07.09.",time:"16:00",pr:"prac_04",loc:"loc_01"}},{id:"a13",time:"16:20",svc:"KG",loc:"loc_02",kind:"auto",to:{day:"Mo 07.09.",time:"15:20",pr:"prac_06",loc:"loc_02"}}]},
+ {id:"t8",abs:"abs1",patient:"Wiebke Fischer",phone:"+49 151 55011061",email:"wiebke.fischer@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:[],appts:[{id:"a8",time:"10:20",svc:"MT",loc:"loc_01",kind:"auto",to:{day:"Di 08.09.",time:"10:20",pr:"prac_02",loc:"loc_01"},notice:true}]},
+ {id:"t9",abs:"abs1",patient:"Sabine Richter",phone:"+49 151 55011016",email:"sabine.richter@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:[],appts:[{id:"a9",time:"11:00",svc:"KG",loc:"loc_01",kind:"auto",to:{day:"Di 08.09.",time:"11:00",pr:"prac_04",loc:"loc_01"},notice:true}]},
+ {id:"t10",abs:"abs1",patient:"Katrin Meier",phone:"+49 151 55011004",email:"katrin.meyer@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:["Zuordnung unsicher: Stammdaten „Katrin Meyer“"],appts:[{id:"a10",time:"14:00",svc:"KG",loc:"loc_02",kind:"auto",to:{day:"Mo 07.09.",time:"13:00",pr:"prac_08",loc:"loc_02"}}]},
+ {id:"t11",abs:"abs1",patient:"Brigitte Hoffmann",phone:"+49 151 55011002",email:"brigitte.hoffmann@example.com",status:"open",attempts:0,prio:1,warnings:["Verordnung fast aufgebraucht (5 von 6, Schätzung)","MLD45: einzige weitere Therapeutin (Aydin) Mo–Mi voll"],appts:[{id:"a11",time:"14:40",svc:"MLD45",loc:"loc_02",kind:"front_desk",todo:"Anrufen: Warteliste oder Termin ab nächster Woche.",reason:"Kein MLD45-Termin in ±2 Tagen. Absage für heute ist raus.",candidates:[],notice:true}]},
+ {id:"t12",abs:"abs1",patient:"Renate Vogel",phone:"+49 151 55011066",email:"renate.vogel@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:[],appts:[{id:"a12",time:"15:40",svc:"KG",loc:"loc_02",kind:"auto",to:{day:"Mo 07.09.",time:"17:20",pr:"prac_06",loc:"loc_02"}}]},
+ {id:"t14",abs:"abs1",patient:"Frank Krüger",phone:"+49 151 55011089",email:"frank.krueger@example.com",status:"open",attempts:0,prio:2,warnings:[],appts:[{id:"a14",time:"17:00",svc:"MT",loc:"loc_02",kind:"proposal",todo:"Anrufen: Di 15:00 in Mitte anbieten (anderer Standort!).",reason:"Keine MT-Lücke in Kreuzberg (Aydin voll). Nur in Mitte möglich – darum nicht automatisch.",candidates:[{day:"Di 08.09.",time:"15:00",pr:"prac_02",loc:"loc_01",cross:true}],notice:true}]},
+];
+// mock engine result for a NEW absence (any practitioner): generated from a small template so the demo works for anyone
+const NAMES=["Helga Yildiz","Georg Unger","Julia Conrad","Helga Behrens","Carla Wagner","Nils Wagner","Petra Lang","Ömer Kaya","Ingrid Sommer","Ralf Berger"];
+let uid=100;
+function mockEngine(absId,pr,fromHH,toHH){const color=absences.find(a=>a.id===absId).color;const prn=PR[pr];const svc=prn.q.split(", ")[0];const other=Object.keys(PR).filter(k=>k!==pr&&PR[k].q.includes(svc));const start=parseInt(fromHH);const end=parseInt(toHH);const n=Math.max(3,Math.min(7,(end-start)*1.2|0));const out=[];for(let i=0;i<n;i++){const h=start+Math.floor(i*(end-start)/n);const m=(i%3)*20;const time=`${String(h).padStart(2,"0")}:${String(m).padStart(2,"0")}`;const name=NAMES[(uid+i)%NAMES.length];const id="t"+(uid++);const loc=pr==="prac_02"||pr==="prac_04"||pr==="prac_07"||pr==="prac_01"?"loc_01":"loc_02";const kindRoll=i%4;
+  if(kindRoll===0||kindRoll===2){const to={day:"Mo 07.09.",time:`${String(h+1).padStart(2,"0")}:${String(m).padStart(2,"0")}`,pr:other[i%other.length]||"prac_02",loc};out.push({id,abs:absId,patient:name,phone:"+49 151 5501"+String(1000+uid).slice(-4),email:name.toLowerCase().replace(" ",".").replace("ö","oe")+"@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:[],appts:[{id:"a"+id,time,svc,loc,kind:"auto",to}]})}
+  else if(kindRoll===1){const imminent=(h*60+m)-(start*60)<=30;out.push({id,abs:absId,patient:name,phone:"+49 151 5501"+String(1000+uid).slice(-4),email:name.toLowerCase().replace(" ",".")+"@example.com",status:"open",attempts:0,prio:imminent?1:2,warnings:[],appts:[{id:"a"+id,time,svc,loc,kind:imminent?"front_desk":"proposal",todo:imminent?"Kommt gleich. Vor Ort empfangen, Ersatz anbieten.":`Anrufen: Di ${time} anbieten.`,reason:imminent?"Termin beginnt in Kürze, keine Therapeut:in zur gleichen Zeit frei.":"Heute keine passende Lücke mehr. Absage für heute ist raus.",candidates:imminent?[]:[{day:"Di 08.09.",time,pr:other[0]||"prac_02",loc}],notice:!imminent}]})}
+  else{out.push({id,abs:absId,patient:name,phone:null,email:name.toLowerCase().replace(" ",".")+"@example.com",status:"open",attempts:0,prio:2,warnings:["Kein Telefon – nur E-Mail"],appts:[{id:"a"+id,time,svc,loc,kind:"front_desk",todo:"Per E-Mail Ersatz anbieten, sonst Warteliste.",reason:"Keine Lücke in ±2 Tagen am Standort.",candidates:[],notice:true}]})}}
+  return out}
+
+// ---------- helpers ----------
+const $=s=>document.querySelector(s);
+const toast=m=>{const t=$("#toast");t.textContent=m;t.classList.add("show");clearTimeout(toast._);toast._=setTimeout(()=>t.classList.remove("show"),2800)};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const absOf=t=>absences.find(a=>a.id===t.abs);
+const absTag=a=>`<span class="abs-tag"><i style="background:${a.color}"></i>${esc(PR[a.pr].name)} · ${CAT[a.cat]}</span>`;
+const statusBadge=t=>({open:'<span class="badge b-crit"><span class="dot"></span>offen</span>',in_progress:'<span class="badge b-warn"><span class="dot"></span>in Arbeit</span>',retry_contact:`<span class="badge b-warn"><span class="dot"></span>erneut kontaktieren (${t.attempts}×)</span>`,resolved:t.by==="system"?'<span class="badge b-auto">Assistent</span>':'<span class="badge b-good">erledigt</span>'}[t.status]);
+const warnBadges=t=>t.warnings.map(w=>`<span class="badge b-warn" title="${esc(w)}">⚠ ${esc(w)}</span>`).join("");
+const openAppts=t=>t.appts.filter(a=>a.kind!=="auto"&&!a.resolution);
+const find=id=>{for(const t of tasks){const a=t.appts.find(x=>x.id===id);if(a)return {t,a}}};
+const stripeCls=t=>t.status==="resolved"?"done":"p"+t.prio;
+let filterAbs="all",showDone=false;
+const openTasks=()=>tasks.filter(t=>t.status!=="resolved"&&(filterAbs==="all"||t.abs===filterAbs)).sort((a,b)=>(a.prio-b.prio)||(openAppts(a)[0]||a.appts[0]).time.localeCompare((openAppts(b)[0]||b.appts[0]).time));
+const slotLabel=s=>`<b>${s.day} ${s.time}</b><span>${PR[s.pr].name} · ${LOC[s.loc].name}${s.cross?" · ⚠ anderer Standort":""}</span>`;
+// ---------- actions ----------
+let selectedTask=null,page="queue";
+function accept(apptId,ci){const {t,a}=find(apptId);const s=a.candidates[ci];a.kind="auto";a.to=s;a.acceptedBy="front_desk";if(!openAppts(t).length){t.status="resolved";t.by="front_desk"}toast(`${t.patient}: umgebucht auf ${s.day} ${s.time} – Termino + Nachricht im Postausgang`);afterAction(t)}
+function cancelNotify(apptId){const {t,a}=find(apptId);a.resolution="cancelled";if(!openAppts(t).length){t.status="resolved";t.by="front_desk"}toast(`${t.patient}: abgesagt und benachrichtigt`);afterAction(t)}
+function attempt(taskId,reached){const t=tasks.find(x=>x.id===taskId);t.attempts++;t.status=reached?"in_progress":"retry_contact";toast(reached?`${t.patient}: erreicht – in Arbeit`:`${t.patient}: nicht erreicht (${t.attempts}. Versuch) – bleibt in der Liste`);if(!reached)nextCase();else renderAll()}
+function markDone(taskId,res){const t=tasks.find(x=>x.id===taskId);t.appts.forEach(a=>{if(a.kind!=="auto")a.resolution=res});t.status="resolved";t.by="front_desk";toast(`${t.patient}: ${res==="kept"?"kommt trotzdem – findet statt":"erledigt"}`);afterAction(t)}
+function afterAction(t){if(t.status==="resolved"){nextCase()}else renderAll()}
+function nextCase(){const open=openTasks();if(!open.length){closeDrawer();return}const idx=open.findIndex(x=>x.id===selectedTask);const next=open[(idx+1)%open.length]||open[0];if(next.id===selectedTask&&open.length===1){renderAll();return}openDrawer(next.id)}
+let undoTarget=null;
+function openUndo(apptId){const {t,a}=find(apptId);undoTarget=apptId;$("#undo-sub").textContent=`${t.patient} · ${a.time} → ${a.to.day} ${a.to.time} bei ${PR[a.to.pr].name}`;$("#undo-msg").value=`Guten Tag ${t.patient},\n\nbitte beachten Sie: Die Umbuchung Ihres Termins auf ${a.to.day} ${a.to.time} wurde zurückgenommen. Wir melden uns bei Ihnen. Bei Fragen: +49 30 000000.\n\nIhr Team von meinphysio+`;$("#undo").showModal()}
+$("#undo").addEventListener("close",()=>{if($("#undo").returnValue!=="ok"||!undoTarget)return;const {t,a}=find(undoTarget);const next=$("#undo-next").value;if(next==="takes_place_as_planned"){a.kind="done";a.resolution="kept";t.status="resolved";t.by="front_desk"}else if(next==="cancel_without_replacement"){a.kind="done";a.resolution="cancelled";t.status="resolved";t.by="front_desk"}else{a.kind="front_desk";a.todo="Anrufen: neuen Termin finden.";a.reason="Umbuchung zurückgenommen.";a.candidates=[];t.status="open";t.prio=1}undoTarget=null;toast(`${t.patient}: zurückgenommen`);renderAll()});
+
+// ---------- drawer ----------
+function apptDetail(t,a){let body="",act="";if(a.resolution==="cancelled")body=`<span class="badge b-neutral">abgesagt</span>`;else if(a.resolution==="kept")body=`<span class="badge b-good">findet statt</span>`;else if(a.kind==="auto"){body=`<span class="badge b-auto">→ ${a.to.day} ${a.to.time} · ${PR[a.to.pr].name} · ${LOC[a.to.loc].name}</span><span class="note">${a.notice?"Absage für heute + neuer Termin in einer Nachricht":"Nachricht gesendet"} · Termino ${a.acceptedBy?"ausstehend":"bestätigt"}</span>`;act=`<button class="btn sm" onclick="openUndo('${a.id}')">Rückgängig</button>`}else{body=`<div class="note">${esc(a.reason)}</div>${a.candidates.length?`<div class="proposals"><span class="lbl">Vorschläge</span><div class="row">${a.candidates.map((c,i)=>`<button class="slotbtn ${c.cross?"warnslot":""}" onclick="accept('${a.id}',${i})">${slotLabel(c)}</button>`).join("")}</div></div>`:""}`;act=`<button class="btn sm danger" onclick="cancelNotify('${a.id}')">Absagen &amp; benachrichtigen</button>`}return `<div class="appt-d"><div class="hd2"><span class="t">${a.time}</span><span>${a.svc} · ${LOC[a.loc].name}</span><span style="margin-left:auto">${act}</span></div>${body}</div>`}
+function scriptFor(t){const a=openAppts(t)[0];if(!a)return "";const abs=absOf(t);if(a.kind==="front_desk"&&!a.notice)return "Patient:in kommt gleich. Vor Ort erklären, Ersatztermin anbieten, ggf. Wartezeit.";if(a.kind==="proposal")return `„Guten Tag, hier meinphysio+. Ihr Termin heute ${a.time} bei ${PR[abs.pr].name} fällt leider aus, Sie haben dazu schon eine Nachricht bekommen. Wir hätten ${a.candidates.map(c=>`${c.day} ${c.time} bei ${PR[c.pr].name}${c.cross?" in "+LOC[c.loc].name:""}`).join(" oder ")} – passt das?“`;return `„Guten Tag, hier meinphysio+. Ihr Termin heute ${a.time} fällt leider aus. Für ${a.svc} haben wir diese Woche keinen Ersatz. Dürfen wir Sie auf die Warteliste setzen oder gleich einen Termin ab nächster Woche ausmachen?“`}
+function openDrawer(taskId){selectedTask=taskId;const t=tasks.find(x=>x.id===taskId);const abs=absOf(t);const a=openAppts(t)[0];$("#dr-tag").innerHTML=absTag(abs);$("#dr-title").textContent=t.patient;$("#dr-sub").innerHTML=`${statusBadge(t)} &nbsp; ${t.appts.map(x=>x.time+" "+x.svc).join(" · ")}`;const open=t.status!=="resolved";const script=scriptFor(t);
+  $("#dr-body").innerHTML=`<div class="row"><div>${t.phone?`<div class="phone-big">${t.phone}</div>`:`<span class="badge b-crit">kein Telefon</span>`}<div class="small muted">${t.email||"keine E-Mail"}</div></div></div>${a?`<div class="what">${esc(a.todo)}</div><div class="why">${esc(a.reason)}</div>`:""}${t.warnings.length?`<div class="warnings">${warnBadges(t)}</div>`:""}${script?`<div class="script"><span class="lbl">Gesprächsleitfaden</span>${esc(script)}</div>`:""}${a&&a.candidates.length?`<div class="proposals"><span class="lbl">Ersatztermin anbieten – Vorschläge des Assistenten</span><span class="hint">Klick bucht den Termin in Termino und benachrichtigt die Patient:in.</span><div class="row">${a.candidates.map((c,i)=>`<button class="slotbtn ${c.cross?"warnslot":""}" onclick="accept('${a.id}',${i})">${slotLabel(c)}</button>`).join("")}</div></div>`:""}<details><summary class="small muted" style="cursor:pointer">Alle Termine dieser Patient:in (${t.appts.length})</summary><div class="stack" style="margin-top:8px">${t.appts.map(x=>apptDetail(t,x)).join("")}</div></details>`;
+  const openN=openTasks().length;
+  $("#dr-foot").innerHTML=open?`<button class="btn primary" onclick="attempt('${t.id}',true)">☎ Erreicht</button><button class="btn" onclick="attempt('${t.id}',false)">Nicht erreicht</button><button class="btn" onclick="markDone('${t.id}','kept')">Kommt trotzdem</button>${a?`<button class="btn danger" onclick="cancelNotify('${a.id}')">Absagen</button>`:""}<span class="nextbar"><button class="btn sm" onclick="nextCase()" title="Nächster Fall (→)">Nächster → <span class="muted">${openN}</span></button></span>`:`<span class="muted small">Nichts mehr zu tun.</span><span class="nextbar"><button class="btn sm" onclick="nextCase()">Nächster offener Fall →</button></span>`;
+  $("#drawer").classList.add("open");$("#scrim").classList.add("open");renderQueue();renderAbsences()}
+function closeDrawer(){selectedTask=null;$("#drawer").classList.remove("open");$("#scrim").classList.remove("open");renderAll()}
+document.addEventListener("keydown",e=>{if(!$("#drawer").classList.contains("open"))return;if(e.key==="Escape")closeDrawer();if(e.key==="ArrowRight")nextCase()});
+
+// ---------- queue page ----------
+function rowBtn(t){const a=openAppts(t)[0]||t.appts[0];const abs=absOf(t);return `<button class="rowbtn ${selectedTask===t.id?"sel":""}" onclick="openDrawer('${t.id}')"><span class="t">${a.time}<small>${a.svc} · ${LOC[a.loc].name}</small></span><span><span class="who">${esc(t.patient)}</span><div class="todo">${esc(a.todo||"")}</div><div class="meta">${absTag(abs)}${t.warnings.length?`<span>⚠ ${esc(t.warnings[0])}${t.warnings.length>1?` · +${t.warnings.length-1}`:""}</span>`:""}</div></span><span class="right">${statusBadge(t)}${t.phone?`<span class="mono small muted">${t.phone}</span>`:""}</span></button>`}
+function renderQueue(){const allOpen=tasks.filter(t=>t.status!=="resolved");$("#q-cnt").textContent=allOpen.length;$("#q-cnt").classList.toggle("zero",!allOpen.length);$("#a-cnt").textContent=absences.length;
+  $("#q-filters").innerHTML=`<button class="chip" aria-pressed="${filterAbs==="all"}" onclick="filterAbs='all';renderAll()">Alle <span class="mono">${allOpen.length}</span></button>`+absences.map(a=>`<button class="chip" aria-pressed="${filterAbs===a.id}" onclick="filterAbs='${a.id}';renderAll()"><i style="width:8px;height:8px;border-radius:2px;background:${a.color};display:inline-block"></i>${esc(PR[a.pr].name)} <span class="mono">${allOpen.filter(t=>t.abs===a.id).length}</span></button>`).join("");
+  const open=openTasks();$("#q-sub").textContent=open.length?`${open.length} Fälle · sortiert nach Dringlichkeit`:"Alles erledigt";
+  const groups=[["Jetzt · bis 09:00",x=>x<"09:00"],["Vormittag",x=>x>="09:00"&&x<"13:00"],["Nachmittag",x=>x>="13:00"]];let h="";groups.forEach(([g,f])=>{const l=open.filter(t=>f((openAppts(t)[0]||t.appts[0]).time));if(!l.length)return;h+=`<div class="group-h">${g} <span class="mono">${l.length}</span></div><div class="stack">${l.map(rowBtn).join("")}</div>`});
+  if(!open.length)h=`<div class="card empty"><b>Keine offenen Fälle</b>Neue Ausfälle oder der nächste Termino-Abgleich füllen die Liste wieder.</div>`;
+  const autoN=tasks.filter(t=>t.status==="resolved"&&t.by==="system"&&(filterAbs==="all"||t.abs===filterAbs)).length;const fdN=tasks.filter(t=>t.status==="resolved"&&t.by==="front_desk"&&(filterAbs==="all"||t.abs===filterAbs)).length;
+  h+=`<div class="summary-line">Umbuchungsassistent: ${autoN} Patient:innen umgebucht und benachrichtigt${fdN?` · Empfang: ${fdN} erledigt`:""}<button class="btn sm" onclick="showDone=!showDone;renderAll()">${showDone?"Ausblenden":"Anzeigen"}</button></div>${showDone?`<div class="stack" style="margin-top:8px">`:`<div hidden>`}${tasks.filter(t=>t.status==="resolved"&&(filterAbs==="all"||t.abs===filterAbs)).map(rowBtn).join("")}</div>`;
+  $("#q-body").innerHTML=h}
+
+// ---------- absences page ----------
+function renderAbsences(){$("#a-body").innerHTML=absences.map(a=>{const ts=tasks.filter(t=>t.abs===a.id);const auto=ts.filter(t=>t.status==="resolved"&&t.by==="system").length,fd=ts.filter(t=>t.status==="resolved"&&t.by==="front_desk").length,retry=ts.filter(t=>t.status==="retry_contact").length,open=ts.filter(t=>t.status==="open"||t.status==="in_progress").length;const N=ts.length||1;const seg=(n,c)=>n?`<div class="${c}" style="flex:${n}"></div>`:"";return `<div class="card pad abs-card"><div><div class="hd">${absTag(a)}<b>${esc(PR[a.pr].name)}</b><span class="muted">${a.day} ${a.from}–${a.to} · ${CAT[a.cat]}${a.note?` · „${esc(a.note)}“`:""}</span><span class="small muted">angelegt ${a.createdAt}</span></div><div class="bar">${seg(auto,"s-auto")}${seg(fd,"s-fd")}${seg(retry,"s-retry")}${seg(open,"s-open")}</div><div class="legend2"><span><i style="background:var(--auto)"></i>Assistent ${auto}</span><span><i style="background:var(--good)"></i>Empfang erledigt ${fd}</span><span><i style="background:var(--warn)"></i>erneut kontaktieren ${retry}</span><span><i style="background:var(--crit)"></i>offen ${open}</span><span class="muted">· ${ts.length} Patient:innen, ${ts.reduce((s,t)=>s+t.appts.length,0)} Termine</span></div></div><div class="stack" style="align-items:flex-end"><button class="btn primary" onclick="filterAbs='${a.id}';go('queue')">${open+retry?`${open+retry} offene Fälle bearbeiten`:"Fälle ansehen"}</button><button class="btn sm" onclick="toast('Zeitraum verlängern: Assistent prüft nur die neuen Tage (Prototyp)')">Zeitraum verlängern</button><button class="btn sm" onclick="toast('Tagesplan-Ansicht: Zukunftsfeature')">Tagesplan</button></div></div>`}).join("")}
+
+// ---------- new absence modal (flow 1) ----------
+let newState={step:"form"};
+function openNew(){newState={step:"form"};renderNew();$("#new").showModal()}
+function renderNew(){const b=$("#new-body");if(newState.step==="form"){b.innerHTML=`<div class="row"><h2>Neuer Ausfall</h2><span class="small muted" style="margin-left:auto">Deine offenen Fälle bleiben erhalten.</span></div><div class="two"><label>Therapeut:in<select id="n-pr">${Object.entries(PR).map(([k,v])=>`<option value="${k}" ${k==="prac_08"?"selected":""}>${v.name} (${v.q})</option>`).join("")}</select></label><label>Grund<select id="n-cat"><option value="sick">krank</option><option value="emergency" selected>Notfall</option><option value="planned">geplant (Urlaub, Fortbildung)</option><option value="other">Sonstiges</option></select></label><label>Von<input id="n-from" type="datetime-local" value="2026-09-07T10:00"></label><label>Bis<input id="n-to" type="datetime-local" value="2026-09-07T15:00"></label></div><label>Notiz (optional)<input id="n-note" placeholder="z. B. Rückruf 12 Uhr"></label><div class="card pad" style="background:var(--surface-2)"><b>Beim Start</b><div class="small muted">Therapeut:in wird in Termino für den Zeitraum gesperrt. Der Umbuchungsassistent prüft alle Termine im Zeitraum: Was sicher passt, wird umgebucht und per SMS/E-Mail mitgeteilt. Der Rest kommt zu „Offene Fälle“.</div></div><div class="row" style="justify-content:flex-end"><button class="btn" onclick="document.getElementById('new').close()">Abbrechen</button><button class="btn primary lg" onclick="submitNew()">Ausfall anlegen &amp; Assistent starten</button></div>`}
+  else if(newState.step==="running"){b.innerHTML=`<h2>Assistent läuft …</h2><p class="muted"><span class="spinner"></span>Termino-Sperre gesetzt · ${newState.n} Termine werden geprüft</p>`}
+  else{const ts=tasks.filter(t=>t.abs===newState.absId);const auto=ts.filter(t=>t.status==="resolved").length;const open=ts.filter(t=>t.status!=="resolved");const urgent=open.filter(t=>t.prio===1);const a=absences.find(x=>x.id===newState.absId);b.innerHTML=`<div class="row">${absTag(a)}<h2>Ausfall angelegt</h2></div><p class="muted">${esc(PR[a.pr].name)} · ${a.day} ${a.from}–${a.to} · Termino-Sperre gesetzt.</p><div class="result-big"><div class="cell c-auto"><b>${auto}</b><span>Patient:innen umgebucht &amp; benachrichtigt</span></div><div class="cell c-open"><b>${open.length}</b><span>brauchen den Empfang</span></div><div class="cell ${urgent.length?"c-urgent":""}"><b>${urgent.length}</b><span>davon dringend (Termin in Kürze)</span></div></div>${urgent.length?`<div><div class="kicker" style="margin-bottom:6px">Dringend</div><div class="urgent-list">${urgent.map(t=>`<div class="u"><span class="t">${(openAppts(t)[0]||t.appts[0]).time}</span><b>${esc(t.patient)}</b><span class="muted">${esc((openAppts(t)[0]||t.appts[0]).todo)}</span></div>`).join("")}</div></div>`:""}<div class="row" style="justify-content:flex-end;margin-top:6px"><button class="btn" onclick="document.getElementById('new').close();toast('${open.length} Fälle in Offene Fälle eingereiht')">In die Warteschlange</button><button class="btn primary lg" onclick="document.getElementById('new').close();filterAbs='${a.id}';go('queue');const o=openTasks();if(o.length)openDrawer(o[0].id)">${urgent.length?"Dringende jetzt bearbeiten":"Fälle jetzt bearbeiten"} →</button></div>`}}
+function submitNew(){const pr=$("#n-pr").value,cat=$("#n-cat").value,from=$("#n-from").value.slice(11,16),to=$("#n-to").value.slice(11,16),note=$("#n-note").value;const id="abs"+(absences.length+1);absences.push({id,pr,cat,from,to,day:"Mo 07.09.",note,createdAt:"07:4"+absences.length,color:ABS_COLORS[absences.length%ABS_COLORS.length]});const ts=mockEngine(id,pr,from,to);newState={step:"running",n:ts.length,absId:id};renderNew();setTimeout(()=>{tasks.push(...ts);newState.step="result";renderNew();renderAll()},900)}
+
+// ---------- nav ----------
+function go(p){page=p;selectedTask=null;$("#drawer").classList.remove("open");$("#scrim").classList.remove("open");document.querySelectorAll(".nav button").forEach(b=>b.setAttribute("aria-current",b.dataset.page===p?"page":"false"));document.querySelectorAll(".page").forEach(s=>s.classList.toggle("active",s.id==="page-"+p));renderAll();window.scrollTo({top:0})}
+document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>go(b.dataset.page));
+function renderAll(){renderQueue();renderAbsences();if(selectedTask)openDrawer(selectedTask)}
+renderAll();
+</script>

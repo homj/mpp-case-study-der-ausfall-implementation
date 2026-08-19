@@ -1,0 +1,338 @@
+<meta charset="utf-8">
+<title>Ausfall-Cockpit Prototypen</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F3F5F7; --surface:#FFFFFF; --surface-2:#EAEEF2; --line:#D5DBE2; --text:#1B2430; --muted:#5B6878;
+  --accent:#0F8B8D; --accent-ink:#FFFFFF; --accent-soft:#DDF1F1;
+  --crit:#B3261E; --crit-soft:#FBE4E2; --warn:#9A6700; --warn-soft:#FBEFD0; --good:#1E7D3A; --good-soft:#DDF3E2; --auto:#2F5FD1; --auto-soft:#E0E8FB;
+  --shadow:0 1px 2px rgba(16,24,32,.06),0 4px 14px rgba(16,24,32,.06);
+  --radius:8px; --font:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#14181D; --surface:#1C2229; --surface-2:#232B34; --line:#303A46; --text:#E6EBF0; --muted:#9AA7B5;
+  --accent:#3FB8BA; --accent-ink:#0B1416; --accent-soft:#163C3D;
+  --crit:#F08A82; --crit-soft:#4A1F1B; --warn:#E2B84A; --warn-soft:#3F3212; --good:#6CC688; --good-soft:#18361F; --auto:#8EAEFF; --auto-soft:#1E2B4B;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.35);
+}}
+:root[data-theme="dark"]{
+  --bg:#14181D; --surface:#1C2229; --surface-2:#232B34; --line:#303A46; --text:#E6EBF0; --muted:#9AA7B5;
+  --accent:#3FB8BA; --accent-ink:#0B1416; --accent-soft:#163C3D;
+  --crit:#F08A82; --crit-soft:#4A1F1B; --warn:#E2B84A; --warn-soft:#3F3212; --good:#6CC688; --good-soft:#18361F; --auto:#8EAEFF; --auto-soft:#1E2B4B;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.45;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+h1,h2,h3{margin:0;text-wrap:balance;font-weight:600}
+h2{font-size:15px} h3{font-size:14px} p{margin:0}
+.top{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font-weight:600;font-size:15px} .brand span{color:var(--accent)}
+.demo{display:inline-flex;align-items:center;gap:8px;padding:4px 10px;border:1px dashed var(--warn);color:var(--warn);border-radius:999px;font-size:12px;font-weight:500;background:var(--warn-soft)} .demo b{font-family:var(--mono);font-weight:500}
+.tabs{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+.tabs button{background:transparent;border:1px solid transparent;border-radius:6px;padding:6px 10px;cursor:pointer;color:var(--muted)}
+.tabs button[aria-selected="true"]{background:var(--accent-soft);color:var(--text);border-color:var(--accent);font-weight:500}
+.tabs button:focus-visible,.btn:focus-visible,.slotbtn:focus-visible,.chip:focus-visible,.rowbtn:focus-visible,.blk:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.intro{max-width:1200px;margin:16px auto 0;padding:0 20px}
+.kicker{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.intro h1{font-size:18px} .intro p{color:var(--muted);max-width:80ch}
+main{max-width:1200px;margin:16px auto 60px;padding:0 20px}
+.proto{display:none} .proto.active{display:block}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.pad{padding:14px 16px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.stack{display:flex;flex-direction:column;gap:10px}
+.muted{color:var(--muted)} .small{font-size:12px}
+.sec-h{display:flex;align-items:baseline;gap:10px;margin:18px 0 10px} .sec-h .count{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:500;border:1px solid transparent;white-space:nowrap}
+.b-crit{background:var(--crit-soft);color:var(--crit)} .b-warn{background:var(--warn-soft);color:var(--warn)} .b-good{background:var(--good-soft);color:var(--good)} .b-auto{background:var(--auto-soft);color:var(--auto)} .b-neutral{background:var(--surface-2);color:var(--muted)} .b-outline{border-color:var(--line);color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:currentColor;display:inline-block}
+.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:6px 10px;cursor:pointer;font-size:13px;font-weight:500;white-space:nowrap}
+.btn:hover{background:var(--surface-2)} .btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)} .btn.primary:hover{filter:brightness(.95)} .btn.danger{color:var(--crit);border-color:var(--crit)} .btn[disabled]{opacity:.5;cursor:not-allowed} .btn.sm{padding:3px 8px;font-size:12px}
+.slotbtn{display:inline-flex;flex-direction:column;align-items:flex-start;gap:1px;border:1px solid var(--accent);background:var(--surface);border-radius:6px;padding:5px 9px;cursor:pointer;font-size:12px;line-height:1.3;text-align:left}
+.slotbtn b{font-family:var(--mono);font-weight:500;font-size:13px} .slotbtn.warnslot{border-color:var(--warn)} .slotbtn:hover{background:var(--accent-soft)}
+.warnings{display:flex;gap:6px;flex-wrap:wrap} .note{font-size:12px;color:var(--muted)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:13px} .kv dt{color:var(--muted)} .kv dd{margin:0}
+table{width:100%;border-collapse:collapse;font-size:13px} th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top} th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--surface-2)} .tablewrap{overflow-x:auto}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:10px 14px;border-radius:8px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:40;max-width:90vw} .toast.show{opacity:1}
+@media (prefers-reduced-motion: reduce){.toast,.drawer{transition:none}}
+dialog{border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text);padding:0;max-width:560px;width:92vw;box-shadow:var(--shadow)} dialog::backdrop{background:rgba(10,14,18,.45)} dialog .pad{padding:18px 20px}
+label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted);font-weight:500}
+select,textarea,input{font:inherit;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:7px 9px;font-size:13px} textarea{min-height:120px;resize:vertical;line-height:1.4}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px} @media (max-width:760px){.two{grid-template-columns:1fr}}
+.proto-note{background:var(--surface-2);border-left:3px solid var(--accent);padding:10px 14px;border-radius:0 6px 6px 0;margin-bottom:14px;font-size:13px} .proto-note b{display:block;margin-bottom:2px} .proto-note .chg{color:var(--accent);font-weight:500}
+/* focus list rows (P1, P5) */
+.rowbtn{display:grid;grid-template-columns:6px 64px 1fr auto;gap:12px;align-items:center;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px 12px 10px 0;cursor:pointer;box-shadow:var(--shadow)}
+.rowbtn:hover{border-color:var(--accent)} .rowbtn.sel{border-color:var(--accent);background:var(--accent-soft)}
+.rowbtn .stripe{height:100%;min-height:40px;border-radius:var(--radius) 0 0 var(--radius)} .stripe.p1{background:var(--crit)} .stripe.p2{background:var(--warn)} .stripe.p3{background:var(--auto)} .stripe.done{background:var(--good)}
+.rowbtn .t{font-family:var(--mono);font-size:16px;font-weight:500} .rowbtn .t small{display:block;font-size:11px;color:var(--muted);font-weight:400;font-family:var(--font)}
+.rowbtn .who{font-weight:600;font-size:15px} .rowbtn .todo{font-size:13px;color:var(--text);margin-top:2px} .rowbtn .meta{font-size:12px;color:var(--muted);margin-top:2px}
+.rowbtn .right{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.group-h{display:flex;align-items:baseline;gap:8px;margin:16px 0 8px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.group-h::after{content:"";flex:1;border-top:1px solid var(--line)}
+.summary-line{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--auto-soft);border-radius:var(--radius);color:var(--auto);font-weight:500}
+.summary-line button{margin-left:auto}
+/* drawer */
+.drawer{position:fixed;top:0;right:0;height:100vh;width:min(460px,100vw);background:var(--surface);border-left:1px solid var(--line);box-shadow:-8px 0 30px rgba(0,0,0,.15);transform:translateX(100%);transition:transform .22s ease;z-index:30;display:flex;flex-direction:column}
+.drawer.open{transform:none}
+.drawer .hd{display:flex;align-items:flex-start;gap:10px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.drawer .bd{padding:16px 18px;overflow:auto;flex:1;display:flex;flex-direction:column;gap:14px}
+.drawer .ft{padding:12px 18px;border-top:1px solid var(--line);display:flex;gap:8px;flex-wrap:wrap}
+.drawer h2{font-size:18px} .drawer .sub{color:var(--muted);font-size:13px}
+.close{margin-left:auto;border:0;background:transparent;font-size:20px;cursor:pointer;color:var(--muted);line-height:1}
+.appt-d{border:1px solid var(--line);border-radius:6px;padding:10px 12px;display:flex;flex-direction:column;gap:8px}
+.appt-d .hd2{display:flex;gap:8px;align-items:baseline} .appt-d .hd2 .t{font-family:var(--mono);font-size:16px;font-weight:500}
+.script{background:var(--surface-2);border-radius:6px;padding:10px 12px;font-size:13px;line-height:1.5}
+.script .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;display:block;margin-bottom:4px}
+.phone-big{font-family:var(--mono);font-size:18px;font-weight:500}
+.scrim{position:fixed;inset:0;background:transparent;z-index:25;display:none} .scrim.open{display:block}
+/* P2 calendar: vertical time, columns = practitioners */
+.cal{display:grid;grid-template-columns:52px repeat(6,1fr);gap:0;position:relative}
+.cal .colh{padding:8px 6px;font-size:12px;border-bottom:1px solid var(--line);text-align:center;position:sticky;top:52px;background:var(--surface);z-index:2}
+.cal .colh b{display:block} .cal .colh .badge{margin-top:2px}
+.cal .axis{position:relative;height:600px;font-family:var(--mono);font-size:11px;color:var(--muted)}
+.cal .axis span{position:absolute;left:0;transform:translateY(-50%);padding-left:4px}
+.cal .col{position:relative;height:600px;border-left:1px solid var(--line);background:repeating-linear-gradient(to bottom,var(--line) 0 1px,transparent 1px 60px)}
+.cal .col.absent{background-color:color-mix(in srgb,var(--crit-soft) 50%,transparent);background-image:repeating-linear-gradient(to bottom,var(--line) 0 1px,transparent 1px 60px)}
+.cal .blk{position:absolute;left:3px;right:3px;border-radius:5px;border:1px solid var(--line);background:var(--surface);padding:2px 6px;font-size:11px;line-height:1.25;cursor:pointer;overflow:hidden;text-align:left}
+.cal .blk b{font-family:var(--mono);font-weight:500;margin-right:4px}
+.cal .blk.k-auto{border-color:var(--auto);background:var(--auto-soft)} .cal .blk.k-open{border-color:var(--crit);background:var(--crit-soft)} .cal .blk.k-warn{border-color:var(--warn);background:var(--warn-soft)} .cal .blk.k-done{border-color:var(--good);background:var(--good-soft)} .cal .blk.k-free{border-style:dashed;background:transparent;color:var(--muted);cursor:default} .cal .blk.k-busy{background:var(--surface-2);color:var(--muted);border-color:transparent;cursor:default}
+.cal .blk.moved{opacity:.55;text-decoration:line-through}
+.cal .nowline{position:absolute;left:52px;right:0;border-top:2px solid var(--warn);z-index:3} .cal .nowline span{position:absolute;left:0;top:-9px;background:var(--warn);color:#fff;font-size:10px;padding:0 4px;border-radius:3px;font-family:var(--mono)}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-bottom:10px} .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;border:1px solid var(--line);vertical-align:-2px;margin-right:4px}
+/* P3 wizard */
+.steps{display:flex;border-bottom:1px solid var(--line)}
+.steps button{flex:1;background:transparent;border:0;border-bottom:3px solid transparent;padding:12px 8px;cursor:pointer;color:var(--muted);font-weight:500;display:flex;gap:8px;align-items:center;justify-content:center}
+.steps button[aria-current="step"]{color:var(--text);border-bottom-color:var(--accent)}
+.steps .n{width:22px;height:22px;border-radius:50%;background:var(--surface-2);display:inline-grid;place-items:center;font-size:11px;font-family:var(--mono)} .steps button[aria-current="step"] .n{background:var(--accent);color:var(--accent-ink)}
+.steps button.donestep .n{background:var(--good);color:#fff}
+.wiz-nav{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.big{font-size:22px;font-weight:600}
+.casenav{display:flex;flex-direction:column;gap:6px}
+.casenav button{display:grid;grid-template-columns:6px 52px 1fr;gap:10px;align-items:center;text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:8px 10px 8px 0;cursor:pointer}
+.casenav button.sel{border-color:var(--accent);background:var(--accent-soft)} .casenav .stripe{height:34px;border-radius:6px 0 0 6px} .casenav .t{font-family:var(--mono);font-weight:500} .casenav .who{font-weight:600;font-size:13px} .casenav .st{font-size:11px;color:var(--muted)}
+.casenav button.doneitem{opacity:.6}
+.case-main{display:grid;grid-template-columns:260px 1fr;gap:16px;align-items:start} @media (max-width:900px){.case-main{grid-template-columns:1fr}}
+.focus{display:flex;flex-direction:column;gap:14px}
+.focus .hd{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.focus .what{font-size:16px;line-height:1.4}
+.focus .why{font-size:13px;color:var(--muted)}
+.actions-big{display:flex;gap:8px;flex-wrap:wrap}
+.actions-big .btn{padding:9px 14px;font-size:14px}
+.compact-table td,.compact-table th{padding:5px 8px;font-size:12px}
+/* summary viz */
+.bar{display:flex;height:28px;border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+.bar div{display:grid;place-items:center;font-size:12px;font-weight:600;color:#fff;min-width:2px}
+.bar .s-auto{background:var(--auto)} .bar .s-fd{background:var(--good)} .bar .s-open{background:var(--crit)} .bar .s-retry{background:var(--warn)}
+.legend2{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;margin-top:8px} .legend2 i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px}
+.outcome-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.outcome-cols .col{background:var(--surface-2);border-radius:6px;padding:10px} .outcome-cols h3{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:6px} .outcome-cols li{font-size:13px;list-style:none;padding:3px 0;border-bottom:1px dashed var(--line)} .outcome-cols ul{margin:0;padding:0} .outcome-cols li:last-child{border:0}
+.stat{display:flex;flex-direction:column} .stat b{font-size:22px;font-family:var(--mono);font-weight:500} .stat span{font-size:12px;color:var(--muted)}
+.stats{display:flex;gap:28px;flex-wrap:wrap}
+/* P4 board */
+.board{display:grid;grid-template-columns:repeat(4,minmax(220px,1fr));gap:12px;overflow-x:auto}
+.col4{background:var(--surface-2);border-radius:var(--radius);padding:10px;min-height:300px}
+.col4 h3{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:13px} .col4 h3 .count{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.kcard{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px;margin-bottom:8px;box-shadow:var(--shadow);cursor:pointer;border-left-width:4px}
+.kcard.p1{border-left-color:var(--crit)} .kcard.p2{border-left-color:var(--warn)} .kcard.p3{border-left-color:var(--auto)} .kcard.done{border-left-color:var(--good)}
+.kcard .name{font-weight:600} .kcard .meta{font-family:var(--mono);font-size:11px;color:var(--muted)} .kcard .todo{font-size:12px;margin-top:4px} .kcard .move{display:flex;gap:4px;flex-wrap:wrap;margin-top:8px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:2px 9px;font-size:12px;cursor:pointer}
+details.panel{margin-top:14px} details.panel summary{cursor:pointer;font-weight:600;padding:10px 0}
+</style>
+
+<header class="top">
+  <div class="brand">meinphysio<span>+</span> · Ausfall-Cockpit</div>
+  <div class="demo"><span class="dot"></span>Demo-Zeit <b>Mo 07.09.2026 · 07:40</b></div>
+  <nav class="tabs" role="tablist" aria-label="Prototypen">
+    <button role="tab" aria-selected="false" data-p="p1">1 · Fokusliste</button>
+    <button role="tab" aria-selected="false" data-p="p2">2 · Tagesplan</button>
+    <button role="tab" aria-selected="true" data-p="p3">3 · Schritt für Schritt</button>
+    <button role="tab" aria-selected="false" data-p="p4">4 · Board</button>
+    <button role="tab" aria-selected="false" data-p="p5">5 · Anrufliste</button>
+  </nav>
+</header>
+
+<div class="intro">
+  <div class="kicker">Ausfall · Anna Weber (KG, MT, MLD45) · Mo 07.09.2026 07:40 – 18:00 · krank</div>
+  <h1>14 Termine betroffen · 9 vom Umbuchungsassistenten erledigt · 5 brauchen den Empfang</h1>
+  <p>Runde 2. Gemeinsame Änderungen: Details stecken hinter einem Klick (Seitenleiste), „Therapeut:in“ statt „Behandler:in“, der KI-Umbucher heißt vorerst „Umbuchungsassistent“. Prototyp mit Beispieldaten; Klicks wirken nur auf dieser Seite und in allen fünf Varianten gleichzeitig.</p>
+</div>
+
+<main>
+  <section id="p1" class="proto" aria-label="Prototyp 1">
+    <div class="proto-note"><b>1 · Fokusliste</b><span class="chg">Neu:</span> eine Zeile pro Patient:in – Uhrzeit, Name, ein Satz „was zu tun ist“. Gruppiert nach „Jetzt / Vormittag / Nachmittag“. Alles Weitere in der Seitenleiste. Das Erledigte des Assistenten ist eine Zeile.</div>
+    <div id="p1-body"></div>
+  </section>
+
+  <section id="p2" class="proto" aria-label="Prototyp 2">
+    <div class="proto-note"><b>2 · Tagesplan</b><span class="chg">Neu:</span> Achsen getauscht – Zeit vertikal, Therapeut:innen als Spalten. Annas Spalte zeigt den Ausfall, die Kolleg:innen zeigen, wohin der Assistent umgebucht hat (blau) und was frei ist (gestrichelt). Klick öffnet die Seitenleiste. <span class="muted">Als Ergebnisansicht gedacht, nicht als Arbeitsfläche – Zukunftsfeature.</span></div>
+    <div class="card pad">
+      <div class="legend"><span><i style="background:var(--crit-soft);border-color:var(--crit)"></i>braucht Empfang</span><span><i style="background:var(--warn-soft);border-color:var(--warn)"></i>Vorschlag prüfen</span><span><i style="background:var(--auto-soft);border-color:var(--auto)"></i>vom Assistenten umgebucht</span><span><i style="background:var(--good-soft);border-color:var(--good)"></i>erledigt</span><span><i style="background:var(--surface-2);border-color:transparent"></i>belegt</span><span><i style="border-style:dashed"></i>frei</span></div>
+      <div class="cal" id="p2-cal"></div>
+    </div>
+  </section>
+
+  <section id="p3" class="proto active" aria-label="Prototyp 3">
+    <div class="proto-note"><b>3 · Schritt für Schritt</b><span class="chg">Neu:</span> drei Schritte statt vier. Schritt 2 ist die Arbeitsfläche: links die Fälle in Reihenfolge, in der Mitte ein Fall mit dem Wesentlichen und großen Aktionen; das Erledigte des Assistenten ist darunter eingeklappt und kompakt. Schritt 3 zeigt das Ergebnis als Balken und nach Ausgang sortiert.</div>
+    <div class="card">
+      <div class="steps" role="list">
+        <button role="listitem" data-step="0"><span class="n">1</span>Ausfall erfassen</button>
+        <button role="listitem" data-step="1" aria-current="step"><span class="n">2</span>Fälle bearbeiten</button>
+        <button role="listitem" data-step="2"><span class="n">3</span>Ergebnis</button>
+      </div>
+      <div class="pad" id="p3-body"></div>
+      <div class="pad wiz-nav"><button class="btn" id="p3-prev">Zurück</button><span class="muted small" id="p3-pos"></span><button class="btn primary" id="p3-next">Weiter</button></div>
+    </div>
+  </section>
+
+  <section id="p4" class="proto" aria-label="Prototyp 4">
+    <div class="proto-note"><b>4 · Board</b><span class="chg">Neu:</span> Karten zeigen nur Uhrzeit, Name und „was zu tun ist“; Klick öffnet die Seitenleiste. <span class="muted">Nicht Priorität – wird nach Tests mit Nutzer:innen wieder aufgegriffen.</span></div>
+    <div class="board" id="p4-board"></div>
+  </section>
+
+  <section id="p5" class="proto" aria-label="Prototyp 5">
+    <div class="proto-note"><b>5 · Anrufliste</b><span class="chg">Neu:</span> Master-Detail. Links nur das Wichtige: Reihenfolge, Nummer groß, ein Satz. Rechts die Seitenleiste mit Gesprächsleitfaden und Ergebnis-Knöpfen. Der Assistent ist eine Zeile am Ende.</div>
+    <div id="p5-body"></div>
+  </section>
+</main>
+
+<div class="scrim" id="scrim" onclick="closeDrawer()"></div>
+<aside class="drawer" id="drawer" aria-label="Details"><div class="hd"><div><h2 id="dr-title"></h2><div class="sub" id="dr-sub"></div></div><button class="close" onclick="closeDrawer()" aria-label="Schließen">×</button></div><div class="bd" id="dr-body"></div><div class="ft" id="dr-foot"></div></aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<dialog id="undo">
+  <form method="dialog" class="pad stack">
+    <h2>Umbuchung zurücknehmen</h2>
+    <p class="muted small" id="undo-sub"></p>
+    <div class="two">
+      <label>Grund<select id="undo-reason"><option value="patient_declined">Patient:in lehnt neuen Termin ab</option><option value="practitioner_available">Therapeut:in doch verfügbar</option><option value="wrong_slot">Falscher Termin / Datenfehler</option><option value="other">Sonstiges</option></select></label>
+      <label>Nächster Schritt<select id="undo-next"><option value="front_desk_will_call">Empfang ruft an</option><option value="takes_place_as_planned">Termin findet wie geplant statt</option><option value="cancel_without_replacement">Absagen ohne Ersatz</option></select></label>
+    </div>
+    <label>Nachricht an Patient:in (vorbereitet, bearbeitbar)<textarea id="undo-msg"></textarea></label>
+    <div class="row" style="justify-content:flex-end"><button class="btn" value="cancel">Abbrechen</button><button class="btn primary" value="ok">Zurücknehmen &amp; senden</button></div>
+  </form>
+</dialog>
+
+<script>
+// ---------- shared data (illustrative engine outcome) ----------
+const LOC={loc_01:{name:"Mitte",addr:"Torstraße 118"},loc_02:{name:"Kreuzberg",addr:"—"}};
+const PR={prac_01:"Anna Weber",prac_02:"Jonas Brandt",prac_04:"Sofia Lindqvist",prac_05:"Meltem Aydin",prac_06:"David Okafor",prac_08:"Tobias Falk"};
+let tasks=[
+ {id:"t1",patient:"Sabine Czerny",phone:"+49 151 55011020",email:"sabine.czerny@example.com",status:"open",attempts:0,prio:1,warnings:[],
+  appts:[{id:"a1",time:"08:00",svc:"KG",loc:"loc_01",kind:"front_desk",todo:"Kommt in 20 Min. Vor Ort empfangen, Ersatz anbieten.",reason:"Keine Therapeut:in zur gleichen Zeit in Mitte frei. Patientin ist vermutlich schon unterwegs.",candidates:[],notice:false}]},
+ {id:"t2",patient:"Lena Krause",phone:"+49 151 55011131",email:"lena.krause@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:["Nicht zugeordnet – kein Stammdatensatz, Selbstzahlerin angenommen"],
+  appts:[{id:"a2",time:"08:20",svc:"KG",loc:"loc_01",kind:"auto",to:{day:"Mo 07.09.",time:"09:20",pr:"prac_02",loc:"loc_01"},notice:false}]},
+ {id:"t3",patient:"Jan Ahrens",phone:"+49 151 55011052",email:"jan.ahrens@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:[],
+  appts:[{id:"a3",time:"08:40",svc:"MT",loc:"loc_01",kind:"auto",to:{day:"Mo 07.09.",time:"11:40",pr:"prac_02",loc:"loc_01"},notice:false}]},
+ {id:"t4",patient:"Cem Öztürk",phone:"+49 151 55011129",email:"cem.oeztuerk@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:[],
+  appts:[{id:"a4",time:"09:00",svc:"KG",loc:"loc_01",kind:"auto",to:{day:"Mo 07.09.",time:"10:20",pr:"prac_04",loc:"loc_01"},notice:false}]},
+ {id:"t5",patient:"Kerstin Nowak",phone:"+49 151 55011038",email:"kerstin.nowak@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:[],
+  appts:[{id:"a5",time:"09:20",svc:"KG",loc:"loc_01",kind:"auto",to:{day:"Mo 07.09.",time:"15:00",pr:"prac_02",loc:"loc_01"},notice:false}]},
+ {id:"t6",patient:"Gisela Neumann",phone:null,email:"gisela.neumann@example.com",status:"open",attempts:0,prio:2,warnings:["Kein Telefon – nur E-Mail","Diese Woche unter Frequenz (1×/Woche)"],
+  appts:[{id:"a6",time:"09:40",svc:"MT",loc:"loc_01",kind:"proposal",todo:"Per E-Mail Di 09:40 oder Mi 08:40 anbieten.",reason:"Heute keine MT-Lücke in Mitte mehr. Absage für heute ist per E-Mail raus.",candidates:[{day:"Di 08.09.",time:"09:40",pr:"prac_02",loc:"loc_01",cross:false},{day:"Mi 09.09.",time:"08:40",pr:"prac_02",loc:"loc_01",cross:false}],notice:true}]},
+ {id:"t7",patient:"Marek Kowalski",phone:"+49 151 55011079",email:"marek.kowalski@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:["Zwei Termine am selben Tag (Verordnung 1×/Woche)"],
+  appts:[{id:"a7",time:"10:00",svc:"KG",loc:"loc_01",kind:"auto",to:{day:"Mo 07.09.",time:"16:00",pr:"prac_04",loc:"loc_01"},notice:false},{id:"a13",time:"16:20",svc:"KG",loc:"loc_02",kind:"auto",to:{day:"Mo 07.09.",time:"15:20",pr:"prac_06",loc:"loc_02"},notice:false}]},
+ {id:"t8",patient:"Wiebke Fischer",phone:"+49 151 55011061",email:"wiebke.fischer@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:[],
+  appts:[{id:"a8",time:"10:20",svc:"MT",loc:"loc_01",kind:"auto",to:{day:"Di 08.09.",time:"10:20",pr:"prac_02",loc:"loc_01"},notice:true}]},
+ {id:"t9",patient:"Sabine Richter",phone:"+49 151 55011016",email:"sabine.richter@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:[],
+  appts:[{id:"a9",time:"11:00",svc:"KG",loc:"loc_01",kind:"auto",to:{day:"Di 08.09.",time:"11:00",pr:"prac_04",loc:"loc_01"},notice:true}]},
+ {id:"t10",patient:"Katrin Meier",phone:"+49 151 55011004",email:"katrin.meyer@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:["Zuordnung unsicher: Stammdaten „Katrin Meyer“ (gleiches Geburtsdatum, Telefon, E-Mail)"],
+  appts:[{id:"a10",time:"14:00",svc:"KG",loc:"loc_02",kind:"auto",to:{day:"Mo 07.09.",time:"13:00",pr:"prac_08",loc:"loc_02"},notice:false}]},
+ {id:"t11",patient:"Brigitte Hoffmann",phone:"+49 151 55011002",email:"brigitte.hoffmann@example.com",status:"open",attempts:0,prio:1,warnings:["Verordnung fast aufgebraucht (5 von 6, Schätzung)","MLD45: einzige weitere Therapeutin (Aydin) Mo–Mi voll"],
+  appts:[{id:"a11",time:"14:40",svc:"MLD45",loc:"loc_02",kind:"front_desk",todo:"Anrufen: Warteliste oder Termin ab nächster Woche.",reason:"Kein MLD45-Termin in ±2 Tagen. Absage für heute ist raus.",candidates:[],notice:true}]},
+ {id:"t12",patient:"Renate Vogel",phone:"+49 151 55011066",email:"renate.vogel@example.com",status:"resolved",by:"system",attempts:0,prio:3,warnings:[],
+  appts:[{id:"a12",time:"15:40",svc:"KG",loc:"loc_02",kind:"auto",to:{day:"Mo 07.09.",time:"17:20",pr:"prac_06",loc:"loc_02"},notice:false}]},
+ {id:"t14",patient:"Frank Krüger",phone:"+49 151 55011089",email:"frank.krueger@example.com",status:"open",attempts:0,prio:2,warnings:[],
+  appts:[{id:"a14",time:"17:00",svc:"MT",loc:"loc_02",kind:"proposal",todo:"Anrufen: Di 15:00 in Mitte anbieten (anderer Standort!).",reason:"Keine MT-Lücke in Kreuzberg (Aydin voll). Nur in Mitte möglich – darum nicht automatisch.",candidates:[{day:"Di 08.09.",time:"15:00",pr:"prac_02",loc:"loc_01",cross:true}],notice:true}]},
+];
+let outbox=[];
+(function seed(){outbox.push({kind:"Termino",op:"Sperre Anna Weber 07.09. 07:40–18:00",to:"Termino",status:"delivered"});tasks.forEach(t=>t.appts.forEach(a=>{if(a.kind==="auto"){outbox.push({kind:"Termino",op:`Umbuchung ${t.patient} ${a.time} → ${a.to.day} ${a.to.time} ${PR[a.to.pr]}`,to:"Termino",status:"delivered"});if(t.phone)outbox.push({kind:"SMS",op:"Termin verlegt",to:t.phone,status:"delivered"});if(t.email)outbox.push({kind:"E-Mail",op:"Termin verlegt",to:t.email,status:"delivered"})}else if(a.notice){if(t.phone)outbox.push({kind:"SMS",op:`Absage heute ${a.time}`,to:t.phone,status:"delivered"});if(t.email)outbox.push({kind:"E-Mail",op:`Absage heute ${a.time}`,to:t.email,status:"delivered"})}}))})();
+const issues=[{kind:"Nicht zugeordnete Patientin",ref:"Lena Krause (Termino pat_03115)",detail:"Kein Stammdatensatz, keine Verordnung. Als Selbstzahlerin geführt."},{kind:"Unsichere Zuordnung",ref:"Katrin Meier ↔ Katrin Meyer",detail:"Gleiches Geburtsdatum, Telefon, E-Mail."},{kind:"Unbekannte Therapeuten-ID",ref:"prac_03 – 5 Termine 24.–28.08.",detail:"Nicht in den Stammdaten."}];
+
+// ---------- helpers ----------
+const $=s=>document.querySelector(s);
+const toast=m=>{const t=$("#toast");t.textContent=m;t.classList.add("show");clearTimeout(toast._);toast._=setTimeout(()=>t.classList.remove("show"),2600)};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const statusBadge=t=>({open:'<span class="badge b-crit"><span class="dot"></span>offen</span>',in_progress:'<span class="badge b-warn"><span class="dot"></span>in Arbeit</span>',retry_contact:`<span class="badge b-warn"><span class="dot"></span>erneut kontaktieren (${t.attempts}×)</span>`,resolved:t.by==="system"?'<span class="badge b-auto">Assistent</span>':'<span class="badge b-good">erledigt</span>'}[t.status]);
+const warnBadges=t=>t.warnings.map(w=>`<span class="badge b-warn" title="${esc(w)}">⚠ ${esc(w)}</span>`).join("");
+const find=id=>{for(const t of tasks){const a=t.appts.find(x=>x.id===id);if(a)return {t,a}}};
+const openTasks=()=>tasks.filter(t=>t.status!=="resolved").sort((a,b)=>(a.prio-b.prio)||a.appts[0].time.localeCompare(b.appts[0].time));
+const openAppts=t=>t.appts.filter(a=>a.kind!=="auto"&&!a.resolution);
+const todoLine=t=>{const a=openAppts(t)[0];if(!a)return t.status==="resolved"?"erledigt":"—";return a.todo};
+const slotLabel=s=>`<b>${s.day} ${s.time}</b><span>${PR[s.pr]} · ${LOC[s.loc].name}${s.cross?" · ⚠ anderer Standort":""}</span>`;
+const stripeCls=t=>t.status==="resolved"?"done":"p"+t.prio;
+// ---------- actions ----------
+let selectedTask=null;
+function accept(apptId,ci){const {t,a}=find(apptId);const s=a.candidates[ci];a.kind="auto";a.to=s;a.acceptedBy="front_desk";outbox.push({kind:"Termino",op:`Umbuchung ${t.patient} ${a.time} → ${s.day} ${s.time} ${PR[s.pr]}`,to:"Termino",status:"pending"});if(t.phone)outbox.push({kind:"SMS",op:"Termin verlegt",to:t.phone,status:"pending"});if(t.email)outbox.push({kind:"E-Mail",op:"Termin verlegt",to:t.email,status:"pending"});if(!openAppts(t).length){t.status="resolved";t.by="front_desk"}toast(`${t.patient}: umgebucht auf ${s.day} ${s.time} – Termino + Nachricht im Postausgang`);renderAll()}
+function cancelNotify(apptId){const {t,a}=find(apptId);a.resolution="cancelled";outbox.push({kind:"Termino",op:`Absage ${t.patient} ${a.time}`,to:"Termino",status:"pending"});if(t.phone)outbox.push({kind:"SMS",op:"Termin abgesagt",to:t.phone,status:"pending"});if(t.email)outbox.push({kind:"E-Mail",op:"Termin abgesagt",to:t.email,status:"pending"});if(!openAppts(t).length){t.status="resolved";t.by="front_desk"}toast(`${t.patient}: abgesagt und benachrichtigt`);renderAll()}
+function attempt(taskId,reached){const t=tasks.find(x=>x.id===taskId);t.attempts++;t.status=reached?"in_progress":"retry_contact";toast(reached?`${t.patient}: erreicht – in Arbeit`:`${t.patient}: nicht erreicht (${t.attempts}. Versuch) – bleibt oben`);renderAll()}
+function markDone(taskId,res){const t=tasks.find(x=>x.id===taskId);t.appts.forEach(a=>{if(a.kind!=="auto")a.resolution=res});t.status="resolved";t.by="front_desk";toast(`${t.patient}: ${res==="kept"?"kommt trotzdem – findet statt":"erledigt"}`);renderAll()}
+function setStatus(id,s){tasks.find(x=>x.id===id).status=s;renderAll()}
+let undoTarget=null;
+function openUndo(apptId){const {t,a}=find(apptId);undoTarget=apptId;$("#undo-sub").textContent=`${t.patient} · ${a.time} → ${a.to.day} ${a.to.time} bei ${PR[a.to.pr]}`;$("#undo-msg").value=`Guten Tag ${t.patient},\n\nbitte beachten Sie: Die Umbuchung Ihres Termins auf ${a.to.day} ${a.to.time} wurde zurückgenommen. Wir melden uns bei Ihnen. Bei Fragen: +49 30 000000.\n\nIhr Team von meinphysio+`;$("#undo").showModal()}
+$("#undo").addEventListener("close",()=>{if($("#undo").returnValue!=="ok"||!undoTarget)return;const {t,a}=find(undoTarget);const next=$("#undo-next").value;outbox.push({kind:"Termino",op:`Storno Umbuchung ${t.patient}`,to:"Termino",status:"pending"});outbox.push({kind:t.phone?"SMS":"E-Mail",op:"Korrektur",to:t.phone||t.email,status:"pending"});if(next==="takes_place_as_planned"){a.kind="done";a.resolution="kept";t.status="resolved";t.by="front_desk"}else if(next==="cancel_without_replacement"){a.kind="done";a.resolution="cancelled";t.status="resolved";t.by="front_desk"}else{a.kind="front_desk";a.todo="Anrufen: neuen Termin finden.";a.reason="Umbuchung zurückgenommen.";a.candidates=[];t.status="open";t.prio=1}undoTarget=null;toast(`${t.patient}: zurückgenommen`);renderAll()});
+
+// ---------- drawer (master-detail, shared) ----------
+function apptDetail(t,a){
+  let body="",act="";
+  if(a.resolution==="cancelled")body=`<span class="badge b-neutral">abgesagt</span>`;
+  else if(a.resolution==="kept")body=`<span class="badge b-good">findet statt</span>`;
+  else if(a.kind==="auto"){body=`<span class="badge b-auto">→ ${a.to.day} ${a.to.time} · ${PR[a.to.pr]} · ${LOC[a.to.loc].name}</span><span class="note">${a.notice?"Absage für heute + neuer Termin in einer Nachricht":"Nachricht gesendet"} · Termino ${a.acceptedBy?"ausstehend":"bestätigt"}</span>`;act=`<button class="btn sm" onclick="openUndo('${a.id}')">Rückgängig</button>`}
+  else{body=`<div class="note">${esc(a.reason)}</div>${a.candidates.length?`<div class="row">${a.candidates.map((c,i)=>`<button class="slotbtn ${c.cross?"warnslot":""}" onclick="accept('${a.id}',${i})">${slotLabel(c)}</button>`).join("")}</div>`:""}`;act=`<button class="btn sm danger" onclick="cancelNotify('${a.id}')">Absagen &amp; benachrichtigen</button>`}
+  return `<div class="appt-d"><div class="hd2"><span class="t">${a.time}</span><span>${a.svc} · ${LOC[a.loc].name}</span><span style="margin-left:auto">${act}</span></div>${body}</div>`;
+}
+function scriptFor(t){const a=openAppts(t)[0];if(!a)return "";if(a.kind==="front_desk"&&a.id==="a1")return "Patientin kommt gleich. Vor Ort erklären, Ersatztermin anbieten, ggf. Wartezeit.";if(a.kind==="proposal")return `„Guten Tag, hier meinphysio+. Ihr Termin heute ${a.time} bei Anna Weber fällt leider aus, Sie haben dazu schon eine Nachricht bekommen. Wir hätten ${a.candidates.map(c=>`${c.day} ${c.time} bei ${PR[c.pr]}${c.cross?" in "+LOC[c.loc].name:""}`).join(" oder ")} – passt das?“`;return `„Guten Tag, hier meinphysio+. Ihr Termin heute ${a.time} fällt leider aus. Für ${a.svc} haben wir diese Woche keinen Ersatz. Dürfen wir Sie auf die Warteliste setzen oder gleich einen Termin ab nächster Woche ausmachen?“`}
+function openDrawer(taskId){selectedTask=taskId;const t=tasks.find(x=>x.id===taskId);$("#dr-title").textContent=t.patient;$("#dr-sub").innerHTML=`${statusBadge(t)} &nbsp; ${t.appts.map(a=>a.time).join(" · ")} · ${t.appts[0].svc}`;
+  const open=t.status!=="resolved";const script=scriptFor(t);
+  $("#dr-body").innerHTML=`<div><div class="kicker">Kontakt</div>${t.phone?`<div class="phone-big">${t.phone}</div>`:`<span class="badge b-crit">kein Telefon</span>`}<div class="small muted">${t.email||"keine E-Mail"}</div></div>${t.warnings.length?`<div><div class="kicker">Hinweise</div><div class="warnings" style="margin-top:4px">${warnBadges(t)}</div></div>`:""}${script?`<div class="script"><span class="lbl">Gesprächsleitfaden</span>${esc(script)}</div>`:""}<div><div class="kicker" style="margin-bottom:6px">Termine</div><div class="stack">${t.appts.map(a=>apptDetail(t,a)).join("")}</div></div>`;
+  $("#dr-foot").innerHTML=open?`<button class="btn primary" onclick="attempt('${t.id}',true)">☎ Erreicht</button><button class="btn" onclick="attempt('${t.id}',false)">Nicht erreicht</button><button class="btn" onclick="markDone('${t.id}','kept')">Kommt trotzdem</button>`:`<span class="muted small">Nichts mehr zu tun.</span>`;
+  $("#drawer").classList.add("open");$("#scrim").classList.add("open")}
+function closeDrawer(){selectedTask=null;$("#drawer").classList.remove("open");$("#scrim").classList.remove("open");renderAll()}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("#drawer").classList.contains("open"))closeDrawer()});
+
+// ---------- P1: focus list ----------
+function rowBtn(t){const a=openAppts(t)[0]||t.appts[0];return `<button class="rowbtn ${selectedTask===t.id?"sel":""}" onclick="openDrawer('${t.id}')"><span class="stripe ${stripeCls(t)}"></span><span class="t">${a.time}<small>${a.svc} · ${LOC[a.loc].name}</small></span><span><span class="who">${esc(t.patient)}</span><div class="todo">${esc(todoLine(t))}</div>${t.warnings.length?`<div class="meta">⚠ ${esc(t.warnings[0])}${t.warnings.length>1?` · +${t.warnings.length-1}`:""}</div>`:""}</span><span class="right">${statusBadge(t)}${t.phone?`<span class="mono small muted">${t.phone}</span>`:""}</span></button>`}
+function renderP1(){const open=openTasks();const groups=[["Jetzt",x=>x<"09:00"],["Vormittag",x=>x>="09:00"&&x<"13:00"],["Nachmittag",x=>x>="13:00"]];let h="";groups.forEach(([g,f])=>{const l=open.filter(t=>f((openAppts(t)[0]||t.appts[0]).time));if(!l.length)return;h+=`<div class="group-h">${g} <span class="mono">${l.length}</span></div><div class="stack">${l.map(rowBtn).join("")}</div>`});if(!open.length)h=`<div class="card pad muted">Alles erledigt.</div>`;const autoN=tasks.filter(t=>t.status==="resolved"&&t.by==="system").length;const fdN=tasks.filter(t=>t.status==="resolved"&&t.by==="front_desk").length;h+=`<div class="group-h">Erledigt</div><div class="summary-line">Umbuchungsassistent: ${autoN} Patient:innen umgebucht und benachrichtigt${fdN?` · Empfang: ${fdN} erledigt`:""}<button class="btn sm" onclick="document.getElementById('p1-done').toggleAttribute('open')">Anzeigen</button></div><details id="p1-done" class="panel"><summary class="small muted">Liste</summary><div class="stack">${tasks.filter(t=>t.status==="resolved").map(rowBtn).join("")}</div></details>`;$("#p1-body").innerHTML=h}
+
+// ---------- P2: calendar (vertical time, practitioner columns) ----------
+const H0=8,H1=18,PXH=60; const ypx=hhmm=>{const [h,m]=hhmm.split(":").map(Number);return (h+m/60-H0)*PXH};
+const cols=[{pr:"prac_01",loc:"loc_01/loc_02",absent:true},{pr:"prac_02",loc:"loc_01",hours:[["08:00","12:00"],["12:40","16:00"]],free:[["09:20","09:40"],["11:40","12:00"],["15:00","15:20"]]},{pr:"prac_04",loc:"loc_01",hours:[["09:00","13:00"],["13:40","17:00"]],free:[["10:20","10:40"],["16:00","16:20"]]},{pr:"prac_05",loc:"loc_02",hours:[["08:00","12:00"],["12:40","16:00"]],free:[]},{pr:"prac_06",loc:"loc_02",hours:[["10:00","14:00"],["14:40","18:00"]],free:[["12:00","12:20"],["15:20","15:40"],["17:20","17:40"]]},{pr:"prac_08",loc:"loc_02",hours:[["08:00","12:00"],["12:40","15:00"]],free:[["08:40","09:00"],["13:00","13:20"]]}];
+function renderP2(){const cls=a=>a.resolution?"k-done":a.kind==="auto"?"k-auto moved":a.kind==="front_desk"?"k-open":"k-warn";
+  let h=`<div></div>`+cols.map(c=>`<div class="colh"><b>${PR[c.pr]}</b>${c.absent?'<span class="badge b-crit">krank</span>':`<span class="badge b-outline">${LOC[c.loc].name}</span>`}</div>`).join("");
+  h+=`<div class="axis">${Array.from({length:H1-H0+1},(_,i)=>`<span style="top:${i*PXH}px">${String(H0+i).padStart(2,"0")}:00</span>`).join("")}</div>`;
+  const incoming={};tasks.forEach(t=>t.appts.forEach(a=>{if(a.kind==="auto"&&a.to.day.startsWith("Mo"))(incoming[a.to.pr]=incoming[a.to.pr]||[]).push({t,a})}));
+  cols.forEach(c=>{let inner="";if(c.absent){tasks.forEach(t=>t.appts.forEach(a=>{inner+=`<button class="blk ${cls(a)}" style="top:${ypx(a.time)+1}px;height:${(a.svc==="MLD45"?40:20)-2}px" onclick="openDrawer('${t.id}')" title="${esc(t.patient)}"><b>${a.time}</b>${esc(t.patient)} · ${a.svc}</button>`}))}
+    else{c.hours.forEach(([s,e])=>{inner+=`<span class="blk k-busy" style="top:${ypx(s)+1}px;height:${ypx(e)-ypx(s)-2}px;z-index:0"></span>`});const freeNow=c.free.filter(([s])=>!(incoming[c.pr]||[]).some(({a})=>a.to.time===s));freeNow.forEach(([s,e])=>{inner+=`<span class="blk k-free" style="top:${ypx(s)+1}px;height:${ypx(e)-ypx(s)-2}px;z-index:1;background:var(--surface)"><b>${s}</b>frei</span>`});(incoming[c.pr]||[]).forEach(({t,a})=>{inner+=`<button class="blk k-auto" style="top:${ypx(a.to.time)+1}px;height:18px;z-index:2" onclick="openDrawer('${t.id}')"><b>${a.to.time}</b>${esc(t.patient)} ← ${a.time}</button>`})}
+    h+=`<div class="col ${c.absent?"absent":""}">${inner}</div>`});
+  h+=`<div class="nowline" style="top:${ypx("07:40")+34}px"><span>07:40 jetzt</span></div>`;
+  $("#p2-cal").innerHTML=h}
+
+// ---------- P3: wizard (3 steps) ----------
+let p3step=1,p3sel=null;
+function renderP3(){document.querySelectorAll("#p3 .steps button").forEach(b=>{const n=Number(b.dataset.step);b.setAttribute("aria-current",n===p3step?"step":"false");b.classList.toggle("donestep",n<p3step)});const body=$("#p3-body");
+  if(p3step===0){body.innerHTML=`<div class="stack" style="max-width:720px"><h2>Ausfall erfassen</h2><div class="two"><label>Therapeut:in<select><option>Anna Weber (KG, MT, MLD45)</option><option>Jonas Brandt</option></select></label><label>Grund<select><option>krank</option><option>Notfall</option><option>geplant (Urlaub, Fortbildung)</option><option>Sonstiges</option></select></label><label>Von<input type="datetime-local" value="2026-09-07T07:40"></label><label>Bis<input type="datetime-local" value="2026-09-07T18:00"></label></div><label>Notiz (optional)<input placeholder="z. B. Rückruf 12 Uhr"></label><div class="card pad" style="background:var(--surface-2)"><b>Was beim Start passiert</b><div class="small muted">Anna Weber wird in Termino für den Zeitraum gesperrt. Der Umbuchungsassistent prüft 14 Termine: Was sicher passt (gleicher Standort, passende Qualifikation, ±2 Tage), wird umgebucht und per SMS/E-Mail mitgeteilt. Alles andere landet in Schritt 2 – sortiert nach Dringlichkeit.</div></div></div>`;$("#p3-pos").textContent=""}
+  if(p3step===1){const open=openTasks();if(!open.length){p3sel=null}else if(!p3sel||!open.find(t=>t.id===p3sel))p3sel=open[0].id;const t=open.find(x=>x.id===p3sel);
+    const nav=`<div class="casenav">${open.map(x=>`<button class="${x.id===p3sel?"sel":""}" onclick="p3sel='${x.id}';renderP3()"><span class="stripe ${stripeCls(x)}"></span><span class="t">${(openAppts(x)[0]||x.appts[0]).time}</span><span><div class="who">${esc(x.patient)}</div><div class="st">${x.status==="open"?"offen":x.status==="in_progress"?"in Arbeit":`nicht erreicht (${x.attempts}×)`}</div></span></button>`).join("")}${tasks.filter(x=>x.status==="resolved"&&x.by==="front_desk").map(x=>`<button class="doneitem" onclick="openDrawer('${x.id}')"><span class="stripe done"></span><span class="t">${x.appts[0].time}</span><span><div class="who">${esc(x.patient)}</div><div class="st">erledigt</div></span></button>`).join("")}</div>`;
+    let focus="";if(!t)focus=`<div class="focus"><h2>Alle Fälle erledigt</h2><p class="muted">Weiter zum Ergebnis.</p></div>`;else{const a=openAppts(t)[0];const script=scriptFor(t);focus=`<div class="focus"><div class="hd"><span class="big">${esc(t.patient)}</span>${statusBadge(t)}${t.phone?`<span class="phone-big">${t.phone}</span>`:`<span class="badge b-crit">kein Telefon</span> <span class="small muted">${esc(t.email)}</span>`}</div><div class="what">${esc(a.todo)}</div><div class="why">${esc(a.reason)}${t.warnings.length?`<div class="warnings" style="margin-top:6px">${warnBadges(t)}</div>`:""}</div>${script?`<div class="script"><span class="lbl">Gesprächsleitfaden</span>${esc(script)}</div>`:""}<div class="actions-big">${a.candidates.map((c,i)=>`<button class="slotbtn ${c.cross?"warnslot":""}" style="padding:8px 12px" onclick="accept('${a.id}',${i})">${slotLabel(c)}</button>`).join("")}<button class="btn" onclick="attempt('${t.id}',false)">Nicht erreicht – später</button><button class="btn" onclick="markDone('${t.id}','kept')">Kommt trotzdem</button><button class="btn danger" onclick="cancelNotify('${a.id}')">Absagen &amp; benachrichtigen</button></div>${t.appts.length>1?`<div class="note">Weitere Termine dieser Patient:in: ${t.appts.filter(x=>x!==a).map(x=>`${x.time} ${x.svc}`).join(", ")} – <a href="#" onclick="openDrawer('${t.id}');return false">alle anzeigen</a></div>`:""}</div>`}
+    const autos=tasks.flatMap(x=>x.appts.filter(a=>a.kind==="auto").map(a=>({t:x,a})));
+    body.innerHTML=`<div class="case-main">${nav}${focus}</div><details class="panel"><summary>Vom Umbuchungsassistenten erledigt · ${autos.length} Termine, ${new Set(autos.map(x=>x.t.id)).size} Patient:innen, alle benachrichtigt</summary><div class="card tablewrap"><table class="compact-table"><thead><tr><th>Alt</th><th>Patient:in</th><th>Neu</th><th>Hinweis</th><th></th></tr></thead><tbody>${autos.map(({t,a})=>`<tr><td class="mono">${a.time} ${a.svc}</td><td>${esc(t.patient)}</td><td class="mono">${a.to.day} ${a.to.time} · ${PR[a.to.pr].split(" ").pop()} · ${LOC[a.to.loc].name[0]}</td><td class="small">${t.warnings.length?"⚠ "+esc(t.warnings[0]):""}</td><td><button class="btn sm" onclick="openUndo('${a.id}')">Rückgängig</button></td></tr>`).join("")}</tbody></table></div></details>`;$("#p3-pos").textContent=open.length?`${open.length} offen`:""}
+  if(p3step===2){const auto=tasks.filter(t=>t.status==="resolved"&&t.by==="system");const fd=tasks.filter(t=>t.status==="resolved"&&t.by==="front_desk");const retry=tasks.filter(t=>t.status==="retry_contact");const open=tasks.filter(t=>t.status==="open"||t.status==="in_progress");const N=tasks.length;const seg=(n,c,l)=>n?`<div class="${c}" style="flex:${n}" title="${l}">${n}</div>`:"";const pend=outbox.filter(o=>o.status==="pending").length;
+    const li=t=>`<li>${(openAppts(t)[0]||t.appts[0]).time} ${esc(t.patient)}${t.appts.length>1?` (${t.appts.length} Termine)`:""}</li>`;
+    body.innerHTML=`<div class="stack" style="gap:18px"><h2>Ergebnis für Mo 07.09.</h2><div class="bar">${seg(auto.length,"s-auto","Assistent")}${seg(fd.length,"s-fd","Empfang erledigt")}${seg(retry.length,"s-retry","erneut kontaktieren")}${seg(open.length,"s-open","offen")}</div><div class="legend2"><span><i style="background:var(--auto)"></i>Assistent ${auto.length}</span><span><i style="background:var(--good)"></i>Empfang erledigt ${fd.length}</span><span><i style="background:var(--warn)"></i>erneut kontaktieren ${retry.length}</span><span><i style="background:var(--crit)"></i>offen ${open.length}</span><span class="muted">von ${N} Patient:innen · 14 Termine</span></div><div class="outcome-cols"><div class="col"><h3>Offen / in Arbeit</h3><ul>${open.map(li).join("")||"<li class='muted'>–</li>"}</ul></div><div class="col"><h3>Erneut kontaktieren</h3><ul>${retry.map(li).join("")||"<li class='muted'>–</li>"}</ul></div><div class="col"><h3>Empfang erledigt</h3><ul>${fd.map(li).join("")||"<li class='muted'>–</li>"}</ul></div><div class="col"><h3>Assistent</h3><ul>${auto.map(li).join("")}</ul></div></div><div class="stats"><div class="stat"><b>${outbox.filter(o=>o.kind==="Termino").length}</b><span>Termino-Schreibvorgänge${pend?` (${pend} ausstehend)`:""}</span></div><div class="stat"><b>${outbox.filter(o=>o.kind!=="Termino").length}</b><span>Nachrichten (SMS/E-Mail)</span></div><div class="stat"><b>3</b><span>Datenprobleme zu klären</span></div><div class="stat"><b>08:05</b><span>nächster Termino-Abgleich</span></div></div><p class="muted small">Die Liste bleibt offen: Rückrufe, „erneut kontaktieren“ und der nächste Export aktualisieren sie. Wenn Anna länger ausfällt, den Zeitraum verlängern – der Assistent prüft nur die neuen Tage.</p></div>`;$("#p3-pos").textContent=""}
+  $("#p3-prev").disabled=p3step===0;$("#p3-next").textContent=p3step===0?"Ausfall anlegen & Assistent starten":p3step===2?"Fertig":"Weiter zum Ergebnis"}
+$("#p3-prev").onclick=()=>{p3step=Math.max(0,p3step-1);renderP3()};
+$("#p3-next").onclick=()=>{if(p3step===0)toast("Ausfall angelegt · Termino-Sperre gesetzt · Assistent: 9 Termine umgebucht, 5 für den Empfang");if(p3step<2){p3step++;renderP3()}else toast("Fertig – Liste bleibt für Rückrufe offen.")};
+document.querySelectorAll("#p3 .steps button").forEach(b=>b.onclick=()=>{p3step=Number(b.dataset.step);renderP3()});
+
+// ---------- P4: board ----------
+function renderP4(){const cs=[["open","Offen"],["in_progress","In Arbeit"],["retry_contact","Erneut kontaktieren"],["resolved","Erledigt"]];$("#p4-board").innerHTML=cs.map(([s,label])=>{const list=tasks.filter(t=>t.status===s).sort((a,b)=>(a.prio-b.prio)||a.appts[0].time.localeCompare(b.appts[0].time));return `<div class="col4"><h3>${label}<span class="count">${list.length}</span></h3>${list.map(t=>`<div class="kcard ${stripeCls(t)}" onclick="openDrawer('${t.id}')"><div class="name">${esc(t.patient)}</div><div class="meta">${t.appts.map(a=>`${a.time} ${a.svc} ${LOC[a.loc].name[0]}`).join(" · ")}${t.attempts?` · ${t.attempts}× versucht`:""}</div><div class="todo">${s==="resolved"?(t.by==="system"?'<span class="badge b-auto">Assistent</span>':'<span class="badge b-good">erledigt</span>'):esc(todoLine(t))}</div>${s!=="resolved"?`<div class="move">${s!=="in_progress"?`<button class="chip" onclick="event.stopPropagation();setStatus('${t.id}','in_progress')">→ In Arbeit</button>`:""}<button class="chip" onclick="event.stopPropagation();attempt('${t.id}',false)">Nicht erreicht</button><button class="chip" onclick="event.stopPropagation();markDone('${t.id}','kept')">Erledigt</button></div>`:""}</div>`).join("")||`<p class="muted small">–</p>`}</div>`}).join("")}
+
+// ---------- P5: call list (master-detail) ----------
+function renderP5(){const open=openTasks();$("#p5-body").innerHTML=`<div class="stack">${open.map((t,i)=>{const a=openAppts(t)[0];return `<button class="rowbtn ${selectedTask===t.id?"sel":""}" onclick="openDrawer('${t.id}')"><span class="stripe ${stripeCls(t)}"></span><span class="t">${i+1}.<small>${a.time} ${a.svc}</small></span><span><span class="who">${esc(t.patient)}</span> ${t.phone?`<span class="phone-big" style="font-size:15px;margin-left:8px">${t.phone}</span>`:`<span class="badge b-crit" style="margin-left:8px">kein Telefon – E-Mail</span>`}<div class="todo">${esc(a.todo)}</div></span><span class="right">${statusBadge(t)}</span></button>`}).join("")||`<div class="card pad muted">Liste leer.</div>`}</div><div class="group-h" style="margin-top:18px">Ohne Anruf erledigt</div><div class="summary-line">Umbuchungsassistent: ${tasks.filter(t=>t.status==="resolved"&&t.by==="system").length} Patient:innen umgebucht und per SMS/E-Mail informiert<button class="btn sm" onclick="document.querySelector('.tabs button[data-p=p3]').click();p3step=1;renderP3();document.querySelector('#p3 details.panel').open=true">Liste im Schritt-Modus</button></div>`}
+
+function renderAll(){renderP1();renderP2();renderP3();renderP4();renderP5();if(selectedTask)openDrawer(selectedTask)}
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tabs button").forEach(x=>x.setAttribute("aria-selected","false"));b.setAttribute("aria-selected","true");document.querySelectorAll(".proto").forEach(p=>p.classList.toggle("active",p.id===b.dataset.p));window.scrollTo({top:0})});
+renderAll();
+</script>
