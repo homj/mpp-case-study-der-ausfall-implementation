@@ -40,10 +40,14 @@ export function createApp(db: Database, tenantId: string = DEFAULT_TENANT_ID): O
   const app = new OpenAPIHono();
 
   const origins = allowedOrigins();
+  // Local development only: the preview tooling may start the web app on another port.
+  const isLocalDev = process.env.NODE_ENV !== 'production' && process.env.WEB_ORIGIN === undefined;
+  const localDevOrigin = /^http:\/\/(localhost|127\.0\.0\.1):\d+$/;
   app.use(
     '*',
     cors({
-      origin: (origin) => (origins.includes(origin) ? origin : origins[0] ?? null),
+      origin: (origin) =>
+        origins.includes(origin) || (isLocalDev && localDevOrigin.test(origin)) ? origin : (origins[0] ?? null),
       allowMethods: ['GET', 'POST', 'OPTIONS'],
       allowHeaders: ['content-type'],
     }),
