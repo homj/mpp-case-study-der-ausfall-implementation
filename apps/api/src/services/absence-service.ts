@@ -1099,3 +1099,48 @@ export async function listPractitionerViews(deps: AbsenceServiceDeps) {
     qualifications: row.qualifications,
   }));
 }
+
+/**
+ * One ranked queue across all absences. The front desk works this list, not one
+ * list per absence, so a second absence merges into the same day of work.
+ * `status: 'open'` drops tasks the system or the front desk already closed.
+ */
+export async function listTaskQueue(deps: AbsenceServiceDeps, status: 'open' | 'all') {
+  const absences = await listAbsences(deps.db, deps.tenantId);
+  const queued = [];
+  for (const absence of absences) {
+    const view = await getAbsenceView(deps, absence.id);
+    for (const task of view.tasks) {
+      if (status === 'open' && task.status === 'resolved') continue;
+      const warnings = task.affectedAppointments.flatMap((item) => item.warnings);
+      queued.push({
+        id: task.id,
+        absence: {
+          id: view.absence.id,
+          practitionerName: view.absence.practitionerName,
+          category: view.absence.category,
+          startsAt: view.absence.startsAt,
+          endsAt: view.absence.endsAt,
+        },
+        patient: {
+          terminoPatientId: task.terminoPatientId,
+          name: task.patientName,
+          phone: task.phone,
+          email: task.email,
+        },
+        status: task.status,
+        contactAttempts: task.contactAttempts,
+        pinned: task.pinned,
+        resolvedBy: task.resolvedBy,
+        warnings,
+        warningCount: task.warningCount,
+        earliestStartsAt: task.earliestStartsAt,
+        phoneContactable: task.phoneContactable,
+        affectedAppointments: task.affectedAppointments,
+      });
+    }
+  }
+  return rankTasks(
+    queued.map((task) => ({ ...task, earliestStartsAt: new Date(task.earliestStartsAt) })),
+  ).map((task) => ({ ...task, earliestStartsAt: task.earliestStartsAt.toISOString() }));
+}

@@ -260,3 +260,49 @@ export const practitionerListResponseSchema = z.object({
   practitioners: z.array(practitionerViewSchema),
 });
 export type PractitionerListResponse = z.infer<typeof practitionerListResponseSchema>;
+
+// --- task queue -------------------------------------------------------------
+// One queue across all absences. `GET /tasks` powers the front-desk cockpit:
+// the front desk works one ranked list, not one list per absence.
+
+export const queueAbsenceRefSchema = z.object({
+  id: z.uuid(),
+  practitionerName: z.string(),
+  category: absenceCategorySchema,
+  startsAt: z.iso.datetime(),
+  endsAt: z.iso.datetime(),
+});
+export type QueueAbsenceRef = z.infer<typeof queueAbsenceRefSchema>;
+
+export const queuePatientSchema = z.object({
+  terminoPatientId: z.string(),
+  name: z.string(),
+  phone: z.string().nullable(),
+  email: z.string().nullable(),
+});
+export type QueuePatient = z.infer<typeof queuePatientSchema>;
+
+export const queuedTaskViewSchema = z.object({
+  id: z.uuid(),
+  absence: queueAbsenceRefSchema,
+  patient: queuePatientSchema,
+  status: rescheduleTaskStatusSchema,
+  contactAttempts: z.int().nonnegative(),
+  pinned: z.boolean(),
+  resolvedBy: z.enum(['system', 'front_desk']).nullable(),
+  /** Union of the prescription warnings of every affected appointment. */
+  warnings: z.array(prescriptionWarningSchema),
+  warningCount: z.int().nonnegative(),
+  earliestStartsAt: z.iso.datetime(),
+  phoneContactable: z.boolean(),
+  affectedAppointments: z.array(affectedAppointmentViewSchema),
+});
+export type QueuedTaskView = z.infer<typeof queuedTaskViewSchema>;
+
+export const taskQueueQuerySchema = z.object({
+  status: z.enum(['open', 'all']).default('open'),
+});
+export type TaskQueueQuery = z.infer<typeof taskQueueQuerySchema>;
+
+export const taskQueueResponseSchema = z.object({ tasks: z.array(queuedTaskViewSchema) });
+export type TaskQueueResponse = z.infer<typeof taskQueueResponseSchema>;

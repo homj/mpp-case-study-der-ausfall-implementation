@@ -21,6 +21,8 @@ import {
   practitionerListResponseSchema,
   quickActionResponseSchema,
   rescheduleTaskStateSchema,
+  taskQueueQuerySchema,
+  taskQueueResponseSchema,
 } from '@ausfall/contracts';
 import {
   ConflictError,
@@ -33,6 +35,7 @@ import {
   listAbsenceSummaries,
   listOpenDataIssueViews,
   listPractitionerViews,
+  listTaskQueue,
   logContactAttempt,
   markKept,
 } from '../services/absence-service.js';
@@ -334,6 +337,29 @@ export function createAbsencesRouter(deps: AbsenceServiceDeps): OpenAPIHono {
     async (context) => {
       const practitioners = await listPractitionerViews(deps);
       return context.json(practitionerListResponseSchema.parse({ practitioners }), 200);
+    },
+  );
+
+  router.openapi(
+    createRoute({
+      method: 'get',
+      path: '/tasks',
+      summary: 'The one reschedule-task queue across all absences',
+      description:
+        'Every reschedule task of the tenant, ranked by the domain priority rules, each one tagged with the absence it belongs to. `status=open` drops resolved tasks.',
+      request: { query: taskQueueQuerySchema },
+      responses: {
+        200: {
+          description: 'The ranked queue.',
+          content: { 'application/json': { schema: taskQueueResponseSchema } },
+        },
+        400: { description: 'The query is invalid.', ...errorContent },
+      },
+    }),
+    async (context) => {
+      const { status } = context.req.valid('query');
+      const tasks = await listTaskQueue(deps, status);
+      return context.json(taskQueueResponseSchema.parse({ tasks }), 200);
     },
   );
 
