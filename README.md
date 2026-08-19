@@ -1,0 +1,1 @@
+# mpp-case-study-der-ausfall-implementation
