@@ -1,0 +1,205 @@
+{
+  "app": {
+    "title": "meinphysio+ absence management",
+    "demo_time_label": "Demo time",
+    "demo_time_hint": "Simulated time for the demo. Not a real clock.",
+    "language_label": "Language",
+    "language_de": "German",
+    "language_en": "English",
+    "loading": "Loading ...",
+    "error_title": "Something went wrong",
+    "not_found": "Page not found",
+    "mock_data_notice": "Demo data. Nothing is really sent or written to Termino."
+  },
+  "absence": {
+    "new": {
+      "title": "Report an absence",
+      "description": "Record practitioner, period, and reason. The tool then proposes rebookings.",
+      "practitioner_label": "Practitioner",
+      "practitioner_placeholder": "Select a practitioner",
+      "category_label": "Category",
+      "category_placeholder": "Select a category",
+      "from_label": "From",
+      "to_label": "To",
+      "note_label": "Note (optional)",
+      "note_placeholder": "For example: called in sick at 07:35",
+      "submit": "Create absence",
+      "submitting": "Creating ...",
+      "error_practitioner_required": "Please select a practitioner.",
+      "error_period_invalid": "The end must be after the start.",
+      "error_submit_failed": "The absence could not be created."
+    },
+    "category": {
+      "sick": "Sick",
+      "emergency": "Emergency",
+      "planned": "Planned",
+      "other": "Other"
+    },
+    "detail": {
+      "heading": "Absence",
+      "period": "Period",
+      "category": "Category",
+      "note": "Note",
+      "no_note": "No note"
+    }
+  },
+  "tasks": {
+    "heading": "Open reschedule tasks",
+    "description": "Sorted by urgency. The most urgent task is on top.",
+    "empty": "No open reschedule tasks.",
+    "rank": "Rank {{rank}}",
+    "contact_attempts": "Contact attempts: {{count}}",
+    "unreachable_by_phone": "Unreachable by phone",
+    "unmatched_patient": "Unmatched patient",
+    "no_email": "No email on file",
+    "log_contact_attempt": "Log contact attempt",
+    "status": {
+      "open": "Open",
+      "in_progress": "In progress",
+      "retry_contact": "Retry contact",
+      "resolved": "Resolved"
+    }
+  },
+  "appointment": {
+    "original_time": "Original appointment",
+    "service": "Service",
+    "location": "Location",
+    "duration": "{{count}} min",
+    "in_progress": "Already running",
+    "imminent": "Starts very soon",
+    "duplicate_same_day": "Second appointment on the same day",
+    "same_day_impossible": "Not possible today any more. A cancellation notice for today goes out."
+  },
+  "decision": {
+    "heading": "What the tool proposes",
+    "auto_rebook": "Rebooked automatically",
+    "swap_proposal": "Swap at the same time with another practitioner",
+    "proposal": "Proposal with candidate slots",
+    "front_desk": "The front desk must decide",
+    "no_candidates": "No matching candidate slots found.",
+    "candidates_heading": "Candidate slots",
+    "candidate_summary": "{{time}} with {{practitioner}}, {{location}}",
+    "reason": {
+      "in_progress": "The treatment is already running. Handle it in person.",
+      "imminent_no_swap": "The appointment starts very soon and nobody can take over at the same time. Do not cancel it automatically.",
+      "no_slot": "No free slot found in the window.",
+      "not_contactable": "The patient is unreachable by phone. No automatic rebooking."
+    }
+  },
+  "quick_action": {
+    "accept_proposal": "Accept proposal",
+    "cancel_and_notify": "Cancel and notify",
+    "rebooked_manually": "Rebooked manually",
+    "rebooked_manually_tooltip": "coming soon",
+    "running": "Running ...",
+    "done": "Done",
+    "failed": "The action failed."
+  },
+  "warnings": {
+    "heading": "Prescription warnings",
+    "no_prescription": "No prescription",
+    "start_deadline": "Start deadline",
+    "interruption": "Treatment interruption",
+    "below_frequency": "Below the prescribed frequency",
+    "units_nearly_used": "Prescription nearly used up"
+  },
+  "automated": {
+    "heading": "Automated actions",
+    "description": "Already done. Every action can be undone.",
+    "empty": "No automated actions.",
+    "old_slot": "Old slot",
+    "new_slot": "New slot",
+    "new_practitioner": "New practitioner",
+    "notification_sent": "Notification sent",
+    "notification_not_sent": "No notification",
+    "undone": "Undone",
+    "undo": "Undo",
+    "undo_dialog": {
+      "title": "Undo the rebooking",
+      "description": "The rebooking for {{patient}} will be taken back. Tell us why, and what happens next.",
+      "reason_label": "Reason",
+      "reason_placeholder": "Select a reason",
+      "next_step_label": "Next step",
+      "next_step_placeholder": "Select the next step",
+      "message_label": "Message to the patient",
+      "message_hint": "Check the text and adjust it if needed.",
+      "confirm": "Undo",
+      "cancel": "Cancel",
+      "default_message": "Hello {{patient}}, we have taken back your rebooking. We will get in touch with you."
+    },
+    "undo_reason": {
+      "patient_declined": "The patient declined",
+      "practitioner_available": "The practitioner is available after all",
+      "wrong_slot": "Wrong slot picked",
+      "other": "Other"
+    },
+    "undo_next_step": {
+      "front_desk_will_call": "The front desk will call",
+      "takes_place_as_planned": "Takes place as planned",
+      "cancel_without_replacement": "Cancel without a replacement"
+    }
+  },
+  "outbox": {
+    "heading": "Outbox",
+    "description": "Everything the tool intends to write or send. Nothing goes out without a row here.",
+    "tab_termino_writes": "Termino writes",
+    "tab_notifications": "Notifications",
+    "empty": "No entries.",
+    "column": {
+      "kind": "Kind",
+      "target": "Target",
+      "recipient": "Recipient",
+      "subject": "Subject",
+      "status": "Status",
+      "created": "Created"
+    },
+    "op": {
+      "block_practitioner": "Block practitioner",
+      "rebook": "Rebook",
+      "swap": "Swap",
+      "cancel": "Cancel"
+    },
+    "channel": {
+      "email": "Email",
+      "sms": "SMS"
+    },
+    "write_status": {
+      "pending": "Pending",
+      "delivered": "Delivered",
+      "confirmed": "Confirmed",
+      "failed": "Failed"
+    },
+    "notification_status": {
+      "pending": "Pending",
+      "sent": "Sent",
+      "failed": "Failed"
+    }
+  },
+  "data_issues": {
+    "heading": "Data issues",
+    "description": "Records the tool cannot match. The front desk resolves them.",
+    "empty": "No data issues.",
+    "resolve": "Resolve the match",
+    "candidates_heading": "Possible matches",
+    "matched_fields": "Matched: {{fields}}",
+    "birth_date": "Date of birth: {{date}}",
+    "kind": {
+      "unmatched_patient": "Unmatched patient",
+      "fuzzy_patient_match": "Fuzzy match",
+      "unknown_practitioner": "Unknown practitioner id"
+    },
+    "field": {
+      "first_name": "First name",
+      "last_name": "Last name",
+      "birth_date": "Date of birth",
+      "phone": "Phone",
+      "email": "Email"
+    },
+    "dialog": {
+      "title": "Resolve the match",
+      "description": "Resolving data issues comes in a next step.",
+      "placeholder": "The front desk will pick the matching record here and confirm the link.",
+      "close": "Close"
+    }
+  }
+}

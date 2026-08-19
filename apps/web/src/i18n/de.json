@@ -1,0 +1,205 @@
+{
+  "app": {
+    "title": "meinphysio+ Ausfallmanagement",
+    "demo_time_label": "Demo-Zeit",
+    "demo_time_hint": "Simulierte Uhrzeit fuer die Demo. Keine echte Uhr.",
+    "language_label": "Sprache",
+    "language_de": "Deutsch",
+    "language_en": "Englisch",
+    "loading": "Wird geladen ...",
+    "error_title": "Etwas ist schiefgelaufen",
+    "not_found": "Seite nicht gefunden",
+    "mock_data_notice": "Demo-Daten. Es wird nichts wirklich gesendet oder in Termino geschrieben."
+  },
+  "absence": {
+    "new": {
+      "title": "Ausfall melden",
+      "description": "Behandler:in, Zeitraum und Grund erfassen. Danach schlaegt das System Umbuchungen vor.",
+      "practitioner_label": "Behandler:in",
+      "practitioner_placeholder": "Behandler:in waehlen",
+      "category_label": "Kategorie",
+      "category_placeholder": "Kategorie waehlen",
+      "from_label": "Von",
+      "to_label": "Bis",
+      "note_label": "Notiz (optional)",
+      "note_placeholder": "Zum Beispiel: krankgemeldet um 07:35",
+      "submit": "Ausfall anlegen",
+      "submitting": "Wird angelegt ...",
+      "error_practitioner_required": "Bitte eine Behandler:in waehlen.",
+      "error_period_invalid": "Das Ende muss nach dem Beginn liegen.",
+      "error_submit_failed": "Der Ausfall konnte nicht angelegt werden."
+    },
+    "category": {
+      "sick": "Krank",
+      "emergency": "Notfall",
+      "planned": "Geplant",
+      "other": "Sonstiges"
+    },
+    "detail": {
+      "heading": "Ausfall",
+      "period": "Zeitraum",
+      "category": "Kategorie",
+      "note": "Notiz",
+      "no_note": "Keine Notiz"
+    }
+  },
+  "tasks": {
+    "heading": "Offene Umbuchungsaufgaben",
+    "description": "Nach Dringlichkeit sortiert. Die dringendste Aufgabe steht oben.",
+    "empty": "Keine offenen Umbuchungsaufgaben.",
+    "rank": "Platz {{rank}}",
+    "contact_attempts": "Kontaktversuche: {{count}}",
+    "unreachable_by_phone": "Telefonisch nicht erreichbar",
+    "unmatched_patient": "Nicht zugeordnete:r Patient:in",
+    "no_email": "Keine E-Mail hinterlegt",
+    "log_contact_attempt": "Kontaktversuch protokollieren",
+    "status": {
+      "open": "Offen",
+      "in_progress": "In Arbeit",
+      "retry_contact": "Erneut anrufen",
+      "resolved": "Erledigt"
+    }
+  },
+  "appointment": {
+    "original_time": "Urspruenglicher Termin",
+    "service": "Heilmittel",
+    "location": "Standort",
+    "duration": "{{count}} Min.",
+    "in_progress": "Laeuft bereits",
+    "imminent": "Steht unmittelbar bevor",
+    "duplicate_same_day": "Zweiter Termin am selben Tag",
+    "same_day_impossible": "Heute nicht mehr moeglich. Absage fuer heute geht raus."
+  },
+  "decision": {
+    "heading": "Vorschlag des Systems",
+    "auto_rebook": "Automatisch umgebucht",
+    "swap_proposal": "Tausch zur gleichen Zeit mit einer anderen Behandler:in",
+    "proposal": "Vorschlag mit Alternativterminen",
+    "front_desk": "Der Empfang muss entscheiden",
+    "no_candidates": "Keine passenden Alternativtermine gefunden.",
+    "candidates_heading": "Alternativtermine",
+    "candidate_summary": "{{time}} bei {{practitioner}}, {{location}}",
+    "reason": {
+      "in_progress": "Die Behandlung laeuft bereits. Vor Ort klaeren.",
+      "imminent_no_swap": "Der Termin steht unmittelbar bevor und niemand kann zur gleichen Zeit uebernehmen. Nicht automatisch absagen.",
+      "no_slot": "Kein freier Termin im Zeitfenster gefunden.",
+      "not_contactable": "Patient:in ist nicht telefonisch erreichbar. Keine automatische Umbuchung."
+    }
+  },
+  "quick_action": {
+    "accept_proposal": "Vorschlag uebernehmen",
+    "cancel_and_notify": "Absagen & benachrichtigen",
+    "rebooked_manually": "Manuell umgebucht",
+    "rebooked_manually_tooltip": "folgt",
+    "running": "Wird ausgefuehrt ...",
+    "done": "Erledigt",
+    "failed": "Aktion fehlgeschlagen."
+  },
+  "warnings": {
+    "heading": "Verordnungshinweise",
+    "no_prescription": "Keine Verordnung",
+    "start_deadline": "Behandlungsbeginn-Frist",
+    "interruption": "Behandlungsunterbrechung",
+    "below_frequency": "Unter der verordneten Frequenz",
+    "units_nearly_used": "Verordnung fast aufgebraucht"
+  },
+  "automated": {
+    "heading": "Automatische Aktionen",
+    "description": "Bereits ausgefuehrt. Jede Aktion laesst sich rueckgaengig machen.",
+    "empty": "Keine automatischen Aktionen.",
+    "old_slot": "Alter Termin",
+    "new_slot": "Neuer Termin",
+    "new_practitioner": "Neue Behandler:in",
+    "notification_sent": "Benachrichtigung gesendet",
+    "notification_not_sent": "Keine Benachrichtigung",
+    "undone": "Rueckgaengig gemacht",
+    "undo": "Rueckgaengig",
+    "undo_dialog": {
+      "title": "Umbuchung rueckgaengig machen",
+      "description": "Die Umbuchung von {{patient}} wird zurueckgenommen. Sagen Sie uns, warum, und was als Naechstes passiert.",
+      "reason_label": "Grund",
+      "reason_placeholder": "Grund waehlen",
+      "next_step_label": "Naechster Schritt",
+      "next_step_placeholder": "Naechsten Schritt waehlen",
+      "message_label": "Nachricht an die Patient:in",
+      "message_hint": "Text pruefen und bei Bedarf anpassen.",
+      "confirm": "Rueckgaengig machen",
+      "cancel": "Abbrechen",
+      "default_message": "Guten Tag {{patient}}, Ihre Umbuchung haben wir zurueckgenommen. Wir melden uns bei Ihnen."
+    },
+    "undo_reason": {
+      "patient_declined": "Patient:in hat abgelehnt",
+      "practitioner_available": "Behandler:in ist doch verfuegbar",
+      "wrong_slot": "Falscher Termin gewaehlt",
+      "other": "Sonstiges"
+    },
+    "undo_next_step": {
+      "front_desk_will_call": "Der Empfang ruft an",
+      "takes_place_as_planned": "Termin findet wie geplant statt",
+      "cancel_without_replacement": "Absage ohne Ersatztermin"
+    }
+  },
+  "outbox": {
+    "heading": "Postausgang",
+    "description": "Alles, was das Werkzeug schreiben oder senden will. Nichts geht ohne Eintrag raus.",
+    "tab_termino_writes": "Termino-Schreibvorgaenge",
+    "tab_notifications": "Benachrichtigungen",
+    "empty": "Keine Eintraege.",
+    "column": {
+      "kind": "Art",
+      "target": "Ziel",
+      "recipient": "Empfaenger",
+      "subject": "Betreff",
+      "status": "Status",
+      "created": "Erstellt"
+    },
+    "op": {
+      "block_practitioner": "Behandler:in sperren",
+      "rebook": "Umbuchen",
+      "swap": "Tauschen",
+      "cancel": "Absagen"
+    },
+    "channel": {
+      "email": "E-Mail",
+      "sms": "SMS"
+    },
+    "write_status": {
+      "pending": "Offen",
+      "delivered": "Uebermittelt",
+      "confirmed": "Bestaetigt",
+      "failed": "Fehlgeschlagen"
+    },
+    "notification_status": {
+      "pending": "Offen",
+      "sent": "Gesendet",
+      "failed": "Fehlgeschlagen"
+    }
+  },
+  "data_issues": {
+    "heading": "Datenprobleme",
+    "description": "Datensaetze, die das Werkzeug nicht zuordnen kann. Der Empfang loest sie auf.",
+    "empty": "Keine Datenprobleme.",
+    "resolve": "Zuordnung klaeren",
+    "candidates_heading": "Moegliche Treffer",
+    "matched_fields": "Uebereinstimmung: {{fields}}",
+    "birth_date": "Geburtsdatum: {{date}}",
+    "kind": {
+      "unmatched_patient": "Nicht zugeordnete:r Patient:in",
+      "fuzzy_patient_match": "Unsichere Zuordnung",
+      "unknown_practitioner": "Unbekannte Behandler-ID"
+    },
+    "field": {
+      "first_name": "Vorname",
+      "last_name": "Nachname",
+      "birth_date": "Geburtsdatum",
+      "phone": "Telefon",
+      "email": "E-Mail"
+    },
+    "dialog": {
+      "title": "Zuordnung klaeren",
+      "description": "Die Aufloesung von Datenproblemen folgt in einem naechsten Schritt.",
+      "placeholder": "Hier waehlt der Empfang spaeter den passenden Datensatz aus und bestaetigt die Zuordnung.",
+      "close": "Schliessen"
+    }
+  }
+}
