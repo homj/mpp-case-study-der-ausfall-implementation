@@ -71,6 +71,10 @@ Choices made during implementation that are too small for an ADR. Include the re
 
 - 2026-08-19 (web, found in the browser): the API sent no CORS headers, so **every** request from the web app failed with "Failed to fetch". The web app and the API are separate origins in every setup we ship (dev server on 3000, compose on 3000 vs 4000). `apps/api` now uses `hono/cors` with an allow-list from `WEB_ORIGIN` (default `http://localhost:3000`), not `*` — the API serves patient data. Only a real browser showed this; curl never does.
 
+- 2026-08-19 (web, accessibility): on a wide screen the case detail is an inline pane, not a dialog. Hiding the sheet with `lg:hidden` was not enough — a **mounted** Radix dialog marks the rest of the document inert and traps focus, so the header and the filters were dead while a case was open. The queue now mounts one mode only, chosen by `useIsWideScreen()` (a `matchMedia` hook that reports `false` on the server, so hydration stays stable). The selected case lives in the URL (`?task=`), so both modes share it across a resize.
+- 2026-08-19 (web, color): semantic colors are limited to status badges, warning icons, and the segmented progress bars — green done, blue assistant, red open, amber needs attention. Counts and contact data stay neutral. Every colored element keeps its text label, so color is never the only signal (CONSTITUTION §11).
+- 2026-08-19 (web): "Absagen & benachrichtigen" asks for confirmation in an `AlertDialog` that names the patient and the appointment time. It sends a cancellation notice at once, and only a new appointment undoes that.
+
 ## Deviations
 
 Places where we left the plan. Rule: when an edge case forces a deviation, pick the conservative option, log it here, and keep going.
