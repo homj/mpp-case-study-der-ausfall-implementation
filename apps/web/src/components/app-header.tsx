@@ -41,7 +41,7 @@ export function AppHeader() {
 
   return (
     <header className="bg-card border-b">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-3 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+      <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-3 px-4 py-3 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
         <div className="flex flex-wrap items-center gap-4">
           <Link to="/queue" className="text-lg font-semibold tracking-tight">
             {t('app.title')}

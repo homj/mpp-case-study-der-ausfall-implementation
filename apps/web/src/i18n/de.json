@@ -90,9 +90,6 @@
     "empty_body": "Neue Ausfälle oder der nächste Termino-Abgleich füllen die Liste wieder.",
     "assistant_summary": "Umbuchungsassistent: {{count}} Patient:innen umgebucht und benachrichtigt",
     "front_desk_summary": "Empfang: {{count}} erledigt",
-    "attempts": "{{count}} Kontaktversuche",
-    "no_phone": "kein Telefon",
-    "no_email": "keine E-Mail",
     "other_location": "anderer Standort",
     "script_label": "Gesprächsleitfaden",
     "proposals_label": "Ersatztermin anbieten – Vorschläge des Assistenten",
@@ -142,6 +139,13 @@
     "cancel_confirm": {
       "title": "Termin absagen?",
       "body": "Der Termin von {{name}} am {{time}} wird abgesagt. {{name}} bekommt sofort eine Absage per SMS oder E-Mail. Das lässt sich nur mit einem neuen Termin beheben."
+    },
+    "attempts_one": "{{count}} Kontaktversuch",
+    "attempts_other": "{{count}} Kontaktversuche",
+    "contact": {
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "missing": "nicht hinterlegt"
     }
   },
   "warnings": {

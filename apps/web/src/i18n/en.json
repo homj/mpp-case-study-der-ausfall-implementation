@@ -90,9 +90,6 @@
     "empty_body": "New absences or the next Termino reconciliation fill the list again.",
     "assistant_summary": "Rescheduling assistant: {{count}} patients rebooked and notified",
     "front_desk_summary": "Front desk: {{count}} done",
-    "attempts": "{{count}} contact attempts",
-    "no_phone": "no phone",
-    "no_email": "no email",
     "other_location": "other location",
     "script_label": "Call script",
     "proposals_label": "Offer a replacement slot – proposals of the assistant",
@@ -142,6 +139,13 @@
     "cancel_confirm": {
       "title": "Cancel the appointment?",
       "body": "The appointment of {{name}} on {{time}} will be cancelled. {{name}} gets a cancellation notice by SMS or email right away. Only a new appointment undoes this."
+    },
+    "attempts_one": "{{count}} contact attempt",
+    "attempts_other": "{{count}} contact attempts",
+    "contact": {
+      "phone": "Phone",
+      "email": "Email",
+      "missing": "not on file"
     }
   },
   "warnings": {

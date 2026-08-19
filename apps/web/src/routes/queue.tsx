@@ -7,7 +7,7 @@
 import { useMemo } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
-import { AlertTriangle } from 'lucide-react'
+import { AlertTriangle, Inbox } from 'lucide-react'
 import { useTasks } from '@/api/queries'
 import { AbsenceTag } from '@/components/absence-tag'
 import { CaseDetailActions, CaseDetailBody, CaseDetailHeader } from '@/components/case-detail'
@@ -230,31 +230,37 @@ function QueuePage() {
   )
 
   return (
-    <div className="lg:flex lg:items-start lg:gap-6">
-      <div className="min-w-0 flex-1">{list}</div>
+    <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(28rem,40%)] lg:items-start lg:gap-6">
+      <div className="min-w-0">{list}</div>
 
-      {/* Wide screens: the case sits beside the list and blocks nothing. */}
+      {/* Wide screens: the case fills the right side and blocks nothing. */}
       {wide ? (
-      <aside className="w-[26rem] shrink-0" aria-label={t('queue.detail_label')}>
-        {selected === undefined ? (
-          <Card>
-            <CardContent className="text-muted-foreground py-8 text-center text-sm">
-              {t('queue.detail_empty')}
-            </CardContent>
-          </Card>
-        ) : (
-          <Card className="sticky top-6 max-h-[calc(100vh-3rem)] overflow-y-auto">
-            <CardHeader>
-              <CardTitle>{selected.patient.name}</CardTitle>
-              <CaseDetailHeader task={selected} />
-            </CardHeader>
-            <CardContent className="grid gap-4">
-              <CaseDetailBody task={selected} />
-              <CaseDetailActions task={selected} onNext={next} />
-            </CardContent>
-          </Card>
-        )}
-      </aside>
+        <aside
+          className="lg:sticky lg:top-6 lg:h-[calc(100vh-3rem)]"
+          aria-label={t('queue.detail_label')}
+        >
+          {selected === undefined ? (
+            <Card className="flex h-full flex-col justify-center">
+              <CardContent className="text-muted-foreground grid justify-items-center gap-2 text-center text-sm">
+                <Inbox className="size-8 opacity-40" aria-hidden="true" />
+                {t('queue.detail_empty')}
+              </CardContent>
+            </Card>
+          ) : (
+            <Card className="flex h-full flex-col overflow-hidden">
+              <CardHeader className="shrink-0">
+                <CardTitle>{selected.patient.name}</CardTitle>
+                <CaseDetailHeader task={selected} />
+              </CardHeader>
+              <CardContent className="min-h-0 flex-1 overflow-y-auto">
+                <CaseDetailBody task={selected} />
+              </CardContent>
+              <div className="shrink-0 border-t px-6 py-4">
+                <CaseDetailActions task={selected} onNext={next} />
+              </div>
+            </Card>
+          )}
+        </aside>
       ) : null}
 
       {/* Narrow screens: the same case as a sheet. It must not mount on a wide

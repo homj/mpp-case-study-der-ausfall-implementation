@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { useMutation } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { toast } from 'sonner'
-import { AlertTriangle, ArrowRight, Phone } from 'lucide-react'
+import { AlertTriangle, ArrowRight } from 'lucide-react'
 import { api } from '@/api/client'
 import { useInvalidateAll } from '@/api/queries'
 import { AbsenceTag } from '@/components/absence-tag'
@@ -83,22 +83,33 @@ export function CaseDetailBody({ task }: { task: QueuedTaskView }) {
 
   return (
     <div className="grid gap-4">
-      <div>
-        {task.patient.phone === null ? (
-          <Badge variant="outline" className={toneClass.attention}>
-            {t('queue.no_phone')}
-          </Badge>
-        ) : (
-          <a
-            href={`tel:${task.patient.phone.replace(/\s/g, '')}`}
-            className="flex items-center gap-2 text-2xl font-semibold tracking-tight"
-          >
-            <Phone className="size-5" aria-hidden="true" />
-            {task.patient.phone}
-          </a>
-        )}
-        <p className="text-muted-foreground text-sm">{task.patient.email ?? t('queue.no_email')}</p>
-      </div>
+      <dl className="grid grid-cols-[auto_1fr] items-baseline gap-x-3 gap-y-1">
+        <dt className="text-muted-foreground text-sm">{t('queue.contact.phone')}</dt>
+        <dd>
+          {task.patient.phone === null ? (
+            <span className="text-muted-foreground">
+              – <span className="text-xs">{t('queue.contact.missing')}</span>
+            </span>
+          ) : (
+            <a
+              href={`tel:${task.patient.phone.replace(/\s/g, '')}`}
+              className="font-mono text-xl font-semibold tracking-tight"
+            >
+              {task.patient.phone}
+            </a>
+          )}
+        </dd>
+        <dt className="text-muted-foreground text-sm">{t('queue.contact.email')}</dt>
+        <dd className="min-w-0 truncate text-sm">
+          {task.patient.email === null ? (
+            <span className="text-muted-foreground">
+              – <span className="text-xs">{t('queue.contact.missing')}</span>
+            </span>
+          ) : (
+            <a href={`mailto:${task.patient.email}`}>{task.patient.email}</a>
+          )}
+        </dd>
+      </dl>
 
       <Separator />
 
