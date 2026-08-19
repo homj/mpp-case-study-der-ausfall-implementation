@@ -62,6 +62,13 @@ Choices made during implementation that are too small for an ADR. Include the re
 - 2026-08-19 (reconciliation): "resolved externally" now skips protected appointments. Only a change we did **not** make closes a task; our own optimistic write must never look like the front desk being off the hook.
 - 2026-08-19 (verification, fresh database): absence → 11 `apt_local_*` rows, 11 rebook targets cancelled, outbox 11 `delivered` + 1 `confirmed` (the block). Ingesting 08:05 leaves all of that unchanged (0 flipped back) and reports `added 1, changed 1, cancelled 1, writesConfirmed 0, writesUnconfirmed 11` — the three genuine external diffs still show. A synthetic 08:10 export carrying our writes then reports `writesConfirmed 11, writesUnconfirmed 0`, retires all 11 `apt_local_*` rows and stamps `confirmedAs`; a further export without evidence stamps `staleAfterExports`.
 
+- 2026-08-19 (web): the front desk works **one** queue, not one list per absence. That needed a new endpoint, `GET /tasks?status=open|all`: every reschedule task of the tenant, each tagged with its absence, ranked by the same domain `rankTasks` the absence view uses. It is built by looping the absence views rather than by a new query — the demo has a handful of absences, and one code path for the task view cannot drift from the other.
+- 2026-08-19 (web): the mock API client and the `USE_MOCK` flag are deleted. The API is the source of truth; a second implementation of the same shapes was a place for drift. `VITE_API_URL` defaults to `http://localhost:4000`.
+- 2026-08-19 (web): `apps/web` now imports **types only** from `@ausfall/contracts` (`import type`, erased at build). The zod schemas stay on the server side of the boundary, so the browser bundle does not carry zod, and the shapes still come from one definition (CONSTITUTION §10).
+- 2026-08-19 (web): the queue groups by Berlin wall-clock hour, as in the prototype: before 09:00 "Jetzt", up to 12:59 "Vormittag", from 13:00 "Nachmittag". Empty groups are not rendered.
+- 2026-08-19 (web): `VITE_API_URL` and `VITE_APP_NOW` are **build args**, not run-time env vars — Vite inlines them into the browser bundle. The compose service bakes `http://localhost:4000`, because the browser runs on the host and reaches the API through the published port, not through the compose network.
+- 2026-08-19 (web): `pnpm --filter @ausfall/web check:i18n` fails if the `de` and `en` key sets differ (109 keys each today).
+
 ## Deviations
 
 Places where we left the plan. Rule: when an edge case forces a deviation, pick the conservative option, log it here, and keep going.
