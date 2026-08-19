@@ -1,0 +1,470 @@
+[
+  {
+    "id": "2a3bbf28-bd84-438e-91ca-604f8cd93fb2",
+    "vorname": "Anna",
+    "nachname": "Weber",
+    "qualifikationen": [
+      "KG",
+      "MT",
+      "MLD45"
+    ],
+    "termino_practitioner_id": "prac_01",
+    "arbeitszeiten": {
+      "mo": [
+        {
+          "von": "08:00",
+          "bis": "12:20",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        },
+        {
+          "von": "14:00",
+          "bis": "17:20",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ],
+      "di": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        },
+        {
+          "von": "12:40",
+          "bis": "16:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ],
+      "mi": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        },
+        {
+          "von": "12:40",
+          "bis": "16:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ],
+      "do": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        },
+        {
+          "von": "12:40",
+          "bis": "16:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ],
+      "fr": [
+        {
+          "von": "08:00",
+          "bis": "13:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bd76557d-2443-4bef-a79d-11fb1b73082e",
+    "vorname": "Jonas",
+    "nachname": "Brandt",
+    "qualifikationen": [
+      "KG",
+      "MT"
+    ],
+    "termino_practitioner_id": "prac_02",
+    "arbeitszeiten": {
+      "mo": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        },
+        {
+          "von": "12:40",
+          "bis": "16:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ],
+      "di": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        },
+        {
+          "von": "12:40",
+          "bis": "16:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ],
+      "mi": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        },
+        {
+          "von": "12:40",
+          "bis": "16:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ],
+      "do": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        },
+        {
+          "von": "12:40",
+          "bis": "16:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ],
+      "fr": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        },
+        {
+          "von": "12:40",
+          "bis": "16:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ]
+    }
+  },
+  {
+    "id": "3ddb365b-5576-4fab-92ff-79f5d3add9db",
+    "vorname": "Sofia",
+    "nachname": "Lindqvist",
+    "qualifikationen": [
+      "KG",
+      "KGG"
+    ],
+    "termino_practitioner_id": "prac_04",
+    "arbeitszeiten": {
+      "mo": [
+        {
+          "von": "09:00",
+          "bis": "13:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        },
+        {
+          "von": "13:40",
+          "bis": "17:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ],
+      "di": [
+        {
+          "von": "09:00",
+          "bis": "13:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        },
+        {
+          "von": "13:40",
+          "bis": "17:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ],
+      "mi": [
+        {
+          "von": "09:00",
+          "bis": "13:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        },
+        {
+          "von": "13:40",
+          "bis": "17:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ],
+      "do": [
+        {
+          "von": "09:00",
+          "bis": "13:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        },
+        {
+          "von": "13:40",
+          "bis": "17:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ],
+      "fr": [
+        {
+          "von": "09:00",
+          "bis": "13:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        },
+        {
+          "von": "13:40",
+          "bis": "17:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ]
+    }
+  },
+  {
+    "id": "8405235d-d8c5-4928-bffa-a67c039dba64",
+    "vorname": "Meltem",
+    "nachname": "Aydin",
+    "qualifikationen": [
+      "KG",
+      "MT",
+      "MLD45"
+    ],
+    "termino_practitioner_id": "prac_05",
+    "arbeitszeiten": {
+      "mo": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        },
+        {
+          "von": "12:40",
+          "bis": "16:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ],
+      "di": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        },
+        {
+          "von": "12:40",
+          "bis": "16:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ],
+      "mi": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        },
+        {
+          "von": "12:40",
+          "bis": "16:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ],
+      "do": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        },
+        {
+          "von": "12:40",
+          "bis": "16:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ],
+      "fr": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        },
+        {
+          "von": "12:40",
+          "bis": "16:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ]
+    }
+  },
+  {
+    "id": "d007bbc9-8fb2-4ab9-b039-629671c3770b",
+    "vorname": "David",
+    "nachname": "Okafor",
+    "qualifikationen": [
+      "KG"
+    ],
+    "termino_practitioner_id": "prac_06",
+    "arbeitszeiten": {
+      "mo": [
+        {
+          "von": "10:00",
+          "bis": "14:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        },
+        {
+          "von": "14:40",
+          "bis": "18:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ],
+      "di": [
+        {
+          "von": "10:00",
+          "bis": "14:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        },
+        {
+          "von": "14:40",
+          "bis": "18:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ],
+      "mi": [
+        {
+          "von": "10:00",
+          "bis": "14:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        },
+        {
+          "von": "14:40",
+          "bis": "18:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ],
+      "do": [
+        {
+          "von": "10:00",
+          "bis": "14:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        },
+        {
+          "von": "14:40",
+          "bis": "18:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ],
+      "fr": [
+        {
+          "von": "10:00",
+          "bis": "14:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        },
+        {
+          "von": "14:40",
+          "bis": "18:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ]
+    }
+  },
+  {
+    "id": "408759be-6ae2-463e-9dd9-01017ea795d0",
+    "vorname": "Clara",
+    "nachname": "Petersen",
+    "qualifikationen": [
+      "KG",
+      "MT"
+    ],
+    "termino_practitioner_id": "prac_07",
+    "arbeitszeiten": {
+      "di": [
+        {
+          "von": "08:00",
+          "bis": "14:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ],
+      "mi": [
+        {
+          "von": "08:00",
+          "bis": "14:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ],
+      "do": [
+        {
+          "von": "08:00",
+          "bis": "14:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ],
+      "fr": [
+        {
+          "von": "08:00",
+          "bis": "14:00",
+          "praxis_id": "6ca1286b-9861-4199-adab-24ac7207e0e0"
+        }
+      ]
+    }
+  },
+  {
+    "id": "adfd4901-309b-41c2-aa45-b2711a6475f5",
+    "vorname": "Tobias",
+    "nachname": "Falk",
+    "qualifikationen": [
+      "KG",
+      "KGG"
+    ],
+    "termino_practitioner_id": "prac_08",
+    "arbeitszeiten": {
+      "mo": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        },
+        {
+          "von": "12:40",
+          "bis": "15:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ],
+      "di": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        },
+        {
+          "von": "12:40",
+          "bis": "15:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ],
+      "mi": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        },
+        {
+          "von": "12:40",
+          "bis": "15:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ],
+      "do": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        },
+        {
+          "von": "12:40",
+          "bis": "15:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ],
+      "fr": [
+        {
+          "von": "08:00",
+          "bis": "12:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        },
+        {
+          "von": "12:40",
+          "bis": "15:00",
+          "praxis_id": "40d78753-047d-4846-a340-ff5aca25bc77"
+        }
+      ]
+    }
+  }
+]

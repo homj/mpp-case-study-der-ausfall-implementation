@@ -1,0 +1,14 @@
+[
+  {
+    "id": "6ca1286b-9861-4199-adab-24ac7207e0e0",
+    "name": "meinphysio+ Mitte",
+    "adresse": "Torstrasse 118, 10119 Berlin",
+    "termino_location_id": "loc_01"
+  },
+  {
+    "id": "40d78753-047d-4846-a340-ff5aca25bc77",
+    "name": "meinphysio+ Kreuzberg",
+    "adresse": "Bergmannstrasse 44, 10961 Berlin",
+    "termino_location_id": "loc_02"
+  }
+]

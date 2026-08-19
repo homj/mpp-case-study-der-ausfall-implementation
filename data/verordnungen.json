@@ -1,0 +1,5015 @@
+[
+  {
+    "id": "649dbfab-eba4-462c-a716-806be488cf67",
+    "patient_id": "8f7002ef-02c2-4239-adcc-27b886e7e5a3",
+    "ausstellungsdatum": "2026-08-05",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "f866c4fa-8ac6-4d16-b96f-c9c66f030df5",
+    "patient_id": "cc1a42ce-3b63-4ea7-933a-dd07ab24d8ea",
+    "ausstellungsdatum": "2026-08-10",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4f34c54b-0b72-4919-95f2-a80af0fb47ff",
+    "patient_id": "addbd647-3341-4b91-81e0-a00b9f6e37f8",
+    "ausstellungsdatum": "2026-08-11",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b6b9f0f8-5d8c-411b-b2e4-edf67d500824",
+    "patient_id": "6f9cc680-2739-404a-a2b3-25cd0c8cd696",
+    "ausstellungsdatum": "2026-08-12",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "f0ae9eb3-8d35-434a-93af-e781c9193d66",
+    "patient_id": "73f0586c-4e1a-4012-9b76-e4c8416ffe1e",
+    "ausstellungsdatum": "2026-08-13",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "71313b41-9c4c-4acd-8e86-371180328a10",
+    "patient_id": "36de7d37-858f-46d5-9b6d-4d88669f2c35",
+    "ausstellungsdatum": "2026-08-14",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "7d03db21-ed0f-4a6a-b13c-bf7b8c4bf4f7",
+    "patient_id": "64380cc2-a737-4aad-8634-b580b5e3e035",
+    "ausstellungsdatum": "2026-08-15",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b46f7c3f-03e5-4eb3-9598-11bb1cdbe577",
+    "patient_id": "fb560ddc-af3e-4696-82b2-c2fe228b20bd",
+    "ausstellungsdatum": "2026-08-15",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "f46623cd-65f0-4a90-807f-26cbe9fb46e1",
+    "patient_id": "dd7e0372-0f8b-4162-8d46-2b74076a2576",
+    "ausstellungsdatum": "2026-08-15",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "0e21698f-57c6-4e5b-9c91-f4cef439a78c",
+    "patient_id": "b88f8529-380c-4527-872f-39f28c48fcc7",
+    "ausstellungsdatum": "2026-08-15",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "9650ed56-2c21-4eb5-8e95-06b92e44cced",
+    "patient_id": "22afbd21-ea29-4f8f-bdc1-ee768a24a116",
+    "ausstellungsdatum": "2026-08-15",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "f0b88bdf-cd4d-492b-bd1f-5082fa62e49e",
+    "patient_id": "6de52b0e-1915-4558-989e-dc773501fda0",
+    "ausstellungsdatum": "2026-08-15",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "882b75b8-1fd0-424e-b920-e61e892b834b",
+    "patient_id": "f6acb102-21f2-48bb-a323-2a559fc5f1c2",
+    "ausstellungsdatum": "2026-08-15",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "37a146e9-7838-4000-8cb3-97b19fb5153d",
+    "patient_id": "079661bb-315c-471b-9c72-fd2f7bf31280",
+    "ausstellungsdatum": "2026-08-15",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "26d00a0d-0890-4bf8-86da-50932d383fa5",
+    "patient_id": "873e6a3e-8109-4f45-9c80-d57e289f8358",
+    "ausstellungsdatum": "2026-08-15",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "3cf7ad69-bc72-4285-9414-95cba2619bcb",
+    "patient_id": "a0e172eb-a609-4ce9-b496-f3613de8db91",
+    "ausstellungsdatum": "2026-08-15",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "911d05d6-fb2d-436d-90c3-4f382224a235",
+    "patient_id": "3d63d533-f53b-45aa-906c-b03d68df87ad",
+    "ausstellungsdatum": "2026-08-15",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "0c7a3162-76f8-4c98-9d43-aff0f95382a8",
+    "patient_id": "9028a5cb-07a9-4a42-995a-75147aa3b974",
+    "ausstellungsdatum": "2026-08-15",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "3501c962-5c26-4c50-8699-5d383f0ba7b5",
+    "patient_id": "6498d0a8-11f4-43ee-a1c8-e2bcbcde3701",
+    "ausstellungsdatum": "2026-08-15",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "25a5e71b-f1e3-4950-9c10-32b5c802af77",
+    "patient_id": "e734f851-b24b-4b14-9ccb-1ed2475d43da",
+    "ausstellungsdatum": "2026-08-15",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "330a5120-f5e6-403c-a041-84022d62b695",
+    "patient_id": "9d7c98bd-2375-44cf-8583-9eced32141ad",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "af77c29c-6712-4220-8bc2-beed2fd51e69",
+    "patient_id": "a06103dd-cefd-4714-a72d-6e2fd2507f3f",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "d5e8ca3e-1434-44bd-8572-ce362d040343",
+    "patient_id": "5e683eb5-ce9a-48ff-835a-042088ea53f4",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "267e6bad-b003-4ccb-9d94-cab717bdf47d",
+    "patient_id": "c4c8dd7c-d325-403c-9a46-76038720879e",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ea340af6-1b69-471b-97a5-fb09faa5b1a0",
+    "patient_id": "8b6b45df-a065-4462-8b53-761c6cf2161a",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b6e8df9b-493d-49b9-af92-e95548317a31",
+    "patient_id": "18cef81c-e6ff-4e20-bbcf-31c9b78c943e",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "84451659-d6b6-4e5b-8188-af66662a2efd",
+    "patient_id": "7f388c66-092b-48b1-bd13-4f11a46d093e",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "0b813470-332f-479b-b93c-50113a7c3779",
+    "patient_id": "90638a9d-5cf5-4ddd-ace8-6834ebd01ea8",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ee5a8735-9544-465b-982b-ec3ebe75c849",
+    "patient_id": "86d1460c-69e0-475b-a4cd-e277b554f130",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "3004055d-74db-4ea0-86d9-2b5be2f71650",
+    "patient_id": "fe87354b-fe60-474b-9585-fa8521135a07",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "abbf2560-9e71-4d8d-bdc4-de3015762e31",
+    "patient_id": "1eec42d2-edb1-4a26-ac5c-953bd2e82450",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "dacb5dbd-270b-4002-966f-97cda513f206",
+    "patient_id": "078a7c32-ddb7-4b5e-9be4-9a184862f582",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "35aba1c3-b05b-4fc9-82c3-f1ab697b0dae",
+    "patient_id": "e7e2776a-4768-440f-a166-e7bfcc7db870",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "cd167b0b-68be-4c52-b2af-2d913a26839a",
+    "patient_id": "dbe5f0b8-3b82-4174-afd2-ac4f4de7b788",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "7fbbad61-a0be-4dfa-ab75-b99ce819d24b",
+    "patient_id": "e3c19541-ac8d-4451-abf7-0c37c6f968b3",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "18e2dd41-d4a0-4fdb-8753-9e14b43788e7",
+    "patient_id": "51b4a7e6-c9fb-4490-8a47-704dc0eb45b4",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "416fe7e1-4871-4d0f-8aaa-69f321985506",
+    "patient_id": "bec70bd1-beda-4bf0-8c80-a02686d718d4",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "3987de4a-1744-4add-a1f0-61a1bdb19a8d",
+    "patient_id": "79b4d660-8ca5-43ae-91e0-024bda70a78a",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "3ebdf086-07c3-4a2d-9857-10238c8e99c2",
+    "patient_id": "87e2e9d4-28fd-40ca-b92c-09963395986f",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "6b783d53-b731-4623-a469-42a9cf26392a",
+    "patient_id": "76d47aef-3f0f-4192-aca3-fdb831f25848",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "739a01b0-464b-4154-bee2-50a8468b8ce3",
+    "patient_id": "fc3bed5a-8616-4de1-b036-2a6c6a5e7649",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "534483cd-67cd-42da-bca0-5f3f21002685",
+    "patient_id": "2ba28c62-db1b-4810-ab47-baa7864dac63",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2ae15d47-6ad5-480c-acd9-ff1b4fe6a13c",
+    "patient_id": "53cb0d7c-48af-4362-a0c9-7718e19e2bd3",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "5e4adeab-3ffd-4cce-9942-dbddfb4f8f4d",
+    "patient_id": "80497190-bb42-4df6-9f6c-c3f4e46c7f0b",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "bcd05b32-1702-4083-832c-efb815945876",
+    "patient_id": "1bc40d98-2fd1-43d4-9a9b-09b9bea20d9a",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "9ea6c8b3-c18f-4748-9a3b-bdd8cf3c50dc",
+    "patient_id": "041edbf9-71cb-4683-99a1-eb5656ba56b7",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "46372572-a4a6-47c1-9e3f-325857bdf34f",
+    "patient_id": "e5032040-78ad-453e-9884-28bdca569c45",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "69069bf5-de09-4f4b-a7da-e368dcb4ccd6",
+    "patient_id": "bd19ec7c-b1e6-4afa-9252-8658047c1e73",
+    "ausstellungsdatum": "2026-08-16",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "6da20fb2-ee44-4ca8-b775-acbe2c03f601",
+    "patient_id": "d2f2a6b4-e8a5-4ba9-8e1a-4822e63868b8",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "LY2",
+    "heilmittel": "MLD45",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "26978839-698c-4af2-b783-5803aa904bb0",
+    "patient_id": "20001980-90b9-4e3e-968b-418495adfb5f",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "1e613144-603d-4220-894d-ddf507a9cc0a",
+    "patient_id": "4d0ef170-b253-4696-a602-d20c43bbe703",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "78872d92-cbd1-49b9-96d3-82582ec9cbaf",
+    "patient_id": "b83c1ba2-5845-44c4-a84e-089604fe1571",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "fe0e092e-6075-4942-a2ef-010dd2771546",
+    "patient_id": "5ef7a5e0-b9c7-40e2-963f-767cee0aea29",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "0ebf1497-9f59-40da-a476-ed459487fcb7",
+    "patient_id": "d3dd8e34-ec89-41a4-b4eb-749ca1778fc8",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4ae81482-d8f2-45f9-aa42-941b3065d846",
+    "patient_id": "222d26a3-7447-4fed-843d-363d78ff86bb",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "951c2079-f60f-4eb3-873e-b620e2b44277",
+    "patient_id": "1e911f8c-0e00-42fe-bf83-7239e3743ed0",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "a6a211bf-ce1f-40e9-82a4-93a0d59d9840",
+    "patient_id": "6f1d1d1f-1461-49e0-80f8-8b69106ab724",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "e13b88a8-06ce-4892-a4cf-42190c5050c7",
+    "patient_id": "3691d3bc-79fe-4699-85c0-6147758f15e5",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KGG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2d716a5e-5bf4-495b-bd23-47660d78054b",
+    "patient_id": "74bb86c5-9328-45f6-ad7b-7992bf07900e",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "LY2",
+    "heilmittel": "MLD45",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "068ad0c4-46f2-46b9-b6ab-cd4c3e990e5c",
+    "patient_id": "29eea7b3-eb8b-43df-a33c-3f9b6d03d72f",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "0f7ad3ad-9faa-4da3-9136-bb65112c1683",
+    "patient_id": "5641f2cb-4d1d-4777-a1ea-9bccc3d57c95",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "fe455e35-dc93-43b3-83da-0f21e5be2628",
+    "patient_id": "72185366-aff9-4e90-a037-8a47bbefedde",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "7866b081-fc16-4dbd-938a-696332033e2c",
+    "patient_id": "0980791d-99b0-4f29-8eb7-ed3579938d65",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "7c0febc0-7049-488c-8b31-16cb5d2aa8aa",
+    "patient_id": "dad5421d-b4f0-4e91-aed2-d49d45f6d6f7",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "68dd1da1-85de-49ba-9cb7-2296958436f6",
+    "patient_id": "f3bae1a6-add7-4a1e-818e-cd45efd468de",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "574552e4-2a52-4e43-914e-2352cc1506db",
+    "patient_id": "d2f9c7d1-2f20-48b3-964f-5c8bc3d936f0",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "27eb9591-efc2-4f2f-8bce-cbadeea0da08",
+    "patient_id": "1d5d1fff-99a2-455a-8f9b-81585080f634",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "3782959b-3d03-491f-92d1-029916d09a0f",
+    "patient_id": "f7309d7c-d587-4978-983d-b4299b61ebd4",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "a891bc9e-800c-4d08-ab5b-e11bed382d74",
+    "patient_id": "dda38037-51c3-4f0b-b57e-e310b47ea65a",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "d9f51508-0d56-4d5a-83d3-511fcec748b5",
+    "patient_id": "5aa542a5-2329-4bf4-80c1-d215d6a90e86",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "021b6b4a-c19b-4a42-abe9-b4b04b726ded",
+    "patient_id": "85c53d8f-e827-4669-a751-c8545dde17f4",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "5f4eed6e-f055-45ae-9566-041fd358e2b4",
+    "patient_id": "842173b9-e67a-4e37-b161-5079c0ad0393",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "1c7edcb6-4d16-4d6a-a304-552193481fe5",
+    "patient_id": "595a837c-f117-484d-bf48-b13150f1ce75",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "a91bae35-e0cb-4550-be9b-640a26332a8d",
+    "patient_id": "ddb6ba73-ae18-45ea-83e2-e4fa583050e6",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "e6b532f0-812d-4e2d-a841-94bb27afa9d5",
+    "patient_id": "41150d38-46d9-4396-b903-1d22088914d6",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2fcd3c6d-8d66-481d-b59a-03f492f1e4ff",
+    "patient_id": "de315d27-1584-4b43-9186-4243d2c8116e",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2bf558ea-faba-4430-8581-5629e4c8620d",
+    "patient_id": "4b20d165-ca80-4811-aa23-c52cd2c5ce2a",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "8f01d23c-ea02-4d9c-a503-f805c6b62a23",
+    "patient_id": "2e0aa3bf-9015-4524-9482-d7c444cb6c5c",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2a8d753c-5f9f-45c8-915a-6aeea7a2cc4f",
+    "patient_id": "e1e4a320-4863-4b3e-96ff-c1cc1852b035",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "0c983020-f855-4aab-bad7-39a92b5f5f51",
+    "patient_id": "2e41488e-0cfc-4b74-a475-8ad225acca77",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "89560fa2-0925-4b93-befe-aa7ff8ac0a3c",
+    "patient_id": "a3cdc109-8493-4dcf-a05a-c4622148ec7e",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "a932993c-b029-4dce-8e73-b94613e21e8a",
+    "patient_id": "a5762b87-1ae1-42fc-810f-7aebe41c517d",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ab3adbe3-3aac-4769-bf34-1541f7feb4eb",
+    "patient_id": "2040ba23-b02b-4018-88b5-038a5ba74eeb",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "fe1ca7b8-18ea-4779-9613-648769b16a90",
+    "patient_id": "86a49c4f-dcec-4939-ba2b-5bf7f0a871ed",
+    "ausstellungsdatum": "2026-08-17",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "4004b8cd-3108-4027-8a2b-cba6e1fc9a9a",
+    "patient_id": "6bc3f142-ec85-42ad-89a0-7e6e29f6cd10",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "26cbf321-f26a-4e96-8d7f-2822248a2093",
+    "patient_id": "b46b68f8-de55-454e-9ef4-df4ac53f148d",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "34050dad-cc11-40c7-bfc7-1513f217c210",
+    "patient_id": "24c05a58-d885-4556-b991-8ba22ca01ee5",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "e11cf096-f470-4c65-80e4-6912080f3142",
+    "patient_id": "2f6fbaaf-7e0c-46f3-a49f-48168f47b6fe",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "612746c3-2088-4f7a-8ae8-486a27f8dd92",
+    "patient_id": "2c33619b-0eb4-47e1-8437-00e632abedf5",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "LY2",
+    "heilmittel": "MLD45",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "65eac95e-3661-4d4b-9878-da37d58a2c67",
+    "patient_id": "49904810-690e-43d1-9fc4-9a3192ca07da",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "916a159f-963c-42ca-bf0c-35641ff3751c",
+    "patient_id": "707b5cca-a03d-468e-9f5c-0f68d723d27f",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "372ac222-7674-4264-8141-1fdeebb42c39",
+    "patient_id": "1d6c32d1-8d5c-4574-88d5-693d0dd11017",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "5aff9728-e413-4c55-b8e5-c876cceb2eef",
+    "patient_id": "e0f62564-c3fe-45a3-b202-18fc96e68598",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "08f0058c-2121-4bb1-9a46-119102abec4a",
+    "patient_id": "295d019f-e1fb-4550-9350-93879c685f67",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "7ac632c3-51a9-424a-8aa8-c309579627b8",
+    "patient_id": "49bc331d-5da3-4fb4-b5e2-4296c07a4dee",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "eabeac4e-85d3-42e2-9375-7a82c2ea7d9a",
+    "patient_id": "244b48a8-ae6d-44c4-a372-d02840e34d3b",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "5f38163e-418c-4e42-909f-ce5e35498e9a",
+    "patient_id": "94510856-9d27-46b0-9e07-de18d18ce64c",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b44665b8-2c01-4691-a11e-7df0a177609e",
+    "patient_id": "6a753c78-0bf4-4d79-8501-6ca5f6db8496",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "8edba24d-e68a-45d1-bcfa-9a837664afa2",
+    "patient_id": "e9e5508a-7206-45b5-bae5-45a006959c81",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "736f684a-13c8-4d54-9e3e-aadba038af1f",
+    "patient_id": "98e0dd60-6970-4aa1-ac9d-c92b8ee2a79c",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "d4a84a5d-83e2-40ef-a140-f33e9f7bcd35",
+    "patient_id": "32bcdbd4-b2ca-46d9-9bb5-b3675e655293",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "04f1f4d2-7353-4182-8114-1d7a7c494d55",
+    "patient_id": "a49f4fd0-71ce-4f48-a237-f857a1690892",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "63ba3e33-e1a5-4735-8864-a8d795066832",
+    "patient_id": "4fe28842-15e2-4b5f-ad7a-d29d0e31bd68",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "3618da85-c4f9-4b2e-95e5-2984905d5cdd",
+    "patient_id": "ae6faa0e-b5e5-4a1a-a270-5fc7ba36cf29",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "df2b2695-b4e3-4e67-bd34-6205b35b5e49",
+    "patient_id": "01d06837-b044-465a-8707-f90b4f464441",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ef6d9072-cb30-4169-b1aa-b59ac89c01b4",
+    "patient_id": "48cbd510-b2a3-473b-9d89-6f0c4aa1fc29",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "69279909-c84f-4cdc-a94f-4842a3628022",
+    "patient_id": "89d4777b-aee2-4ced-8f13-b25bd68ce06d",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "c20b1dd0-9da2-4f57-8dbb-444277e1a4d9",
+    "patient_id": "db057bc9-e062-4031-9226-ad1d4cebba79",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ab790a21-2446-4eb8-8873-5a4d589570be",
+    "patient_id": "480fd893-4a74-4c81-8e4a-e771cd756ddd",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "bdcfd0c4-427b-4167-987a-010b7780eccd",
+    "patient_id": "be1cef5f-1067-4132-b132-cb9fb479786e",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "0a83f062-c6d3-4542-919e-e02854aca098",
+    "patient_id": "f63f00e6-a956-4b2b-a0ba-6bf2d53e30ee",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "a969ce8c-7e36-4763-af97-a1a1ae8bab0b",
+    "patient_id": "16fc1c07-b1f1-4d0a-9382-a707af75e0a0",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4eaf81a8-c122-475b-96a4-53dda0cf9113",
+    "patient_id": "5b81a873-ded9-4ffe-8fb5-73a4b8ddf993",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KGG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "3751302d-b3dd-4ef3-b84c-45af06777991",
+    "patient_id": "6e7b1ff6-0441-47c2-980d-b040d6e8ecad",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KGG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "fe0be360-8d7d-42cd-a2d6-b20302c61a71",
+    "patient_id": "3c425e69-86b4-4008-98bd-491bb1696094",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "7d08927a-66a0-4c5f-b666-a41c5d6a71be",
+    "patient_id": "f3677524-6b87-4195-8dbd-727c85a7cd65",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "d6b56b9f-6b1d-4920-93c7-81eee7207fe7",
+    "patient_id": "2b77bfe1-e7b8-409d-a35c-160788e26f3c",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KGG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "21d1aba2-29be-4d06-a6f6-a280a8b64ec7",
+    "patient_id": "a803130b-dafe-4755-bb4e-59907a705b4c",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KGG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "797d5a08-7d07-4cb8-b638-fdd668f510c3",
+    "patient_id": "303503cc-5f63-4d00-97a1-d205aac9da97",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "3bf558dd-79a8-4593-bdec-2e8b7fb9b5c5",
+    "patient_id": "a533852c-5514-40c8-8d33-8cc7c1070260",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "5e676dc1-8412-44fb-97cc-55c1d01cc28e",
+    "patient_id": "50b3d081-7064-42df-9c96-9d7ef86379d8",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4bc30dc6-d930-4c11-8fa8-d10ffbd0c51d",
+    "patient_id": "b6700bb3-c0f0-47b3-9de6-4fb23cfd8c08",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "f7ec5622-dbf9-42eb-a14d-7f4dbf2d7afd",
+    "patient_id": "50f844bb-e7d2-451f-8aa8-9a7c19a42d18",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "de3b5d44-4281-468a-802d-961fcd15744a",
+    "patient_id": "97496e43-b30f-43ff-9b27-0ac2c7af0e78",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "aebc687a-208c-4386-a3c0-bbfe093e2975",
+    "patient_id": "5c44b726-bcd4-4801-8756-dce3dcf961e7",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "56fa949a-ac42-4f3f-8c41-14cdd5d71fc8",
+    "patient_id": "21e3cdda-6089-4672-b146-7cd01776e891",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "93b11531-11b5-4edf-9ac1-ff4cb0eabff3",
+    "patient_id": "5ef77084-6abb-4c5e-b0ec-c9b1c53dadbf",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "28fe2ef9-e7f7-4068-998e-caa01e122117",
+    "patient_id": "5570ac06-b40d-43c6-b6c1-8d8fd012812c",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "83870cfd-c156-45c8-a349-4e515133f07d",
+    "patient_id": "d5570dad-0bdd-46d1-b338-6190eb8832fa",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2f11894b-47bd-4bb3-a61a-3cf060925dbd",
+    "patient_id": "bc83766f-68a0-4160-9c65-5c4b9b663dca",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "6297afae-2503-41ca-a68c-ecf50029a8d1",
+    "patient_id": "0624f69b-5e76-49d9-a373-32570f1f29fa",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "f3fa0a87-493a-457d-9d5d-935a9b0b0ccc",
+    "patient_id": "4dc3e1b4-bc1c-4bf9-a8e0-8edac17a02d3",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "c41b9714-3760-40e1-a92a-0ad57322d896",
+    "patient_id": "7e9decd5-78f9-46ed-9a8a-3ea8a189f464",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "1d8ffae8-4814-493a-9abc-01a84b933b71",
+    "patient_id": "41ea6005-cb18-4ee7-b107-bb4e8892dbf6",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "fafe577a-6534-4771-ba7a-a4b3d7154d24",
+    "patient_id": "643a8753-fb9e-4e82-8f27-505099cc551d",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "cc97e376-7078-48c2-9e02-95e33a7d9a5d",
+    "patient_id": "6eabe7c8-59db-46fb-be9e-c5cb3789ad13",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "681a1fa3-2cca-4b40-9380-1a5b77955c56",
+    "patient_id": "e5bda7b3-2a8e-4b5e-bbb6-e0299366a31b",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "7e976cd3-95fe-490c-a8de-8a081940e58e",
+    "patient_id": "ffa2f1b0-738a-4000-8d64-27247f5f8747",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "f4e8cc3d-1a38-45e7-9bcd-5fe356b7274a",
+    "patient_id": "f4082c18-079d-49e1-a836-3ee55326057f",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "72d99133-9e1e-4e7c-8739-2dd6b6b00e3e",
+    "patient_id": "169bd230-5d1f-457a-8364-5c5f2f1565e6",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "bcf0d88c-4825-4b0f-a1ad-f06ebf726dcb",
+    "patient_id": "411bc353-9cc3-47f8-877a-6a1daa99e476",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "492bf194-2083-4636-a0a3-7a5c3510a338",
+    "patient_id": "d3152cf8-980b-4527-9e2d-27d5d92648da",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "f78fc278-7936-45a2-9942-d0cf5b89efbf",
+    "patient_id": "277fa894-d8d6-409d-9042-af7805d0e1c4",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "1106aa6b-f76f-4ecc-9f31-0a95c7e10a3b",
+    "patient_id": "98468a48-ee6b-4a67-b352-916052b2e567",
+    "ausstellungsdatum": "2026-08-18",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4cd6f099-03b5-45ec-ac84-b3f3dc521b4f",
+    "patient_id": "1b1e7f0a-9790-463c-b9f8-cb57f4f4870d",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "7064bdde-7be1-4093-847e-9e4f44b31105",
+    "patient_id": "9b9293be-e13f-48a7-a51e-5558aa4246c7",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4b8d6237-6e37-4ecb-aaf6-8ea21e8ccda4",
+    "patient_id": "5d95a8cf-be89-48c5-9ed3-e7de94877f96",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "03456fc5-11a1-49d3-a2f7-a0ffaef877e6",
+    "patient_id": "fc1ad25f-3b6f-4748-97cd-a649f73df82e",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "127d6737-d53e-4c9d-b412-e36e14081573",
+    "patient_id": "14e25f64-1b92-4e15-a411-dd06aa3757b9",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "5d2aaead-28ac-49b9-8d3a-ea14612bf881",
+    "patient_id": "2536919e-47f9-4171-ad6b-7b16c38a9fa3",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "ce5c61de-d7c3-4979-9da4-0c5f4ae13352",
+    "patient_id": "5a399ab2-2574-4d16-b32e-0e872e252eb9",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "08b7bbb2-4972-42f1-b302-56833e33992a",
+    "patient_id": "61662b8a-9fc6-4d9f-9b0e-f65f391eb2a8",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "8f490d1b-4360-4880-bf9d-ff988d40f4d5",
+    "patient_id": "48138b1e-31bc-48ed-bc5a-1f8ecf5c0365",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4d885ed6-897a-432c-98b1-bdbd1873c4cd",
+    "patient_id": "5f8f865b-97ae-47bc-a080-8fa1ae004d0a",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "34e8dc3b-208c-4ea6-a50f-d245422bbd94",
+    "patient_id": "38b79eb9-0a1c-4cf2-bc4d-2e8d0e048b12",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "762f9169-a1ac-4c70-81b4-f406cecfd869",
+    "patient_id": "8d0a0fcc-1402-409d-8729-9d31760cf610",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "69bdf87d-185a-444f-a783-4a1ceef119ec",
+    "patient_id": "cfeeb3ed-a3a7-479d-b361-598b09d06e02",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "b418370a-2b33-460d-b0a0-36dd9808eef7",
+    "patient_id": "61510aa7-b2cc-4f45-bb03-30f1cd487f85",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "92910ded-00b8-40be-b922-a908553d06b4",
+    "patient_id": "065e09a2-1bd3-414e-a36f-b4f7e363c159",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "e05a2dca-5fff-4cf2-b084-3bde130bfc43",
+    "patient_id": "59291868-8f28-469e-8b2a-5c2b77b5c112",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2b54f140-7f98-4296-bb8a-a75ae1139cef",
+    "patient_id": "5b58f545-4058-4177-85e1-8d9b38a46527",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "06003515-d9a5-4396-912f-5cb03a59d3b4",
+    "patient_id": "3070e160-e787-478f-b324-24302eb54f82",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "0fd7ba19-9902-446d-bcb3-0ae6feb9df24",
+    "patient_id": "6e7b5801-8819-498a-8876-c2aca22cb61d",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "3e9ce47c-040b-4d2a-beba-b1316c276507",
+    "patient_id": "e30a6458-9bd9-497c-845f-acd413aca324",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "01a70b1a-93f7-4e58-a509-2234237a3c6e",
+    "patient_id": "86a10177-9f9b-4e1a-a73b-d6fc09f16f13",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "0a8aad3b-e431-4df6-9ea5-63be9fc656ba",
+    "patient_id": "1f2a9b41-ed98-4319-8073-100b3da7f133",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "55c306c1-cf21-45bd-a74f-2ceea2df592f",
+    "patient_id": "f4f47a64-df95-4ea5-8595-bf0e62acef2c",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "503148b1-d1e6-41b0-b4f3-3b3e3c8f56ee",
+    "patient_id": "9249a6dc-3a57-41f6-9ff1-91716ccd41a7",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "439f96ed-8d4f-4c50-9848-944afe51ce2e",
+    "patient_id": "96c5527a-6a03-4df9-88f1-f5e4476d6e1a",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "cffd63ca-a234-45b1-a5a8-a992052fcaf0",
+    "patient_id": "957ea666-ffc7-4c8f-bc60-0736f5da677a",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "891fc234-8592-45ac-8290-575f02ee861e",
+    "patient_id": "1f39530a-53a3-4c25-ac40-6f8886de2a05",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "8c818710-3b6c-49e2-ac4e-a169ee7fb6f9",
+    "patient_id": "061d1c4b-8143-4761-858c-fc33d7bb842b",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4251bfd6-a7dd-4cfb-9e80-f2a246ca7ab0",
+    "patient_id": "9aa319a3-32e7-4c95-a49e-4ea1f7bab99b",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "263b97cb-502b-4a5a-8d56-306362646c98",
+    "patient_id": "564f1a72-fa96-4be7-98e1-d82a986d4278",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b45d8e63-fff5-46a0-b3d2-8052f870dd59",
+    "patient_id": "b99d13bb-b383-415e-a684-40965d293368",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "0d983b5d-0e93-40dd-8bfb-62b0334679a0",
+    "patient_id": "2bb24e47-1aac-48fc-a7f0-9c2d8ca5dc72",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ea25a682-7d65-45de-8f59-9da550b1c676",
+    "patient_id": "49050f4f-fb52-48af-8db3-b9bdd1dceaaf",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "fea6a87a-d397-488e-89e6-5f55a63d598d",
+    "patient_id": "6b702865-fb65-4ffa-8d44-4c3a484c2f45",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "5f3ad472-9640-454f-9043-cfbc8de1f52e",
+    "patient_id": "9245feb7-22ae-464e-aa82-ca9137155249",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "25fe3015-c81f-43f7-9462-5a2dcaeddf8e",
+    "patient_id": "55278041-31be-4285-b6de-84da51a96c94",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "d326725c-2451-41d2-9f08-360871fbaa4f",
+    "patient_id": "a9bc39a2-99a0-419d-a4bb-dc3fd6f1ba43",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "bef3cdaa-ca06-4c8d-8f77-5364523e8af0",
+    "patient_id": "e62f32a5-9db9-487d-9207-671751b46d6b",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "26ec829c-35eb-463d-a942-41427f834f6e",
+    "patient_id": "dd25c721-aecc-4858-805f-11b7594b0627",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "91d15368-ad32-4740-a2c1-9243ef728f40",
+    "patient_id": "f8cdd1f9-07c4-4d69-b6c2-ac7803c7cc3a",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "f828dbbc-2bc3-4e0b-9481-dfabf4445612",
+    "patient_id": "8bb582db-1548-41cf-9220-d06538c06f8f",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2f096a6a-8eca-44d4-9c5d-989a251f3e7b",
+    "patient_id": "5978f6f3-dea5-470c-bae6-aeb92e9df887",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "58650bb3-6294-4ab4-b3d4-bcb2922af1eb",
+    "patient_id": "445ed43d-652b-4566-b767-e5b9b7a1d0da",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "1f3dc2a7-0269-416f-8626-cf1fac82b0d7",
+    "patient_id": "334cca12-fd69-4293-bd68-61cd97345d00",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4140a9b9-b01a-4774-844c-683a0aa1099b",
+    "patient_id": "bca7a45e-2d9b-4fbc-a8f4-e5b372991f7f",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "89ab9a02-3b66-4a5b-b8b4-538b4a5978dd",
+    "patient_id": "f083e10a-c2f6-4947-9cde-e78d812aa2b2",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "d5676716-b62b-4a04-9b42-f7ac0ac575af",
+    "patient_id": "82fd15b5-fcbd-47e3-bf71-4254a4224839",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "79ef5709-a635-4d4a-9183-228d9702f16d",
+    "patient_id": "383e6155-3f8d-4438-bb5f-1d5117ba1540",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "994f5719-9be4-468a-aa27-cb87396c9af5",
+    "patient_id": "63f1440b-0c39-4791-aa39-c4fb8f1b28da",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KGG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "bd9b8099-e7cf-400f-9159-46c2cd3f736b",
+    "patient_id": "f93c7b31-573b-441a-8e7a-7794e10951c5",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "0aa38cd9-8f34-4647-a881-8d526a9362b6",
+    "patient_id": "8f233270-ca21-4411-9c98-6e6a27438f79",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ddfadac8-5485-48f3-97e5-6c32a46b3e2f",
+    "patient_id": "16f8e9dc-2b20-4576-90e7-dc9526b1f79d",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "5f5f6399-757c-46bf-9c08-a7f8606ae768",
+    "patient_id": "885fea26-b7d2-4ec4-994a-93baf39bdda2",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "205382ce-b060-4d28-90b4-43ee6767e7be",
+    "patient_id": "e44654f2-41bb-4f7f-a977-9154ecdea6e8",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "2d8a6e45-f030-4297-95a3-d224da7bc714",
+    "patient_id": "d847df6a-626f-4853-acaf-e3733b8a5632",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "a1188fe8-7d86-47e6-a218-8d1d9b9f627a",
+    "patient_id": "c92cb5ce-3259-4489-96fc-6ee4e8ce3264",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "031dd5a7-0df9-4d46-ab0c-b31f8c9e049d",
+    "patient_id": "0b58743e-ca41-486b-be57-47970ecda5ee",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "17ce759d-4d36-4ac3-93c1-70883571468a",
+    "patient_id": "24d1626b-abd2-4ac3-88e5-a9d69c3bffb3",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "abcc3f1a-e919-4b07-b758-e469d9837e63",
+    "patient_id": "3ada21c6-f132-47dc-99bd-7ab1fe74c991",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "04e1801c-aad6-4c22-a955-4d455c037189",
+    "patient_id": "34218b63-8555-4984-ad26-6e2478f7c368",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "7bb71680-1a8a-46d3-9f49-3df625115f81",
+    "patient_id": "35b93771-813c-454c-9d1f-4e7bf5e9b978",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "0755e038-a270-4740-b07d-0bc185d1b768",
+    "patient_id": "af41b776-d3dd-4af2-b4a3-9c03a94238d0",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "bdf99055-352b-4635-81cc-478f20c865ca",
+    "patient_id": "5d54c5d6-aa47-48a6-8d05-c85b17f2d9b6",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "3ed7cf34-e7ae-458a-9017-000568731025",
+    "patient_id": "49d0aa3d-78e6-4296-88ae-a9e1ce251e28",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b7e110a4-0b04-43a5-a23a-d0da42cc5a2d",
+    "patient_id": "e017a856-73aa-4d39-9e7a-d487320ddae9",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "39d8e662-cfd3-42f4-9a4f-37e0e2660624",
+    "patient_id": "e2272c6d-f6c7-4c63-a14e-04e1e16c8400",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "cb287c6b-6846-4ad7-ac9e-74c69b047da3",
+    "patient_id": "09f57c65-bcbc-46a4-989f-195ca865ab38",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "43a57669-b5d4-4a68-82c9-de15dd64e478",
+    "patient_id": "dde3699b-f18c-4390-9955-acc9b51a9010",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "8f6f3bca-47b8-4af8-a885-613b5b911806",
+    "patient_id": "d340c625-f1a5-49a7-8e6d-2be3f7732618",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "10a3791f-401f-4859-91b3-21621680c7e0",
+    "patient_id": "913800ea-0a68-4e70-bed8-8d15901e9e14",
+    "ausstellungsdatum": "2026-08-19",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "d4d19e71-3cff-46a9-a233-b54536186c49",
+    "patient_id": "06bac2e3-a83c-4888-af5f-2ba4b526e8b5",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "3dbf11b1-c8f6-47ca-9e77-2c64c3c8996f",
+    "patient_id": "843000bd-5023-4982-80b9-6ab93d8804d9",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ccb74e37-0871-4715-b437-b3267dc0b71e",
+    "patient_id": "fbffc225-c3ed-49a6-b459-dc820e330829",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "9b82fe69-9beb-44b3-a164-63a3e7443825",
+    "patient_id": "2102bbfb-03aa-46c5-98e6-4146913329a2",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "4f362281-43c9-491d-bf5a-548d8a8ea2ec",
+    "patient_id": "33044441-c52f-4926-ac0e-d9865030923f",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "0019b2f8-ffb3-4042-8b00-0d329628c361",
+    "patient_id": "5d54cf41-e7de-440d-a26e-4bd2852ccfcb",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "753be706-d0db-446f-aca4-bf1ed541729f",
+    "patient_id": "5a84d337-34e2-412e-83f3-d1b6e9738b66",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "6535415c-0cc7-4e0c-b02a-5066f58c8002",
+    "patient_id": "b245f131-a1a1-4e2d-b6ce-9c2618428ed9",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "b9695766-2234-49b0-93fa-a089fa1dcc05",
+    "patient_id": "85029895-25fa-4258-a387-51915b49dc0c",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "55597187-1571-45bf-8416-285f4ec86bc0",
+    "patient_id": "afca004d-60b1-4b7b-884f-b5369f552295",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "LY2",
+    "heilmittel": "MLD45",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "8be21bc4-a637-41b9-8ef1-76d7f32e6be6",
+    "patient_id": "025695ee-9eed-4742-aca6-dc2b7725e7ea",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "7a6bb579-2a4c-4113-a174-f6c098fba120",
+    "patient_id": "ebb604d6-a8d9-4daa-adf7-7196c8806f82",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "2763461b-4b7b-4e7d-95aa-b1580203f96c",
+    "patient_id": "a1d73ec9-8e89-405e-8425-747803c4a9e5",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "LY2",
+    "heilmittel": "MLD45",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "42dbaaa8-64a5-4301-808c-9258494e2805",
+    "patient_id": "128a7a2e-b313-4c9b-8ae3-4e6f172e8b00",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "3ae48d68-380b-4939-b3f0-8847832fad7b",
+    "patient_id": "13ca9a97-9d4d-469b-aa76-34e8081ff435",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "d856c65e-e04f-43dd-b82f-40108c8f81db",
+    "patient_id": "e115a462-1b6f-4385-8b8d-fb9972d97739",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "7f9fa040-68c2-4ea8-b76f-0eeee5ef3aa8",
+    "patient_id": "a84bb68f-29ae-423a-952a-c04c5591b3d0",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "e9b09cec-d234-48be-8ade-ba199a547176",
+    "patient_id": "6fa74f1a-2228-4004-bdae-1da7f7badd2b",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "7d2b21fd-1504-4c99-be10-9bf06f8bdb1d",
+    "patient_id": "563aa632-857e-49dc-8cdf-85d2f015647d",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ce263195-0ab1-468b-bf5c-876556470d5d",
+    "patient_id": "983474d2-8100-44f5-bc78-edb3970cead5",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "71dcfb6d-5489-49ed-9dc9-3d49d53198ae",
+    "patient_id": "11fb3792-173c-4621-8e97-c5cfd4a5ad2e",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "d105a682-7fde-4081-8e0e-476d635972da",
+    "patient_id": "cb947605-3149-4d8a-875b-ef5210cfa3ad",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "7c645fff-23db-4482-8f11-3e4db54effdd",
+    "patient_id": "9a693d2b-2987-4303-9317-439cda86e41a",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "aa46cd7e-2965-42bd-ad78-ceeb7781130f",
+    "patient_id": "a4be9520-d115-4c74-bc2a-e5c6358f2b30",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "5c3e0a2c-17ba-4285-a0c9-504559b9ca0d",
+    "patient_id": "3b939917-944e-4254-8089-0cd78fd9ad11",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "5860dfce-d26a-430c-bfa1-01a89d13e511",
+    "patient_id": "cccfe48d-f988-457c-b921-0c102ff264d9",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "3f554247-4c42-4940-a5b2-a081b3a8c760",
+    "patient_id": "9dfb35c7-7963-42a7-aa9b-7066fe16fb51",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "d911cdc0-af79-462a-a28d-a4e9899896f1",
+    "patient_id": "a76d999e-6e99-40db-a0c4-ede1afaa9bf5",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4675da6c-a1f8-4a5b-a5b9-b59d3b3ef515",
+    "patient_id": "0177d098-bb2f-49e4-9bc9-331c1bd46049",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "b6c344a1-dc30-44cb-9562-352cf0cbeffa",
+    "patient_id": "e33a26c9-c191-4bb7-ab5b-e65d3ec9c5dd",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "264c534b-3096-467b-b06b-271d269d216b",
+    "patient_id": "afaf6cb6-ad64-4300-a30c-60c7842e8382",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "edff9a8d-5002-4690-924f-3080ea02b2b4",
+    "patient_id": "e3d3dab5-9981-422b-bd55-866f75c176c0",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "91897447-6220-4e6d-b58f-4fc08b08c259",
+    "patient_id": "570700ae-458e-426b-9852-76443d25e6dd",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "fc6f03b1-6f9e-421f-9260-d4a2411fbaa2",
+    "patient_id": "cea2b39a-fcbc-459d-b5c8-bf4104f0e704",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "d8022b03-a2ef-469e-a5cf-ceed2e9e8d73",
+    "patient_id": "ae8e5be6-3c21-4c74-96a7-c4120cc0686b",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "3847a3b4-1a59-41c6-ad0a-979414420b06",
+    "patient_id": "1a4a0243-5c43-4aba-9b65-d3c2fe9e7b14",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "19eee0f2-06f8-4035-aeb1-0d885c57357b",
+    "patient_id": "b810606d-54f8-47de-b30c-2afdd2e8ec7f",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "c771bf6b-25b0-43e9-a350-6afcd287bc89",
+    "patient_id": "f4d8ad73-4ea6-463e-880f-77ce5eeb7233",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "acfc6b20-72e5-4d4a-b612-870608d00b3a",
+    "patient_id": "e26e321d-f17e-401c-ba4b-60945e0dc7aa",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "32350da6-dce5-451b-89c3-3ad98bf49475",
+    "patient_id": "181c9cc6-1f1b-45b9-b850-2910e45cfb38",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2179ced2-e402-420c-adad-2e66e5814b0a",
+    "patient_id": "06c4e59b-7bbe-4d4a-97c1-b82e912ce454",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ba5f4d67-f331-4a97-abd5-8070b6d9af96",
+    "patient_id": "377b66ff-304a-4868-a4ee-d339e8cc3770",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4e7afab4-eee9-448c-852e-38f0956d2bea",
+    "patient_id": "e3c51ab7-408a-4cc1-985c-b4328a5d28da",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "095548d9-5b37-4a91-ad5d-8b35634d79e7",
+    "patient_id": "a7ac8302-d4b2-4f70-84a2-213d15d81d2a",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "9c2a7a9e-ea46-47b4-8f61-ff87608b5805",
+    "patient_id": "d378de6a-77ea-47f9-acd4-ddf241307ca7",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "5bc8ee63-fdb0-4c66-97c3-7859c3bafd9f",
+    "patient_id": "b4882cd9-3131-4b62-a14c-42ef2af06d06",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "e0e50465-5dd4-4c93-ac03-b9a16b3ec6ee",
+    "patient_id": "780ac10e-39e4-49cb-a43a-062b9e738a92",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "22fed8bd-af04-4d4f-8392-705d682c2d29",
+    "patient_id": "2b6a57f9-744a-4608-875c-74423306a523",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "d672a8df-1a98-4703-a43e-55f23c5459c8",
+    "patient_id": "a50cd55a-5a8e-4045-a687-06bd2b1a2349",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "1c67c895-a9a6-411c-a399-0c4161f2873c",
+    "patient_id": "ea7d2669-fdfd-43c5-857b-1e9dcc20bfd0",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "d91d1e88-6575-4cb3-bb07-19a40d2f597c",
+    "patient_id": "f4d095b4-f6d3-45b8-b357-2f95f59e5ead",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "2835dacc-7327-4c6c-9be3-8f9ec665bd46",
+    "patient_id": "4a1965f7-7ed8-4c18-a46d-f9348067d452",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2dff8f16-f435-4ec0-8ad3-2bf4014ef202",
+    "patient_id": "b7c3e9b0-47de-4ec5-9491-e39753d52d55",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "836ee69b-ba82-4149-9992-f532a0e7d9f6",
+    "patient_id": "f7094f6f-3d3a-4eb5-b39f-efa35b67c65f",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "bfb14abe-7192-4759-bfb7-285bbde167ea",
+    "patient_id": "5eb12069-4192-4cc5-ad88-6fbe22c80bf2",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "13d23f00-aa3b-4b37-83ee-36f9214eb5cf",
+    "patient_id": "3127dd2d-7d63-4ed5-846d-36059468f34d",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "0a3a9b48-0497-4271-bd34-f49c83e6bae7",
+    "patient_id": "d0d19599-5385-4198-a6f1-7195f6b71fa8",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "c4504924-87da-425a-b1c6-c7ad0e1b017d",
+    "patient_id": "40b657d2-ac43-4d7d-a105-ec2dbfced8df",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "fb3dfa53-cafc-4a5d-8713-d48c57cb745b",
+    "patient_id": "2117394b-9a43-4dba-a926-bd86cc640b9a",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "f9584c2d-f227-4463-a557-6831930908a3",
+    "patient_id": "b2c19fbb-e581-4ab8-b260-91012f12934f",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4150164a-c2be-4f70-8587-be120621d2bc",
+    "patient_id": "871069c0-3394-4be4-9878-77cd5526e280",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "85cf5f30-b6a8-4a22-9627-6ce30c0db408",
+    "patient_id": "e5b5923c-0d22-4d7b-9db1-c19e986c6b9d",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "7628ee48-a3d2-424c-a4cb-f6a0237c3bf3",
+    "patient_id": "176cc638-a35f-4e8b-bd0a-ad82bb402174",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "283c1357-4063-487b-8e90-c3d6262d40c5",
+    "patient_id": "9fb654cf-1be6-40cd-930d-0da77e7fdda5",
+    "ausstellungsdatum": "2026-08-20",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "8af410ac-715e-4b78-bab9-60780ee850ec",
+    "patient_id": "3153f615-24c2-4934-a973-0ca56623d0cf",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "26c2eafb-6297-4f36-b424-a56d3d2505bf",
+    "patient_id": "d7501dca-ccd7-49f9-9fb2-dea6d8afcaf7",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "56d6bb12-e2b7-4788-9573-9ce2d757e1a3",
+    "patient_id": "72266829-a445-4627-8026-95d23f7259d3",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "7ecb0271-87b8-4abf-8fd8-58e095f126b8",
+    "patient_id": "cd6e32fa-e01b-431f-b963-59a42febfaa2",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b8a50223-782c-4b2f-ab7f-f5c6d99e0b82",
+    "patient_id": "462cab5f-09a8-49f1-a9e7-d853ac9c910e",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "2eb45819-80a5-4fb0-bbcf-4b2e5d75b050",
+    "patient_id": "cb833bee-5b30-4f3c-97bb-c6372391e782",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2d31761e-2184-47ec-b221-70685d5ef0c8",
+    "patient_id": "ed57c59a-cded-409a-9393-5cf992d313b0",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "d01a3db4-8e87-4580-aaeb-ffa3cab2dd7e",
+    "patient_id": "83f598aa-92c6-4905-96eb-7afdf79d22d9",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "fd4f5cf0-b28a-480a-b385-67baceb7b473",
+    "patient_id": "1f81735f-ae47-4e23-9444-83153ed96f42",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "a9255855-906a-49b5-a9c7-318974e2302b",
+    "patient_id": "d94daa5a-803c-4df1-a8a0-dbe8952df958",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "1a18cd50-b630-431d-9a2b-b6b14a077daa",
+    "patient_id": "b714a437-ba90-447d-b257-cfc2a8619218",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "f816d54d-43ba-402b-9c1d-1bb6e6ede220",
+    "patient_id": "1cf089e0-ea41-4981-8e63-14dd443d9044",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "575d03a7-daa9-44a1-8f89-ca933ce50399",
+    "patient_id": "076b01e3-62ec-46cc-a370-0502f630ea72",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "2cfeb9f3-df85-4e6b-bb9f-113e7776f6c2",
+    "patient_id": "81522a0c-2e62-4519-a1b3-fe24b49743c4",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "08a384ba-3a97-4860-9c20-a77ad944e386",
+    "patient_id": "03e35ecf-7cef-408b-97a3-d8204aa95b4e",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "8a8ac93b-3cf1-44b1-8acf-9e6d179c956e",
+    "patient_id": "2d78abc7-c68e-409a-80a6-dbbbfbe81d31",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "45c7ab80-59c9-4398-85eb-779e50a02bf2",
+    "patient_id": "4968c555-7f91-498d-bc5b-3fd5a232c65a",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "e77bb613-b870-4068-804c-54a947879ca4",
+    "patient_id": "3faf8f48-4c86-4caa-82ea-4728bcfcba57",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "8a64dd5f-b2e4-4c20-90aa-1bbf71e4c57a",
+    "patient_id": "0559c00b-6000-41de-9d42-e2779001b932",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "a3506a26-84b8-4508-b9e1-073edb2bfc5e",
+    "patient_id": "f3303730-2c48-4f97-a49f-e526e707b529",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "LY2",
+    "heilmittel": "MLD45",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "531fc051-158e-4c9e-b371-64309acd4e25",
+    "patient_id": "5e2fc9bd-12b2-402e-a334-c1a2df99da73",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "d15e621d-4230-4080-ab5a-f661c8085bd6",
+    "patient_id": "b4753b15-8e8e-44b0-9aeb-e55fac7a853b",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "d30493b4-73b9-4af9-9ab8-239ff5ab9db8",
+    "patient_id": "58931804-4ac0-40e8-af69-6fb58e365331",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "a1ce87fd-c2c7-408b-bf38-874920a82bb4",
+    "patient_id": "08689713-1f8a-4e11-b7c4-df266c89e07e",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "f116d802-3fe5-48fb-b6b6-618a7efb877c",
+    "patient_id": "81030260-f436-46c1-874f-d124cd68cb9e",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "498221ae-d7cf-48fc-a36b-03a919910408",
+    "patient_id": "86be5787-913a-47e8-abd7-9e6cb0e2fe1b",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "5f50ae7d-e34e-4736-a016-d8ce7533dc47",
+    "patient_id": "1ce80494-2483-4a04-bc61-3c64c168efc2",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "LY2",
+    "heilmittel": "MLD45",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "662f71e7-2dd4-4754-80bb-b2b1a8f5d817",
+    "patient_id": "35f71bed-61ac-4e3e-8fff-508d88e39d70",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "b5a3b577-8c23-4fda-8c60-d60fdd7b10ee",
+    "patient_id": "4217e58c-92ae-4731-97d9-002c4c7853f2",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "LY2",
+    "heilmittel": "MLD45",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "5a0e169a-a2f1-4b10-9047-7a3900f4e80e",
+    "patient_id": "17d0a328-0252-4c3b-92cd-086c8ca9c27c",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "f98bf8d8-9569-4cbd-a91c-4056a7d08b50",
+    "patient_id": "d7c940d0-4fd1-4450-abb6-fab2356a04ac",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2cbc8a1f-ccea-413d-9bdb-03f1c8203bbb",
+    "patient_id": "810ec858-1486-4e7d-9c95-f6bd29f4af1d",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "a9f92bba-07a3-4989-998b-59509ef4b7d1",
+    "patient_id": "3967e688-0c7a-440f-94ba-ecf3ea43e9c2",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "9a006dc3-16fe-465d-9d16-ed08275b228b",
+    "patient_id": "f24ca129-73ba-4784-836b-af3e1233f5e9",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "dcdf4e72-bed5-4e5e-a59f-2b0af68d5a2b",
+    "patient_id": "4a062847-0472-453e-91b5-6f19cad937a3",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "3a34fb01-3814-47f9-a3fe-2401d0c09e49",
+    "patient_id": "e9def3ee-b09e-4251-9874-8b90493cdfa8",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "42cd8ff0-30f4-43bf-b6dd-3a4e51e71e1f",
+    "patient_id": "03ae7d49-55bb-4da1-b9e3-6e78e2a9166e",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "b567253c-e6a7-45d7-a8a2-29e7183a86bc",
+    "patient_id": "e160a2a7-b796-4d1b-91c4-ad9025b051fb",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "5eef1eb6-b56f-4474-92b0-92ca97f5f0a8",
+    "patient_id": "db4f00f9-164f-4c6d-b072-3e76b41a41c2",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b64a74e7-7d9e-461d-94c0-a650f1dd43e6",
+    "patient_id": "cbf5be4c-e037-473d-92a7-2b7d8a0eabcb",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2c5484f0-383f-44f9-b42b-f4ebc008aa63",
+    "patient_id": "c78bef23-466a-4cfb-b303-3a989ef6dcfc",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b9b1fa15-b850-4246-b316-f94b0b1b0287",
+    "patient_id": "8a37485f-42bb-4992-9b69-aacfe3ff3332",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "a2d128bc-e5d9-4ffd-8608-6c4bc30caf94",
+    "patient_id": "7e49828e-dbd0-4ab5-90a5-6c63abc8722c",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "80e25f8d-a381-46c8-9026-c7988f5dd165",
+    "patient_id": "f3cb53f6-466b-469c-a309-de3dc6c2926e",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "fdbfe4c0-d057-4094-a497-0fd98116665a",
+    "patient_id": "06a0c2c7-9f78-4289-8d4a-c661c27d44a3",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "5372b7ac-38fc-4317-8474-fed20026161d",
+    "patient_id": "29170d5b-7616-4176-9211-c3e92265f800",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "39faeea6-735b-4c38-8580-4080952902ea",
+    "patient_id": "acac02bb-6b59-4497-bfa8-9915e558e8fe",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "380db2f8-0661-4859-a783-f3643f83680d",
+    "patient_id": "46350004-c4f7-46d1-b0b4-9e65a74d5dd5",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "b38cfb8b-6834-44fb-b297-b9696924c9fe",
+    "patient_id": "4e3927c7-a16c-4ee4-86e3-a5c0e11ad78c",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "220d012b-8aac-42f6-845d-3b4c26e5d8a8",
+    "patient_id": "cf2fdd44-3346-4ccc-a8eb-29030604b8be",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "4613c151-6fa9-4750-91bb-a0fcdaba97b1",
+    "patient_id": "5e92f01e-ee50-4355-bc8e-bca1db2a6555",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "9d7ae7eb-f456-46b1-a552-ca071aa0c2e6",
+    "patient_id": "b81a400d-b59b-4ad1-9f41-d36d35ddcf06",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "c11f20e0-6375-4f1c-96de-0ac360fc56d7",
+    "patient_id": "fcad204c-e3ea-4e93-917d-72098ab23c0b",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "b6e5b312-801f-4b1a-95c7-ba3f4bcc82a2",
+    "patient_id": "fb36bb15-4561-4632-916b-2a3b33bde0ac",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4a612709-b039-4ade-aba4-8a4a22af959a",
+    "patient_id": "ad65b9a2-ad22-4b0b-ba2f-096f079b8cd0",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "e9e69e0d-5657-4e4a-9ec5-a188e8140bb9",
+    "patient_id": "89eeb7b2-520a-408d-b7ad-5d5bb177fa7e",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "3c5cfec6-f870-46f9-882e-4e968168d17a",
+    "patient_id": "0dfef7ce-4e89-48d0-a9bd-3f8352dd69ce",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "b7670c70-8441-4877-94cc-d4bf9ce9899d",
+    "patient_id": "075de2e5-ff94-46d8-bb2a-dc7e257b8955",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "ae73ec08-f534-4972-979c-e8b6e3d8f66c",
+    "patient_id": "0b3fcd79-5f70-431a-a927-9b98812448ac",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "5ece7591-d4ca-4a77-bcbd-1cf466551d15",
+    "patient_id": "b26402c0-3a9b-4b84-8ca2-2755c4525d0d",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "a0c8cf03-0818-44d3-a9b4-2b5355560c1d",
+    "patient_id": "3d13c935-1cc2-4b63-9033-1552848de387",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "a3856c08-247f-4cee-ae58-01f644472574",
+    "patient_id": "3e731557-c1b9-4885-b766-a7b9bdcb64e8",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "0d7cc2cc-c915-4f5f-8e98-1772e3449b96",
+    "patient_id": "1bf3830f-7ad0-4e61-9184-cdad89db64b7",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "1ee29c95-03b9-45e1-a29e-b5ed71d09678",
+    "patient_id": "ac2293bf-3eff-43a6-a88f-b46c7b4ab035",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "23d6f6e5-c258-4a59-a1fd-31583634ff40",
+    "patient_id": "a751d17b-088f-4d7a-8f67-8aecafa5ff63",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "1d4df2ff-449c-4879-9b17-faf5a6af98f0",
+    "patient_id": "286a77ef-be2b-416e-9986-523210bd4a8d",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "3c221532-282e-49f0-85e0-59fa3ad15ebc",
+    "patient_id": "efe30bb6-a3b2-4322-8101-2897b3eddaec",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "cd79e9f0-d8d5-4d3d-8d52-fb1e37a07a57",
+    "patient_id": "0d0b0f9e-ce1d-4bc5-8bd0-bfbd565a9e1d",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "9e78184e-c427-4ced-bae8-cf4196ef97fc",
+    "patient_id": "f76a4b35-b287-4420-8f0c-24eee5b3c9b7",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "6772506b-1254-4d2d-a893-a9581c29bb1a",
+    "patient_id": "35070740-cc6f-4031-b9e0-649fa72b339e",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "c7961539-9d50-4068-b951-88013e2d2f30",
+    "patient_id": "d2485409-c2f9-4cd5-abba-dfe5c02f0443",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "8e4cc2b0-e12d-44f1-9a76-228f00868f0f",
+    "patient_id": "b7a6d313-1526-474c-aea7-cc158981d6e9",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "7c034e6c-e007-442a-b8c0-1d64e34c14f8",
+    "patient_id": "2cc1aed1-56ec-4d17-afd1-1660509984d3",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "6db073a1-0e15-49ef-873c-9b30269dbcc4",
+    "patient_id": "40c359e5-a411-48af-b28c-8be3c23c6027",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "a4431d83-0cc6-4355-b752-bd710af30e66",
+    "patient_id": "06cc46fa-e0fc-4446-8398-5c19c03fc777",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ca156326-9055-4b85-9fa2-44785a9cc503",
+    "patient_id": "f30215c2-76d5-40ab-8525-508f5aa6ac11",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "54cf8254-40e2-46eb-af4b-929236e25760",
+    "patient_id": "7d204a75-fd01-4c54-9c57-cba950a7c4cd",
+    "ausstellungsdatum": "2026-08-21",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b59dafae-bbc4-4a78-8a35-ca47e89be693",
+    "patient_id": "00372a4c-b1a6-4b4c-a6d3-2475ccd57b4a",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "0f129c01-3734-4513-9ead-986b43b2e1c5",
+    "patient_id": "cd3c1b7c-c0a1-4794-91ed-51e809835e78",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "778422d5-abeb-423b-92fc-bc7e3175d85c",
+    "patient_id": "721a0aa2-528c-4fe8-b777-109271923262",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "9155f171-4fd5-4af2-af4c-de85ed285567",
+    "patient_id": "0fffc702-af89-4aa5-87cc-a4149cb1d990",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "cc0e3f9e-e33d-47a1-beca-1443982ea3a3",
+    "patient_id": "904e28af-38e9-423f-8aff-05c753a919d5",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "1054fdf7-e8a2-430a-bbe2-f1a6bb6f42e7",
+    "patient_id": "4b4e5571-b53b-4a05-b57d-f3076980839b",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4d198e01-99cd-442d-bbd1-16130cb2ad92",
+    "patient_id": "53579380-65c0-4cb1-bc0f-3044299c7f88",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "LY2",
+    "heilmittel": "MLD45",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "cf211ac5-ab8c-4439-8505-a36e97b97a16",
+    "patient_id": "9b7a9de1-2085-4736-b82b-ca420f697aa2",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "85d267a7-c47c-49c0-811e-3fdd97c7574a",
+    "patient_id": "2f2622ed-75bb-4315-b9b1-1cedbeda8f91",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "e131222e-a1fa-46cc-9365-f4347f06aa63",
+    "patient_id": "749b21bf-5763-409c-8e30-0792d6714f06",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ccf00d17-ba13-4c9b-8d48-b0419315536d",
+    "patient_id": "5e54376d-7755-44f6-a3b0-c505999bbc02",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "c37f5337-7688-4404-88ac-3f575826f0d3",
+    "patient_id": "8a6a2f11-defb-491c-a7a4-ed97e4f0c55e",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "0a2f1b1b-868d-40e4-af75-d7c03cbbbe4c",
+    "patient_id": "2c1d631b-969c-4056-9101-4d0b502c53aa",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "3cb0151d-957f-40e2-ad7b-9bfbf8a86b27",
+    "patient_id": "a4d64a3f-bf9d-4532-a62f-3c884333b93f",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "52c2bc47-79b2-42df-968b-031035e51976",
+    "patient_id": "7fffcdfd-2f36-4ab4-aba4-c8e6e3e111e6",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "60507c6b-bba5-408d-8058-2d925bc72d4e",
+    "patient_id": "82f7c602-5645-4173-86d8-2b221e31a045",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "316579ac-04e7-46a9-8aed-e9c6fbf0cc53",
+    "patient_id": "c0c02ab1-c914-484a-8185-178361134871",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "24856faf-2463-46d0-b13d-2c3f6c29b2e3",
+    "patient_id": "4fe560b3-10d6-4597-b997-4d751650091a",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "cdf54876-48d8-49bc-b995-a176f30877d7",
+    "patient_id": "7d4a4c86-12f2-4d94-9d77-1889ac0a7b6d",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "098b8114-00b4-453c-af63-1575d25b3a41",
+    "patient_id": "5654804e-2342-4bcb-8dee-c084814f3e8e",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "c5803173-7dc7-45a0-8749-d3bc00598c4e",
+    "patient_id": "a69d6af8-77fd-478b-b81a-617ec20b9867",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "5ac5699f-2be5-4236-a8b6-321367923d64",
+    "patient_id": "47b020bf-b074-4093-8d3a-aefae1e30b96",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "c22b49cd-7bde-4c1f-9835-8a8f2b63b444",
+    "patient_id": "87efac56-aac5-4f60-aad8-32c3fe0c1c93",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "b1145617-d1ac-4554-8039-a70568af43b8",
+    "patient_id": "1e7cf1af-4a9e-4334-9661-8a07653613f6",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "d9d34424-5ac0-421f-8b42-2f1bcc124c54",
+    "patient_id": "e4609598-2f5f-44b5-9d44-61c866122060",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "081ee2a9-37ad-469c-a73e-935c87ab8fc7",
+    "patient_id": "d29c37ef-3a59-4116-ad97-be7dc53b7994",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "1b07fda7-a3fe-4ccf-9849-171f2424cf80",
+    "patient_id": "e821ce5d-0f74-4b5e-9dea-2fd009774995",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "dfeba448-82c8-43d0-8d93-eb61d925d1f4",
+    "patient_id": "7160c574-5f00-4a47-979f-d12cb53d58d8",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "f5851dd8-b534-467e-8096-75e75abed24c",
+    "patient_id": "17098294-b798-4128-9758-6d5f5c39c431",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "80679ed2-fd7f-4d4e-b6b3-228dfe3cbf03",
+    "patient_id": "05f86276-043c-4fdc-acb8-f6e692036264",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ddfc439e-d5dc-4766-b740-d2f1ae42ea59",
+    "patient_id": "d689c7ff-b686-42ae-9d63-1bc1b69fa144",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "733b4772-5082-426a-8468-0c3a82f1c7fe",
+    "patient_id": "097472e5-07c7-4219-bbba-6b0a261edd18",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "ebdcec38-6fbe-4ef4-803e-67dc5d89f4c6",
+    "patient_id": "68bfdf13-afa6-4569-b761-ee01cf6b2335",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "e84f1afb-83cf-490d-bc4d-c1fab6430a51",
+    "patient_id": "5cbe254d-161e-46cd-aad8-401c9949e15f",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "8ddf95fb-7e18-4aa8-842d-b7d98257b18e",
+    "patient_id": "9dd97b50-083e-464f-bd03-c74b2f7a05f0",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "1f090c1b-8f19-4675-bc4d-160ac5939765",
+    "patient_id": "b2c25333-fb96-45f9-a1d0-05651da05b6d",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "232ecd49-6fc2-4f6b-abb2-eb3b1b6d4891",
+    "patient_id": "12cb6863-6b9e-4fbb-aa2c-51d4055fc887",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "df5562f5-20be-46bf-a41a-e36518e0818b",
+    "patient_id": "8d57ceb4-7b81-46b3-aa7c-559a470b426d",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "3a0adb92-a27b-4c63-bad4-9b3f235e42a6",
+    "patient_id": "a654a14e-94b2-4894-9873-fc3e9fcd0640",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "a28db39b-0312-42f0-9569-723a44117f10",
+    "patient_id": "7c98853d-e684-49e0-8c8d-a1f857f8dbaa",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "23349c97-52d8-4b23-b540-8589238d24e0",
+    "patient_id": "81511883-49d4-4ea0-aabd-c11ba6369e4e",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "826a5c5c-af73-4400-80be-da919f9c8d76",
+    "patient_id": "62e4787c-b88a-4a8d-a93f-737c121c25c0",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "2c58084b-4df0-45f7-8f5d-38a1996514d8",
+    "patient_id": "2115a5fb-2204-4623-92c0-7a762ba91f8c",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4e8e4cdc-f0a1-438b-b181-df681b1b314e",
+    "patient_id": "ebfad213-823d-46c4-96f9-3d3f16bd4579",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "c31b66ae-a1d5-45af-98b3-cbd6d55f257b",
+    "patient_id": "7a45b4de-1f3c-4361-a2a7-f5cdf6aff7cd",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "fac8aecd-67de-4897-8654-74cff8ac8f93",
+    "patient_id": "9d49f549-410a-4678-95c8-0c04f36b4a30",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "78e77423-f571-4007-ae13-7162324c29e2",
+    "patient_id": "17067343-3da4-4d38-81b8-2e366f1ff303",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "5bc6e8ac-7859-4071-bebf-8c8f46725faf",
+    "patient_id": "67c327d7-dd3d-4992-855f-da5e4e6f8d66",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2711794c-5f37-42fa-8b8d-e3c07de7d13e",
+    "patient_id": "3a7dd3d1-268e-452f-a793-4c5c9adcaf9a",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "7262a6f1-31cd-467c-bd26-7c70d06a19e9",
+    "patient_id": "0ff49d7f-b3f0-43d0-bdff-9fbb4bc47bc2",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4ec1d12d-db7b-433e-a2fa-124110fd2d30",
+    "patient_id": "13043a6b-92bf-4cc1-a28a-c17a8dbe13d9",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "5eb53b3e-00db-4e4d-847f-7136465cc2a2",
+    "patient_id": "3f1e9378-e805-4ff9-bb2c-b3fef05553ca",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "196d13ec-04c8-4814-8eaa-27705bcdbb86",
+    "patient_id": "ecfc311e-bc0a-4aab-9f98-2c2568c4ac3b",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "31b3a13b-132a-45e3-a67d-7597f0eaed22",
+    "patient_id": "f8116994-5c87-4712-b818-28b70ff1c642",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "aed68583-4e9e-41bc-afd1-06c0e65b6456",
+    "patient_id": "ec4857b6-1c49-40c3-a774-4680c6bc4d8b",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "389d7093-4d91-4ab1-a9d2-ef272589ee18",
+    "patient_id": "520752c0-71f7-4eb3-82e9-2b9e4b88d37a",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "d4d72777-d9f7-4de3-a906-7866d394674a",
+    "patient_id": "b0336f33-45a4-4230-acff-7bea9cfb68f1",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "59c1b686-a886-453f-9f7b-ba458648ba9e",
+    "patient_id": "7557bd29-6d09-4436-85c6-716dd7d80f3d",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "fa1492ca-5385-4bfd-a44c-f2b16a9f0f1a",
+    "patient_id": "868df4ce-5d77-4003-94b8-b34323adfbde",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "e36e9248-c098-4f92-8985-f95da8d555da",
+    "patient_id": "7a076b95-5ecf-45cd-a236-256f670f2466",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "466a8388-09c0-4fa9-8153-3946948564ae",
+    "patient_id": "32e109d8-d1c4-4ef6-a9d4-a5dde196437e",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "21418b27-0035-4e81-8846-53f152573072",
+    "patient_id": "9d777ad1-6f10-465e-a18a-fcfb000a0c66",
+    "ausstellungsdatum": "2026-08-22",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "294972e8-355e-49be-af54-d83b251111b8",
+    "patient_id": "bf798111-479f-4a95-b791-f0b024c1349a",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b44e0dc3-a430-4737-8d2e-83d6be288d0d",
+    "patient_id": "1dbe04b4-245d-44b4-a62d-2f6aba7bf05c",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b763b923-9a76-4558-a35d-85c3fad9af8d",
+    "patient_id": "a90425c6-9fa0-45d9-8861-6d8c8e1abea4",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "68102ada-5348-4316-851f-2ceb6767fb9b",
+    "patient_id": "95fcdf69-c5bc-449b-ae27-9bad2d1b4caa",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "51d0f35f-0451-4a08-8c76-1309d3cb82d1",
+    "patient_id": "667f394c-e05c-428d-b6f2-76d8ed1e3d2f",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ed4303bf-2def-4c80-9040-84137d2a1608",
+    "patient_id": "e087b418-cfe8-4ce5-89f8-e1f5af8f3f6c",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4a7ce826-1469-4296-86f5-b81b88b7217f",
+    "patient_id": "a4d4208a-fd5f-4a51-aa26-9748acb80c62",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "907a162c-062f-483b-8af5-605b5d770ad3",
+    "patient_id": "5da36862-4461-4046-a269-9a8e89832c53",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "7e9bb27d-da77-434d-a86f-cc0def39b176",
+    "patient_id": "5dfc53f2-97de-47a0-b2b0-eb7f97d42aea",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4f3b38bb-b329-4a14-ae98-27e9fcbf54f6",
+    "patient_id": "44a9b90b-8491-4e53-894d-b2909554a8c2",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "072ae419-dbf8-4b7a-bfee-b5b7c1da5f14",
+    "patient_id": "4fcf8915-1a68-49d5-b278-eb6f1ae688fc",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "LY2",
+    "heilmittel": "MLD45",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "f97d156f-1bc4-4ada-88bd-2d77a4b74e68",
+    "patient_id": "0e95f566-0722-4ddb-98e4-efc2cf75ccf2",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "8d08b316-a8bc-4f60-a3ef-eaa4e8cbc756",
+    "patient_id": "b6955f3c-3ed6-47ce-82a0-020f994eae53",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2fe47237-aaad-4823-a11b-405bb42d7a06",
+    "patient_id": "26958238-082f-4ab4-a399-a5491fe11e65",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "1692638a-35b5-43ad-a04e-26000cbf32a1",
+    "patient_id": "6ec95569-7538-4d59-ae4b-5000828efbcb",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "0f499a78-1edb-44ff-819a-90a4fc8993fb",
+    "patient_id": "e5ae8450-964a-4b87-b925-5f0494c45778",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "96f09533-dd14-4920-98d0-27cf3f41d69e",
+    "patient_id": "c6a89175-f270-46be-8f11-911f25dc982e",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "124659cf-7378-403f-8cb4-d1d85d6553f9",
+    "patient_id": "7da195be-4704-4ff6-9188-76f3ec89e000",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "83141a86-8037-4e1c-9ff9-5c1408f703e9",
+    "patient_id": "94673318-cfb1-4573-b732-732df19e3d20",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "1d18d979-584d-4c96-873a-cc4364417d08",
+    "patient_id": "95455d2c-2448-43f9-bcf2-53b44bc169c8",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "885cc292-133c-483d-8b96-dea60fff4bdc",
+    "patient_id": "d806d16e-d9e3-4b41-83e1-351164a527fe",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "c577738a-f4c9-4dc0-aef5-bdd66878a57f",
+    "patient_id": "1853f982-84ce-4373-ac44-c8b9c3e800d3",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "a2515169-d0f3-41d6-9153-87b6d8e6f748",
+    "patient_id": "aaef5c28-990a-4289-9b7c-f198ad13303b",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "64ad377c-09da-476c-bbf2-931033ac6588",
+    "patient_id": "6fbf89cc-7a4c-41bc-95e9-b2cf7056e5b9",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "8f730da7-27bf-40ca-a311-a28772e8699c",
+    "patient_id": "8e28b5d0-a230-41c5-b4d9-d2f12627f63c",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "92fc83b3-7c83-403d-b225-cc3972069455",
+    "patient_id": "5ccb9af5-08d4-453c-a498-59b10420bb62",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "03eefeec-3463-47fc-9ca6-ba34b69c4173",
+    "patient_id": "f203b4da-dfe8-432d-8bd9-dadbd99edf80",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KGG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "d68b8853-8d44-4081-8245-88248249009a",
+    "patient_id": "51a51bd9-9ea7-4c32-81d2-14a0d01f4358",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "7d455e61-f0ca-4f7f-a063-e386cee4cd9f",
+    "patient_id": "e45b215c-5ab2-4688-a764-d8b2728fd150",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "deaf90f7-e745-4312-b900-5f94a1d3356d",
+    "patient_id": "00bedd9c-1a67-42b9-921c-790c6d2538e8",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ebde5b55-b25f-4d61-8084-01159de1e335",
+    "patient_id": "a3c6feda-1416-4914-9c74-c9c1cb1ae569",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "24cbb32a-b584-4995-9d28-76f3a4418196",
+    "patient_id": "61237d8c-4592-4ef9-a691-ba2188e2ec9d",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4673646c-b90b-41b5-9271-1e8c07d1ffb1",
+    "patient_id": "8f784802-d885-49bd-880d-c098e3ef6d58",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ff00140c-30a2-4dcc-a403-34f5cbc6c685",
+    "patient_id": "e629d031-4731-4f1f-b2e3-c561211f63aa",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "bf36991d-8755-4884-a0fc-161bb0fc7133",
+    "patient_id": "19b6d5d6-424d-42ae-92d7-3cd43007ba48",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "9590565c-8eef-4e07-8c16-e5ee6d0b3f70",
+    "patient_id": "b02762b6-d653-45a2-9fe9-5e4ab806b94f",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "7b3b8dfa-b1ea-435a-b354-4cb431dff23d",
+    "patient_id": "e3aca3b2-bcbf-4ef0-932c-eebe60c439f5",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "ca0874ad-03ab-4ac0-98c8-1df0deb01e78",
+    "patient_id": "c5ad86b2-f2f8-4653-8283-968b995c4a31",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "a2cdf63c-4165-4dc2-929b-a0df115f4d36",
+    "patient_id": "1175d42b-fd54-4a4d-adbf-0de087be88b7",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "8b59db37-a98f-4565-8bcc-1c6ae8be4f34",
+    "patient_id": "894b2c97-203f-4a60-a923-bd892f97afd5",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "c40d8ac7-750e-4723-be49-b71c369c7874",
+    "patient_id": "d6460a4f-6cd6-4c0c-86d3-a407b1df0086",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "61b0444f-22e4-4927-9e46-46afe5654710",
+    "patient_id": "6298b09a-4943-4f1f-8aee-9ebfeb9bb2f8",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "9177fde9-f94a-4318-9a00-ab6ceaddd265",
+    "patient_id": "91379099-db46-4fdc-a759-2d905ca9fbf1",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "1ef446b8-45b8-416a-89cf-02949e0acf57",
+    "patient_id": "bdc511d2-ef7e-4072-a9b7-fc76ad4b3630",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4b218e6a-e494-4847-ae65-1cb91ec138de",
+    "patient_id": "cb62dd0e-6042-4502-923e-9d130776e83a",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KGG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "2bca0f2a-a6a0-465e-a402-7ab87684aebb",
+    "patient_id": "4809a8b1-37be-409c-b8ef-c124823f5e7d",
+    "ausstellungsdatum": "2026-08-23",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "8ac31841-1791-4f0b-ae88-38ab8069ff67",
+    "patient_id": "b7d7bf2e-0d4a-41a7-89e6-069918747ab1",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "cdcd972a-8e09-4686-8591-2af784970aad",
+    "patient_id": "4da3441b-1cf2-4f08-beb6-5826584342b7",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "7f10f8f6-2490-4a44-aec0-4e875d3937da",
+    "patient_id": "49c1de19-d682-4ac0-ad28-826d4b29c9ae",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "e424dfdc-d775-47da-97c9-f8e608bcca3c",
+    "patient_id": "5ae3cbca-003e-4331-bfd9-311a320fa869",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b9fb5a3d-a8e5-43f5-9eaa-8bb1d1fee1e6",
+    "patient_id": "8015d3eb-8e23-4389-add9-fd279a0ac3d8",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "4a001fa1-b8de-40b1-92e0-17ba0623af1a",
+    "patient_id": "d8b61d1e-2f0b-4486-b846-2b85c3ecf42f",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "LY2",
+    "heilmittel": "MLD45",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "d3fed9c6-c812-4d75-ba82-613005254887",
+    "patient_id": "6653627c-c041-4a54-8eb0-66b34520296c",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "0c5f0675-acd2-44b3-9c09-800470ec1377",
+    "patient_id": "9e89aa07-6e2c-4f9e-9179-227f4722db56",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "c5571e52-e8d9-4722-926b-58e355c466fb",
+    "patient_id": "2a118346-c9fc-4e38-90e1-65bc5fcf55f5",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "1a09c599-d061-4892-a75e-2c541f08525b",
+    "patient_id": "84ace889-3c55-4d23-852d-e81c42bc797e",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "54393fb2-264b-4c84-80bb-e721b1a1bc41",
+    "patient_id": "55561967-5449-43d9-8a45-0ac6883a4ba2",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b0ee367e-fe34-4f4c-b89b-69838dda2d9c",
+    "patient_id": "4fe2cadb-4895-4aea-84eb-71b67c3f9e74",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "de0d878e-49d6-402c-9365-07a9ae697449",
+    "patient_id": "b32c3253-0450-48ed-94f2-f6874d6e2f47",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "f09dbf26-3cfe-4e4b-b50e-30ac178a3fe5",
+    "patient_id": "724d7d9f-3eef-4f98-95cf-745a0623fd9e",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "af718fb4-a90f-4fd5-8cae-638b4c8fde29",
+    "patient_id": "da456cb0-381b-4360-85db-6a505f4d59dd",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "d822c17a-b365-4113-8d70-3a675db4103a",
+    "patient_id": "ceefc993-46e4-479a-aba7-136654874048",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4c2f752b-d053-4636-8cf5-bc12901ad96d",
+    "patient_id": "dc6b5e3d-0008-4bf6-8928-b31ca8bac4da",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "bc27ce8d-d140-4a3a-8761-99e8722e099e",
+    "patient_id": "1048ec28-691b-4c2f-a61e-4dbee1f9f1eb",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "25c86056-1ee2-4f83-b0cf-c221c3fb2c6a",
+    "patient_id": "0782e28a-180c-4a28-be6e-b08612fb93c2",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "62c9bb34-cbac-4ea9-bc97-d2cf70648ab3",
+    "patient_id": "67edafbb-5ef0-425c-a9b7-a5bd5bb1a9cc",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b82bed05-1eeb-4954-941a-b62b37aaaeb3",
+    "patient_id": "7c63a119-238e-4b2b-bf55-20b4b57b023a",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "f8c0bbd9-b60d-471b-b1e6-7091c0cb6816",
+    "patient_id": "3e0f972e-5978-4023-88ae-75b09d27e4e4",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "11924b37-9319-433e-b822-ab0092cfe4b0",
+    "patient_id": "5bc68816-06b7-4792-9adb-bee4f011a04c",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "9c52e810-c2e3-46fa-87ed-be1adac612ef",
+    "patient_id": "81fd2aaf-6708-48c2-b697-23731b2592df",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "fe6a7400-48db-470e-8208-743c09667b29",
+    "patient_id": "e418d8bb-7cf6-4c20-aca3-5bc4ec90bcaf",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "94535ebc-3e3e-48e7-83de-41e8024d21e2",
+    "patient_id": "f5f564bf-b49c-477b-9a61-8830d1ea7c6e",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "7fd1f7ec-fe37-49b3-909b-c5d83e99937e",
+    "patient_id": "b2c181ad-d459-41af-8d79-5fcea7d6d7af",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "812743fd-1c6e-454e-9c94-ba533eaaf6e1",
+    "patient_id": "6f110dc3-68b5-4319-8e9e-a32b3bd91e75",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "c7289f26-33cb-49ca-87a2-b93f15e50016",
+    "patient_id": "86b9cc39-7661-4c52-b8b2-684f3d25f3b0",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "cc0885fa-86b7-4bb0-b52c-51d4515f4843",
+    "patient_id": "fce69279-05d7-4854-832a-48b64ae18316",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "453cd194-d5e1-4acc-b348-dc19638a22f0",
+    "patient_id": "b83b257e-6df1-4ba3-aa70-425d5a81af92",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KGG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "bbf65266-1839-45e8-892b-0183e0c8121d",
+    "patient_id": "7e2df5b3-1731-47a9-8f45-b29ff32227b4",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "7741f903-8cef-4dcb-8819-3b6c25e90353",
+    "patient_id": "c21ba8d6-65bc-48d3-b55f-a9aab3ef7268",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "56d24aaf-c158-40f4-84e8-1be98a664a82",
+    "patient_id": "5e6cd153-9ba0-45c5-b6da-59620896e762",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "02d72ef7-fe16-42ba-baa3-7cf40210ce89",
+    "patient_id": "57fb41d1-1bbb-466f-8839-ed32db8dff5e",
+    "ausstellungsdatum": "2026-08-24",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b7a8cb51-e888-4b48-b082-01950d10f78b",
+    "patient_id": "13e53f74-e621-41fb-bb82-1d4681d4429d",
+    "ausstellungsdatum": "2026-08-25",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "66af3bb8-abcb-4520-b80f-a02fea9737aa",
+    "patient_id": "e4136c8e-754b-4538-b530-f98f03d3ac98",
+    "ausstellungsdatum": "2026-08-25",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "7c0c3146-f2fb-42a1-af73-44136e4d640d",
+    "patient_id": "ce103f33-4ba9-40f7-9192-2b28b33aa690",
+    "ausstellungsdatum": "2026-08-25",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "947db602-be96-4556-a573-c45b18b392b0",
+    "patient_id": "e14b2893-6216-4607-8939-ffb0750d8129",
+    "ausstellungsdatum": "2026-08-25",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "320c1417-bc17-41d0-9927-6bf981cf5bd6",
+    "patient_id": "1cf44cae-d550-484c-aad2-339fe1b9ae00",
+    "ausstellungsdatum": "2026-08-25",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "1eacebbe-ce65-495a-aa0b-e2c42714795c",
+    "patient_id": "f7d46898-9c3f-402e-a597-d5233fb28fe0",
+    "ausstellungsdatum": "2026-08-25",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "d4f456d8-ade6-40ad-bfed-0814103a56cc",
+    "patient_id": "869a6083-8872-4815-a308-6f5ade41edf7",
+    "ausstellungsdatum": "2026-08-25",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "7c90776f-68de-44ef-a0d6-6e9cd2d95e91",
+    "patient_id": "59e95472-0f63-416d-b75b-f3880c935713",
+    "ausstellungsdatum": "2026-08-25",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "31a2a47d-beca-4392-a753-a1bb8f3967aa",
+    "patient_id": "5f896364-4f54-4155-b967-88c92ea64345",
+    "ausstellungsdatum": "2026-08-25",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "b4a5372e-8973-4915-889f-ce27400b05f0",
+    "patient_id": "c735ead6-9b38-440e-8c7e-d6e70544f80b",
+    "ausstellungsdatum": "2026-08-25",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "5e99c3bf-d7ec-4508-8e4b-b1a9a078de87",
+    "patient_id": "df2000b1-fda9-4426-bf08-426b55b76ac4",
+    "ausstellungsdatum": "2026-08-25",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "e23b7370-12c6-4e77-b62f-6a0d1b4cf8e1",
+    "patient_id": "c2552fab-ec0b-4ef5-9984-fbe0aa6950e3",
+    "ausstellungsdatum": "2026-08-25",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "1ebaa12b-31c7-4ad4-8d5e-63ae07a22183",
+    "patient_id": "355090de-d690-4b1f-ac6d-5b4e707ce966",
+    "ausstellungsdatum": "2026-08-25",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "767f3eab-4245-449f-98fc-19e122e6a3ef",
+    "patient_id": "3bc2f805-8d4c-41b0-aaff-2527edaaadcf",
+    "ausstellungsdatum": "2026-08-25",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "f8631628-64b8-4cb0-b83b-174747dc19b4",
+    "patient_id": "64268c9d-858c-4ec1-af21-65c73f14bd05",
+    "ausstellungsdatum": "2026-08-25",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "7c24fcf6-2485-4e4c-bd17-c8e280ebf6e3",
+    "patient_id": "cb526a48-a357-40b1-b54d-45d969ac1c92",
+    "ausstellungsdatum": "2026-08-26",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "059d9651-fcea-4e0b-bb11-1413ead312d8",
+    "patient_id": "f4648741-8ccb-4025-b3c0-8553ecfbc4d8",
+    "ausstellungsdatum": "2026-08-26",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "57d97af6-d810-4548-8d44-b22f839dfeef",
+    "patient_id": "90e84b29-bfab-4b3a-bed8-0a42a971b841",
+    "ausstellungsdatum": "2026-08-26",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "451e9c83-5e4e-4582-b555-85f1fe2a31a7",
+    "patient_id": "6f8903be-752b-43f1-abd3-2664085f71ac",
+    "ausstellungsdatum": "2026-08-26",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "a028d21a-1d7a-47ce-ab2a-144f43f38d37",
+    "patient_id": "343131af-a22d-4d29-86c9-f183be689495",
+    "ausstellungsdatum": "2026-08-26",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "480be8df-1e6c-4ee0-a436-82d42df3608d",
+    "patient_id": "156f4875-319c-4cd9-b57d-72bf37b339ec",
+    "ausstellungsdatum": "2026-08-26",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "98d3362d-ac96-4b52-a681-e35af2af3f45",
+    "patient_id": "4c4bb7f6-2b09-4a04-85bc-ebe629f88452",
+    "ausstellungsdatum": "2026-08-26",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ecc2a142-49b3-4e9e-8399-40564e540954",
+    "patient_id": "6a063ed7-94c2-46cf-b5bb-c5b22f3d3c99",
+    "ausstellungsdatum": "2026-08-26",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "6ca52bce-a37d-4d56-9cf1-82368b4f5c51",
+    "patient_id": "5474797c-752f-46c9-886c-65cecef71097",
+    "ausstellungsdatum": "2026-08-26",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "b6d0ad5b-4610-4710-a3cd-c3719dfc804c",
+    "patient_id": "2401b5f4-2abe-4bee-8388-848dcd76f0eb",
+    "ausstellungsdatum": "2026-08-27",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "62072800-aca6-4d20-8f40-7f38eeb4901a",
+    "patient_id": "20dd988f-5903-4b25-a84b-a0c787bb4e82",
+    "ausstellungsdatum": "2026-08-27",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "45cd3b67-5208-4a78-b9d4-0b148f6550a1",
+    "patient_id": "e2cd32e0-916d-4fa7-a67d-b39df05ebf10",
+    "ausstellungsdatum": "2026-08-27",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "b574ffa0-13e6-410e-9840-da624b277017",
+    "patient_id": "b8389526-f195-44a3-a0c8-7d94c6972bd0",
+    "ausstellungsdatum": "2026-08-27",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "243d68f8-aa31-4e62-8afc-72175901ad04",
+    "patient_id": "c65a1d45-179a-4ebd-ad6f-96ca57650fbe",
+    "ausstellungsdatum": "2026-08-27",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "6f23e683-0e04-4a38-90c8-0911a6e3ea22",
+    "patient_id": "e0f466e1-aad8-46b7-834e-4ce31204efe2",
+    "ausstellungsdatum": "2026-08-27",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "43e58318-54b7-4ba4-9374-e7bb589c5132",
+    "patient_id": "59aa4512-ae74-4f20-ab06-0e7a683a1dfc",
+    "ausstellungsdatum": "2026-08-27",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "2b0d50d9-7276-46c8-afcd-37eea81b6c48",
+    "patient_id": "302fad2a-2608-470d-8b8e-ede2aed5f387",
+    "ausstellungsdatum": "2026-08-27",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "d0c693a0-175b-4b56-9c54-7aed9e3b3cc5",
+    "patient_id": "a3ce134b-c439-4c28-bbd2-a53b2a6258a0",
+    "ausstellungsdatum": "2026-08-27",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "8bc266c3-c8a6-4628-b6ee-6cc9b1f5e6bd",
+    "patient_id": "a17f12a6-76cc-46d1-9e75-8ea00224ffe4",
+    "ausstellungsdatum": "2026-08-28",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "7f624b2f-2f17-4721-a58d-72a37d953dfa",
+    "patient_id": "8a5ba790-e829-43ae-b307-b42062d45e9c",
+    "ausstellungsdatum": "2026-08-28",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "7f681288-69be-4bea-b811-4cb9d48b6363",
+    "patient_id": "62973760-4e36-4f97-a154-aeffbc0093f4",
+    "ausstellungsdatum": "2026-08-28",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "6c702067-e406-437f-b6c0-e59f8b3163d0",
+    "patient_id": "07c573b7-583b-4504-97fb-d64f797727e9",
+    "ausstellungsdatum": "2026-08-28",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "57e230c6-585d-4e84-b927-762d2ac7d5e9",
+    "patient_id": "dc1d1890-feec-40a7-bc76-93fd2f9df9c8",
+    "ausstellungsdatum": "2026-08-28",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "ea3dacb7-9e6a-4bc3-8d8b-69daef1dc576",
+    "patient_id": "26986dbe-a75a-4e65-bcd1-a878ae9fda01",
+    "ausstellungsdatum": "2026-08-28",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2ae25a4b-72f1-4b83-aa06-e6e4f11e0418",
+    "patient_id": "8615804e-be3e-4740-bbf8-8b3e39279bc9",
+    "ausstellungsdatum": "2026-08-28",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "2b4c01e2-b71d-4cd3-9902-23c39601c755",
+    "patient_id": "523357e2-a880-461e-9a04-89b5aa7d3ed5",
+    "ausstellungsdatum": "2026-08-28",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "d1b7662f-a019-4a19-85e2-fab3db4b31a9",
+    "patient_id": "6b7da490-ca7f-4bb8-935f-410adf1ef20d",
+    "ausstellungsdatum": "2026-08-28",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "4a753d59-733b-4b3e-b823-38a88fb93e47",
+    "patient_id": "d13a3f72-a20b-4741-a307-af275e698a9f",
+    "ausstellungsdatum": "2026-08-28",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "ab5fca1a-1660-4650-ab4a-e482cf90b3fa",
+    "patient_id": "c850a00a-bb2d-4e77-b573-0b2238ae9891",
+    "ausstellungsdatum": "2026-08-28",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "a0d4004a-3ad0-40dd-8c9d-940a0a289ea2",
+    "patient_id": "a50835e4-0b4e-4851-a7e7-f60e21727168",
+    "ausstellungsdatum": "2026-08-28",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "3a253eae-38e0-44d7-a5ec-f69ea6a91dab",
+    "patient_id": "b51e73a4-3bd6-44d4-877e-fcd4c9ad7911",
+    "ausstellungsdatum": "2026-08-28",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KGG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "4c70074e-41e5-415b-9995-4dcb13a4623b",
+    "patient_id": "24721690-09ef-448a-80b9-e7bfca529bc5",
+    "ausstellungsdatum": "2026-08-29",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "99d58feb-0665-472d-898e-b3893d4a66a1",
+    "patient_id": "90b9eeaa-3c21-4969-a793-eb5e0210ad26",
+    "ausstellungsdatum": "2026-08-29",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "465e1dca-ffa7-4f75-bbd1-c39bca9aafe1",
+    "patient_id": "6d1e2bf7-763e-46da-a09c-39e61580d5d8",
+    "ausstellungsdatum": "2026-08-29",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "40b742f1-5231-4565-b847-9f4b6a27eaf2",
+    "patient_id": "79fca829-fd45-4b44-a71a-716b44e7b667",
+    "ausstellungsdatum": "2026-08-29",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "fd08a7ee-33d9-4399-8ff3-697a6764df49",
+    "patient_id": "d9443388-48d8-42ca-a9c4-7845095a9f18",
+    "ausstellungsdatum": "2026-08-29",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "8deb3236-58a4-41c0-965e-d21a560cc898",
+    "patient_id": "6c60ee4c-69cd-486b-8dc1-133c8bb51dfb",
+    "ausstellungsdatum": "2026-08-30",
+    "diagnosegruppe": "WS1",
+    "heilmittel": "MT",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 2
+  },
+  {
+    "id": "38ffed53-053d-4879-bfa5-57d83f19009a",
+    "patient_id": "4d43323e-dad8-4cd6-89cc-5f724577517e",
+    "ausstellungsdatum": "2026-08-30",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "844f1d6a-2f36-4c56-ab3b-251ea1203ab6",
+    "patient_id": "253af30b-8d6f-4ece-b1c3-caa4573644b3",
+    "ausstellungsdatum": "2026-08-30",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "MT",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "2fb4110e-beea-4a1e-8076-7ea2b4284933",
+    "patient_id": "ff522009-0aa2-4378-bc75-66daaba6a9b4",
+    "ausstellungsdatum": "2026-08-30",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "610f279a-f4ee-42fc-aa6b-1d577ee16dcc",
+    "patient_id": "4798a7ca-8ae2-44d1-abc3-d824755dbe84",
+    "ausstellungsdatum": "2026-08-30",
+    "diagnosegruppe": "EX2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "20f2f63c-887b-419a-8fa7-0876ed2eb96e",
+    "patient_id": "2f6c2f37-4839-4f9a-98c6-f914d26c2083",
+    "ausstellungsdatum": "2026-08-30",
+    "diagnosegruppe": "EX3",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "982fc5d8-f975-42b6-b1ad-777cf1b333a0",
+    "patient_id": "2b4e9c0d-f00c-47a7-b0c4-7599fc8fcd28",
+    "ausstellungsdatum": "2026-08-31",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 6,
+    "frequenz_pro_woche": 1
+  },
+  {
+    "id": "010c78ca-aa48-41bc-b97e-ba0095094764",
+    "patient_id": "33b1db3d-5a86-46fd-85dc-c3cd93e75e4a",
+    "ausstellungsdatum": "2026-08-31",
+    "diagnosegruppe": "WS2",
+    "heilmittel": "KG",
+    "verordnungsmenge": 10,
+    "frequenz_pro_woche": 1
+  }
+]
