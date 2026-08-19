@@ -30,6 +30,7 @@ import { useLocale } from '@/i18n/use-locale'
 import { formatTime } from '@/lib/datetime'
 import { DAY_GROUPS, groupOf, leadAppointment, todoKey } from '@/lib/queue'
 import type { DayGroup } from '@/lib/queue'
+import { useIsWideScreen } from '@/lib/use-media-query'
 import { cn } from '@/lib/utils'
 import type { QueuedTaskView } from '@ausfall/contracts'
 
@@ -50,6 +51,7 @@ function QueuePage() {
   const search = Route.useSearch()
   const navigate = Route.useNavigate()
   const all = useTasks('all')
+  const wide = useIsWideScreen()
 
   const tasks = useMemo(() => all.data ?? [], [all.data])
   const filtered = useMemo(
@@ -138,12 +140,10 @@ function QueuePage() {
           onClick={() => setFilter(undefined)}
         >
           {t('queue.filter_all')}
-          <Badge
-            variant="outline"
-            className={openTasks.length > 0 ? toneClass.open : toneClass.done}
-          >
+          {/* Counts stay neutral. Color is reserved for status and warnings. */}
+          <span className="opacity-70 tabular-nums">
             {tasks.filter((task) => task.status !== 'resolved').length}
-          </Badge>
+          </span>
         </Button>
         {absences.map((absence, index) => (
           <Button
@@ -158,12 +158,7 @@ function QueuePage() {
               aria-hidden="true"
             />
             {absence.practitionerName}
-            <Badge
-              variant="outline"
-              className={absence.count > 0 ? toneClass.open : toneClass.done}
-            >
-              {absence.count}
-            </Badge>
+            <span className="opacity-70 tabular-nums">{absence.count}</span>
           </Button>
         ))}
       </div>
@@ -239,7 +234,8 @@ function QueuePage() {
       <div className="min-w-0 flex-1">{list}</div>
 
       {/* Wide screens: the case sits beside the list and blocks nothing. */}
-      <aside className="hidden w-[26rem] shrink-0 lg:block" aria-label={t('queue.detail_label')}>
+      {wide ? (
+      <aside className="w-[26rem] shrink-0" aria-label={t('queue.detail_label')}>
         {selected === undefined ? (
           <Card>
             <CardContent className="text-muted-foreground py-8 text-center text-sm">
@@ -259,15 +255,18 @@ function QueuePage() {
           </Card>
         )}
       </aside>
+      ) : null}
 
-      {/* Narrow screens: the same case as a sheet. */}
+      {/* Narrow screens: the same case as a sheet. It must not mount on a wide
+          screen — a mounted dialog makes the rest of the page inert. */}
+      {wide ? null : (
       <Sheet
         open={selected !== undefined}
         onOpenChange={(next) => {
           if (!next) select(undefined)
         }}
       >
-        <SheetContent className="w-full gap-0 overflow-y-auto sm:max-w-md lg:hidden">
+        <SheetContent className="w-full gap-0 overflow-y-auto sm:max-w-md">
           {selected === undefined ? null : (
             <>
               <SheetHeader>
@@ -288,6 +287,7 @@ function QueuePage() {
           )}
         </SheetContent>
       </Sheet>
+      )}
     </div>
   )
 }
@@ -343,11 +343,14 @@ function TaskRow({
               dotClass={absenceDotClass(absenceIndex)}
             />
             {task.warnings[0] === undefined ? null : (
-              <Badge variant="outline" className={cn(toneClass.attention, 'whitespace-normal')}>
-                <AlertTriangle className="size-3" aria-hidden="true" />
+              <span className="text-muted-foreground inline-flex items-center gap-1 text-xs">
+                <AlertTriangle
+                  className="size-3.5 shrink-0 text-amber-600 dark:text-amber-400"
+                  aria-hidden="true"
+                />
                 {t(`warnings.${task.warnings[0].code}`)}
                 {task.warnings.length > 1 ? ` +${task.warnings.length - 1}` : ''}
-              </Badge>
+              </span>
             )}
           </span>
         </span>

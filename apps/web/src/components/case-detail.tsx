@@ -119,11 +119,15 @@ export function CaseDetailBody({ task }: { task: QueuedTaskView }) {
       {task.warnings.length > 0 ? (
         <ul className="grid gap-1">
           {task.warnings.map((warning, index) => (
-            <li key={`${warning.code}-${index}`}>
-              <Badge variant="outline" className={`${toneClass.attention} whitespace-normal`}>
-                <AlertTriangle className="size-3" aria-hidden="true" />
-                {t(`warnings.${warning.code}`)}
-              </Badge>
+            <li
+              key={`${warning.code}-${index}`}
+              className="text-muted-foreground flex items-start gap-1.5 text-xs"
+            >
+              <AlertTriangle
+                className="mt-0.5 size-3.5 shrink-0 text-amber-600 dark:text-amber-400"
+                aria-hidden="true"
+              />
+              <span>{t(`warnings.${warning.code}`)}</span>
             </li>
           ))}
         </ul>
