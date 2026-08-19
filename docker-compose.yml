@@ -25,6 +25,9 @@ services:
       APP_NOW: '2026-09-07T07:40:00+02:00'
       DATA_DIR: /app/data
       PORT: '4000'
+      # The browser calls the API from the web app's origin; without this the
+      # requests fail as CORS errors.
+      WEB_ORIGIN: http://localhost:3000
     depends_on:
       db:
         condition: service_healthy

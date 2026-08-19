@@ -10,6 +10,7 @@ const domain = fileURLToPath(new URL('../../packages/domain/src/index.ts', impor
 const contracts = fileURLToPath(new URL('../../packages/contracts/src/index.ts', import.meta.url))
 
 export default defineConfig({
+  server: { port: Number(process.env.PORT) || 3000 },
   resolve: {
     alias: [
       { find: '@ausfall/domain', replacement: domain },

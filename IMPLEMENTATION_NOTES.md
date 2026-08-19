@@ -69,6 +69,8 @@ Choices made during implementation that are too small for an ADR. Include the re
 - 2026-08-19 (web): `VITE_API_URL` and `VITE_APP_NOW` are **build args**, not run-time env vars — Vite inlines them into the browser bundle. The compose service bakes `http://localhost:4000`, because the browser runs on the host and reaches the API through the published port, not through the compose network.
 - 2026-08-19 (web): `pnpm --filter @ausfall/web check:i18n` fails if the `de` and `en` key sets differ (109 keys each today).
 
+- 2026-08-19 (web, found in the browser): the API sent no CORS headers, so **every** request from the web app failed with "Failed to fetch". The web app and the API are separate origins in every setup we ship (dev server on 3000, compose on 3000 vs 4000). `apps/api` now uses `hono/cors` with an allow-list from `WEB_ORIGIN` (default `http://localhost:3000`), not `*` — the API serves patient data. Only a real browser showed this; curl never does.
+
 ## Deviations
 
 Places where we left the plan. Rule: when an edge case forces a deviation, pick the conservative option, log it here, and keep going.
